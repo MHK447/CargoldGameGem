@@ -1,3 +1,4 @@
+using BanpoFri;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -263,6 +264,11 @@ namespace DefaultSetting.Utility
             else if (data is Vector2 vec)
             {
                 AppendString($"{{{vec.x}, {vec.y}}} ", sb);
+                return;
+            }
+            else if (data is EventInfoData eventInfoData)
+            {
+                AppendString($"{eventInfoData.eventid} ", sb);
                 return;
             }
             //Default ToString

@@ -31,7 +31,7 @@ public class GameRoot : Singleton<GameRoot>
 	public PlayTimeSystem PlayTimeSystem { get; private set; } = new PlayTimeSystem();
 	public EffectSystem EffectSystem { get; private set; } = new EffectSystem();
 	public TutorialSystem TutorialSystem { get; private set; } = new TutorialSystem();
-
+	public StockEventSystem StockEventSystem { get; private set; } = new StockEventSystem();
 
 	public AdManager GetAdManager { get { return AdManager; } }
 
@@ -211,7 +211,8 @@ public class GameRoot : Singleton<GameRoot>
 			// Cold start and Application.absoluteURL not null so process Deep Link.
 			//OnDeepLinkActivated(Application.absoluteURL);
 		}
-	}
+        StockEventSystem.Init();
+    }
 
 	private IEnumerator LoadGameData()
 	{

@@ -1,7 +1,9 @@
 using BanpoFri;
+using DefaultSetting.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum StockEventType
@@ -11,18 +13,20 @@ public enum StockEventType
     C,
 }
 
-public class StockEventSystem : MonoBehaviour
+public class StockEventSystem
 {
-    public float event1StartTime = 0;
-    public float event2StartTime = 2;
-    public float event3StartTime = 4;
-
-    void Start()
+    public void Init()
     {
-        //TODO: 스테이지 선택해서 각 시작 시점을 적용하도록 수정
-        GameRoot.Instance.WaitTimeAndCallback(event1StartTime, StartEvent);
-        GameRoot.Instance.WaitTimeAndCallback(event2StartTime, StartEvent);
-        GameRoot.Instance.WaitTimeAndCallback(event3StartTime, StartEvent);
+        Debug.Log($"HighCl_{Time.time}:\nStock Event Init");
+       
+        int temp_currentStage = 1; //TODO: 추후 스테이지 입장 시 받는것으로 수정
+        StageEventSetting(temp_currentStage);
+    }
+
+    public void StageEventSetting(int stageID)
+    {
+        StageInfoData eventInfo = Tables.Instance.GetTable<StageInfo>().GetData(stageID);
+        eventInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 1000f, StartEvent));
     }
 
     private void StartEvent()
