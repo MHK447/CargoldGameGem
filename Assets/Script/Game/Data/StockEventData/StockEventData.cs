@@ -20,7 +20,7 @@ public class StockEventData
     {
         _callback = callback;
         SetData(true);
-        GameRoot.Instance.WaitTimeAndCallback(_eventInfoData.eventDurationMs / 100, EndEvent);
+        GameRoot.Instance.WaitTimeAndCallback(_eventInfoData.event_duration / 100, EndEvent);
     }
 
     public void EndEvent()
@@ -34,13 +34,13 @@ public class StockEventData
     {
         int sign = isStart ? 1 : -1;
 
-        switch (_eventInfoData.eventType)
+        switch (_eventInfoData.event_type)
         {
             case "changeStageValue":
-                if (_eventInfoData.eventSubtype == "increaseSpeedMin")
-                    StockEventSystem.SpeedMin += _eventInfoData.eventTypeValue * sign;
-                if (_eventInfoData.eventSubtype == "changeDownRate")
-                    StockEventSystem.DownRate += _eventInfoData.eventTypeValue * sign;
+                if (_eventInfoData.event_subtype == "increaseSpeedMin")
+                    StockEventSystem.SpeedMin += _eventInfoData.event_type_value * sign;
+                if (_eventInfoData.event_subtype == "changeDownRate")
+                    StockEventSystem.DownRate += _eventInfoData.event_type_value * sign;
                 break;
             default:
                 break;

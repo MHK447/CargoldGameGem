@@ -268,7 +268,7 @@ namespace DefaultSetting.Utility
             }
             else if (data is EventInfoData eventInfoData)
             {
-                AppendString($"eventID: {eventInfoData.eventid}, duration: {eventInfoData.eventDurationMs} ", sb);
+                AppendString($"eventID: {eventInfoData.event_id}, duration: {eventInfoData.event_duration} ", sb);
                 return;
             }
             //Default ToString

@@ -29,20 +29,19 @@ public class StockEventSystem
     private List<EventInfoData> CashingCurrentStageEventData()
     {
         EventInfo eventInfo = Tables.Instance.GetTable<EventInfo>();
-        return eventInfo.DataList.Where(e => e.stageId == 0 || e.stageId == currentStage).ToList();
+        return eventInfo.DataList.Where(e => e.stage_id == 0 || e.stage_id == currentStage).ToList();
     }
 
     public void StageEventSetting(int stageID)
     {
         StageInfoData stageInfo = Tables.Instance.GetTable<StageInfo>().GetData(stageID);
         stageInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 100, StartEvent));
-        stageInfo.Print();
     }
 
     private void StartEvent()
     {
         EventInfoData stockEventInfo = GetRandomEvent();
-        Debug.Log($"HighCl_{Time.time}: Entry\n stockEventID: {stockEventInfo.eventid}");
+        Debug.Log($"HighCl_{Time.time}: Entry\n stockEventID: {stockEventInfo.event_id}");
 
         StockEventData stockEventData = new StockEventData();
         stockEventData.Init(stockEventInfo);
@@ -57,6 +56,6 @@ public class StockEventSystem
 
     public void CallBack(EventInfoData eventInfoData)
     {
-        Debug.Log($"HighCl_{Time.time}: Callback\nEventInfoData: {eventInfoData.eventid}");
+        Debug.Log($"HighCl_{Time.time}: Callback\nEventInfoData: {eventInfoData.event_id}");
     }
 }

@@ -12,152 +12,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf069ddfb058f347aec105ce4832af3, type: 3}
   m_Name: EventInfo
   m_EditorClassIdentifier: 
-  mFirstKey: []
+  mFirstKey:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
   mSecondKey: []
   mDataList:
-  - _eventid: 1
-    _stageId: 0
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 200
-    _eventDurationMs: 1500
-    _randomEventText: "\uC774\uBE0C \uC18C\uC0DD \uC2E4\uD5D8 \uC131\uACF5. \"\uC0AC\uACFC\uC5D0
+  - _event_id: 1
+    _stage_id: 0
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 1
+    _event_type_value: 200
+    _event_duration: 1500
+    _event_description: "\uC774\uBE0C \uC18C\uC0DD \uC2E4\uD5D8 \uC131\uACF5. \"\uC0AC\uACFC\uC5D0
       \uB300\uD55C \uC800\uC791\uAD8C\uC740 \uB0B4\uAC8C \uC788\uC5B4.\" \uC0AC\uC774\uBC84
       \uC7A1\uC2A4\uC640 \uBC95\uC801 \uBD84\uC7C1"
-  - _eventid: 2
-    _stageId: 1
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 10
-    _eventDurationMs: 400
-    _randomEventText: "\uB108\uBB34 \uCD94\uC6CC\uC11C \uAC1C\uBC1C\uB825 10% \uD558\uB77D"
-  - _eventid: 3
-    _stageId: 0
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 300
-    _eventDurationMs: 700
-    _randomEventText: "\uC0C8\uC6B0 \uB354\uB4EC\uC774 \uBC84\uAC70 Vtuber \uC0AC\uC774\uC5D0
+  - _event_id: 2
+    _stage_id: 1
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 2
+    _event_type_value: 10
+    _event_duration: 400
+    _event_description: "\uB108\uBB34 \uCD94\uC6CC\uC11C \uAC1C\uBC1C\uB825 10% \uD558\uB77D"
+  - _event_id: 3
+    _stage_id: 0
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 1
+    _event_type_value: 300
+    _event_duration: 700
+    _event_description: "\uC0C8\uC6B0 \uB354\uB4EC\uC774 \uBC84\uAC70 Vtuber \uC0AC\uC774\uC5D0
       \uD070 \uC720\uD589"
-  - _eventid: 4
-    _stageId: 0
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 70
-    _eventDurationMs: 850
-    _randomEventText: "\uC11D\uC720. \uCF5C\uB77C\uB97C \uB300\uCCB4\uD560 \uCC28\uC138\uB300
+  - _event_id: 4
+    _stage_id: 0
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 2
+    _event_type_value: 70
+    _event_duration: 850
+    _event_description: "\uC11D\uC720. \uCF5C\uB77C\uB97C \uB300\uCCB4\uD560 \uCC28\uC138\uB300
       \uC74C\uB8CC\uB85C \uAC01\uAD11"
-  - _eventid: 5
-    _stageId: 0
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 20
-    _eventDurationMs: 9000
-    _randomEventText: "\uB2E8 3\uBA85 \uB0A8\uC740 \uC774\uC2A4\uB77C\uC5D8 \uC8FC\uBBFC\uACFC
+  - _event_id: 5
+    _stage_id: 0
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 1
+    _event_type_value: 20
+    _event_duration: 9000
+    _event_description: "\uB2E8 3\uBA85 \uB0A8\uC740 \uC774\uC2A4\uB77C\uC5D8 \uC8FC\uBBFC\uACFC
       2\uBA85\uC758 \uD314\uB808\uC2A4\uD0C0\uC778 \uC8FC\uBBFC\uC774 \uAD50\uC804
       \uC7AC\uAC1C"
-  - _eventid: 6
-    _stageId: 0
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 30
-    _eventDurationMs: 300
-    _randomEventText: "\uC544\uC774\uB97C \uC704\uD574, \uC544\uC774\uAC00 \uB9CC\uB4E0
+  - _event_id: 6
+    _stage_id: 0
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 2
+    _event_type_value: 30
+    _event_duration: 300
+    _event_description: "\uC544\uC774\uB97C \uC704\uD574, \uC544\uC774\uAC00 \uB9CC\uB4E0
       \"\uAC2D\uC2A4 \uD0A4\uC988 \uD3EC \uD0A4\uC988\" \uCD9C\uC2DC. \uC911\uAD6D\uC758
       \uBBF8\uCDE8\uD559 \uC544\uB3D9\uC758 \uCDE8\uC5C5\uB960 \uB300\uD3ED \uC0C1\uC2B9"
-  - _eventid: 7
-    _stageId: 1
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 50
-    _eventDurationMs: 9999
-    _randomEventText: "\uBBF8\uC5F0\uC900\uC5D0\uC11C \uC62C\uD574\uB294 \uB2EC\uB7EC\uB97C
+  - _event_id: 7
+    _stage_id: 1
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 1
+    _event_type_value: 50
+    _event_duration: 9999
+    _event_description: "\uBBF8\uC5F0\uC900\uC5D0\uC11C \uC62C\uD574\uB294 \uB2EC\uB7EC\uB97C
       \uC778\uC1C4\uD558\uC9C0 \uC54A\uACA0\uB2E4\uACE0 \uBC1C\uD45C. \"\uC885\uC774\uC640
       \uC789\uD06C\uB294 \uADC0\uC911\uD558\uB2E4\""
-  - _eventid: 8
-    _stageId: 2
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 6
-    _eventDurationMs: 300
-    _randomEventText: "\uBE44\uD2B8\uCF54\uC778 1\uC5B5 \uB2EC\uB7EC \uB3CC\uD30C\uD55C
+  - _event_id: 8
+    _stage_id: 2
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 2
+    _event_type_value: 6
+    _event_duration: 300
+    _event_description: "\uBE44\uD2B8\uCF54\uC778 1\uC5B5 \uB2EC\uB7EC \uB3CC\uD30C\uD55C
       \uAC83\uC774 \uC624\uD788\uB824 \uB0B4\uB2EC\uAE4C\uC9C0 3\uC13C\uD2B8 \uC774\uD558\uB85C
       \uB5A8\uC5B4\uC9C8 \uC9D5\uC870\uC778 \uB2E4\uC12F\uAC00\uC9C0 \uC774\uC720"
-  - _eventid: 9
-    _stageId: 3
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 8
-    _eventDurationMs: 2000
-    _randomEventText: "\uBE44\uD2B8\uCF54\uC778 3\uC13C\uD2B8 \uC774\uD558\uB85C
+  - _event_id: 9
+    _stage_id: 3
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 1
+    _event_type_value: 8
+    _event_duration: 2000
+    _event_description: "\uBE44\uD2B8\uCF54\uC778 3\uC13C\uD2B8 \uC774\uD558\uB85C
       \uB5A8\uC5B4\uC9C4 \uAC83\uC774 \uC624\uD788\uB824 \uB0B4\uB2EC\uAE4C\uC9C0
       1\uC5B5\uB2EC\uB7EC\uB97C \uB3CC\uD30C\uD560 \uC9D5\uC870\uC778 \uB2E4\uC12F
       \uAC00\uC9C0 \uC774\uC720"
-  - _eventid: 10
-    _stageId: 4
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 300
-    _eventDurationMs: 4000
-    _randomEventText: "\uB108\uAD6C\uB9AC\uB85C\uBD80\uD130 \uC804\uC5FC\uB418\uB294
+  - _event_id: 10
+    _stage_id: 4
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 2
+    _event_type_value: 300
+    _event_duration: 4000
+    _event_description: "\uB108\uAD6C\uB9AC\uB85C\uBD80\uD130 \uC804\uC5FC\uB418\uB294
       \uC2E0\uADDC \uBCD1\uC6D0\uADE0 rovid-40k \uC720\uD589. \uAC78\uB9AC\uBA74
       \uC5B5\uC6B8\uD55C \uB2E4\uD06C\uC11C\uD074\uC774 \uC601\uAD6C\uC801\uC73C\uB85C
       \uB0A8\uC744 \uC218 \uC788\uC5B4.."
-  - _eventid: 11
-    _stageId: 4
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 20
-    _eventDurationMs: 6000
-    _randomEventText: "\uAD50\uD669 \uD504\uB791\uC2DC\uC2A4 32\uC138\uAC00 \uBAA8\uB4E0
+  - _event_id: 11
+    _stage_id: 4
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 1
+    _event_type_value: 20
+    _event_duration: 6000
+    _event_description: "\uAD50\uD669 \uD504\uB791\uC2DC\uC2A4 32\uC138\uAC00 \uBAA8\uB4E0
       \uAC00\uD1A8\uB9AD\uAD50\uB3C4\uB97C \uD30C\uBA74. \"\uC774\uBC88 \uC8FC\uB9D0\uC5D0\uB294
       \uC880 \uC26C\uC5B4\uC57C\uACA0\uC5B4\""
-  - _eventid: 12
-    _stageId: 3
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 79
-    _eventDurationMs: 3000
-    _randomEventText: "\uBBF8\uD63C \uC5EC\uC131 80% \"\uC804\uAE30\uCC28\uB97C \uD0C0\uC9C0
-      \uC54A\uB294 \uB0A8\uC131\uC740 \uBCC4\uB85C\""
-  - _eventid: 13
-    _stageId: 2
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 50
-    _eventDurationMs: 200
-    _randomEventText: "\uC624\uB298\uC740 \uC2DC\uB9AC\uC640 \uACB0\uD63C\uD55C \uB0A8\uC131\uC744
-      \uC778\uD130\uBDF0\uD569\uB2C8\uB2E4. \"\uC624\uD788\uB824 \uC88B\uC544\""
-  - _eventid: 14
-    _stageId: 2
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 30
-    _eventDurationMs: 500
-    _randomEventText: "\uB108\uBB34 \uB354\uC6CC\uC11C \uAC1C\uBC1C\uB825 10% \uD558\uB77D"
-  - _eventid: 15
-    _stageId: 3
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 20
-    _eventDurationMs: 750
-    _randomEventText: "\uC0C8\uC6B0\uBC84\uAC70 \uD328\uD2F0\uB294 \uC804\uBD80 \uC0C8\uC6B0
-      \uB354\uB4EC\uC774\uB97C \uAC08\uC544 \uB9CC\uB4E4\uACE0 \uC788\uB2E4\uB294
+  - _event_id: 12
+    _stage_id: 3
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 2
+    _event_type_value: 79
+    _event_duration: 3000
+    _event_description: "\uBBF8\uD63C \uC5EC\uC131 80% \"\uC804\uAE30\uCC28\uB97C
+      \uD0C0\uC9C0 \uC54A\uB294 \uB0A8\uC131\uC740 \uBCC4\uB85C\""
+  - _event_id: 13
+    _stage_id: 2
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 1
+    _event_type_value: 50
+    _event_duration: 200
+    _event_description: "\uC624\uB298\uC740 \uC2DC\uB9AC\uC640 \uACB0\uD63C\uD55C
+      \uB0A8\uC131\uC744 \uC778\uD130\uBDF0\uD569\uB2C8\uB2E4. \"\uC624\uD788\uB824
+      \uC88B\uC544\""
+  - _event_id: 14
+    _stage_id: 2
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 2
+    _event_type_value: 30
+    _event_duration: 500
+    _event_description: "\uB108\uBB34 \uB354\uC6CC\uC11C \uAC1C\uBC1C\uB825 10% \uD558\uB77D"
+  - _event_id: 15
+    _stage_id: 3
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 1
+    _event_type_value: 20
+    _event_duration: 750
+    _event_description: "\uC0C8\uC6B0\uBC84\uAC70 \uD328\uD2F0\uB294 \uC804\uBD80
+      \uC0C8\uC6B0 \uB354\uB4EC\uC774\uB97C \uAC08\uC544 \uB9CC\uB4E4\uACE0 \uC788\uB2E4\uB294
       \uC0AC\uC2E4 \uC720\uCD9C"
-  - _eventid: 16
-    _stageId: 4
-    _eventType: changeStageValue
-    _eventSubtype: increaseSpeedMin
-    _eventTypeValue: 60
-    _eventDurationMs: 8000
-    _randomEventText: "\uC804\uAE30\uCC28 \uBC30\uD130\uB9AC \uCDA9\uC804\uC18C,
+  - _event_id: 16
+    _stage_id: 4
+    _event_type: changeStageValue
+    _event_subtype: increaseSpeedMin
+    _event_weight: 2
+    _event_type_value: 60
+    _event_duration: 8000
+    _event_description: "\uC804\uAE30\uCC28 \uBC30\uD130\uB9AC \uCDA9\uC804\uC18C,
       \uD718\uBC1C\uC720\uB85C \uC6B4\uC601\uB418\uACE0 \uC788\uC5B4"
-  - _eventid: 17
-    _stageId: 1
-    _eventType: changeStageValue
-    _eventSubtype: changeDownRate
-    _eventTypeValue: 10
-    _eventDurationMs: 300
-    _randomEventText: "\"\uBAA8\uB4E0 \uC804\uC7C1\uC740 \uAD6D\uAC00 \uC6D0\uC218
+  - _event_id: 17
+    _stage_id: 1
+    _event_type: changeStageValue
+    _event_subtype: changeDownRate
+    _event_weight: 1
+    _event_type_value: 10
+    _event_duration: 300
+    _event_description: "\"\uBAA8\uB4E0 \uC804\uC7C1\uC740 \uAD6D\uAC00 \uC6D0\uC218
       \uAC04\uC758 \uD0A5\uBCF5\uC2F1\uC73C\uB85C \uB300\uCCB4\" UN\uC548\uBCF4\uB9AC\uC5D0\uC11C
       \uACB0\uC815"
