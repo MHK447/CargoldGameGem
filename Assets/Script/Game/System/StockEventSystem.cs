@@ -26,8 +26,10 @@ public class StockEventSystem : MonoBehaviour
 
     private void StartEvent()
     {
-        StockEventData eventData = new StockEventData();
         StockEventType stockEventType = GetRandomEvent();
+        Debug.Log($"HighCl_{Time.time}:\nEntry StartEvent: {stockEventType}");
+
+        StockEventData eventData = new StockEventData();
         eventData.Init(stockEventType);
 
         //TODO: 테이블 키 받아오는거 임시
@@ -35,7 +37,6 @@ public class StockEventSystem : MonoBehaviour
         //var duration = Tables.Instance.GetTable<Define>().GetData("Duration").value;
         eventData.StartEvent(duration, CallBack);
 
-        Debug.Log($"HighCl_{Time.time}:\nEventStart: {stockEventType}");
     }
 
 
