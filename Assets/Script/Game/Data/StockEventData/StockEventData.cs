@@ -1,4 +1,5 @@
 using BanpoFri;
+using DefaultSetting.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,46 +8,45 @@ using UnityEngine;
 
 public class StockEventData
 {
-    private StockEventType _eventType;
+    private int _stockEventID;
     private EventInfoData eventInfoTable;
-    private Action<StockEventType, EventInfoData> _callback;
+    private Action<int, EventInfoData> _callback;
 
-    public void Init(StockEventType eventType)
+    public void Init(int stockEventID)
     {
-        this._eventType = eventType;
-        eventInfoTable = Tables.Instance.GetTable<EventInfo>().GetData(1);
+        this._stockEventID = stockEventID;
+        eventInfoTable = Tables.Instance.GetTable<EventInfo>().GetData(stockEventID);
     }
 
-
-    public void StartEvent(Action<StockEventType, EventInfoData> callback)
+    public void StartEvent(Action<int, EventInfoData> callback)
     {
         _callback = callback;
-        SetData();
+        SetData(true);
         GameRoot.Instance.WaitTimeAndCallback(eventInfoTable.eventDurationMs / 1000, EndEvent);
     }
 
     public void EndEvent()
     {
-        _callback.Invoke(_eventType, eventInfoTable);
+        SetData(false);
+        _callback.Invoke(_stockEventID, eventInfoTable);
     }
 
-
-    private void SetData()
+    //TODO: Start인 경우 의도한 값 그대로 세팅하고, 끝나는 경우 -1 곱하기
+    private void SetData(bool isStart)
     {
-        switch (_eventType)
+        switch (_stockEventID)
         {
-            case StockEventType.A:
-                Debug.Log($"HighCl_{Time.time}:\nA Data Setting");
+            case 1:
+                Debug.Log($"HighCl_{Time.time}:\nEvent1 Data Setting");
                 break;
-            case StockEventType.B:
-                Debug.Log($"HighCl_{Time.time}:\nB Data Setting");
+            case 2:
+                Debug.Log($"HighCl_{Time.time}:\nEvent2 Data Setting");
                 break;
-            case StockEventType.C:
-                Debug.Log($"HighCl_{Time.time}:\nC Data Setting");
+            case 3:
+                Debug.Log($"HighCl_{Time.time}:\nEvent3 Data Setting");
                 break;
             default:
                 break;
         }
-
     }
 }

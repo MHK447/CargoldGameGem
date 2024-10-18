@@ -1,55 +1,57 @@
 using BanpoFri;
-using DefaultSetting.Utility;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum StockEventType
-{
-    A,
-    B,
-    C,
-}
-
 public class StockEventSystem
 {
+    private bool _isInit = false;
+    int currentStage = 1;
+
     public void Init()
     {
+        if (_isInit)
+            return;
+        _isInit = true;
+
         Debug.Log($"HighCl_{Time.time}:\nStock Event Init");
-       
-        int temp_currentStage = 1; //TODO: 추후 스테이지 입장 시 받는것으로 수정
-        StageEventSetting(temp_currentStage);
+
+        StageEventSetting(currentStage);
     }
+
+    private List<EventInfoData> _cashingCurrentStageEventList;
 
     public void StageEventSetting(int stageID)
     {
         StageInfoData eventInfo = Tables.Instance.GetTable<StageInfo>().GetData(stageID);
+        _cashingCurrentStageEventList = CashingCurrentStageEventData();
         eventInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 1000f, StartEvent));
+    }
+
+    private List<EventInfoData> CashingCurrentStageEventData()
+    {
+        EventInfo eventInfo = Tables.Instance.GetTable<EventInfo>();
+        return eventInfo.DataList.Where(e => e.stageId == 0 || e.stageId == currentStage).ToList();
     }
 
     private void StartEvent()
     {
-        StockEventType stockEventType = GetRandomEvent();
-        Debug.Log($"HighCl_{Time.time}:\nEntry StartEvent: {stockEventType}");
+        int stockEventID = GetRandomEvent();
+        Debug.Log($"HighCl_{Time.time}:\nEntry stockEventID: {stockEventID}");
 
         StockEventData eventData = new StockEventData();
-        eventData.Init(stockEventType);
+        eventData.Init(stockEventID);
         eventData.StartEvent(CallBack);
     }
 
-
-    private StockEventType GetRandomEvent()
+    private int GetRandomEvent()
     {
-        Array values = Enum.GetValues(typeof(StockEventType));
-        int randomIndex = UnityEngine.Random.Range(0, values.Length);
-        return (StockEventType)values.GetValue(randomIndex);
+        int randomEventID = _cashingCurrentStageEventList[Random.Range(0, _cashingCurrentStageEventList.Count)].eventid;
+        return randomEventID;
     }
 
-
-    public void CallBack(StockEventType eventtype, EventInfoData eventInfoData)
+    public void CallBack(int stockEventID, EventInfoData eventInfoData)
     {
-        Debug.Log($"HighCl_{Time.time}:\nCallback: {eventtype}, EventInfoData: {eventInfoData}");
+        Debug.Log($"HighCl_{Time.time}:\nCallback: {stockEventID}, EventInfoData: {eventInfoData}");
     }
 }
