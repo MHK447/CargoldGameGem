@@ -1,3 +1,4 @@
+using BanpoFri;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,24 +8,26 @@ using UnityEngine;
 public class StockEventData
 {
     private StockEventType _eventType;
-    private Action<StockEventType> _callback;
+    private EventInfoData eventInfoTable;
+    private Action<StockEventType, EventInfoData> _callback;
 
     public void Init(StockEventType eventType)
     {
         this._eventType = eventType;
+        eventInfoTable = Tables.Instance.GetTable<EventInfo>().GetData(1);
     }
 
 
-    public void StartEvent(float duration, Action<StockEventType> callback)
+    public void StartEvent(Action<StockEventType, EventInfoData> callback)
     {
         _callback = callback;
         SetData();
-        GameRoot.Instance.WaitTimeAndCallback(duration, EndEvent);
+        GameRoot.Instance.WaitTimeAndCallback(eventInfoTable.eventDurationMs / 1000, EndEvent);
     }
 
     public void EndEvent()
     {
-        _callback.Invoke(_eventType);
+        _callback.Invoke(_eventType, eventInfoTable);
     }
 
 

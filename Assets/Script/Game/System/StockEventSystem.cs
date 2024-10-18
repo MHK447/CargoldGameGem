@@ -19,6 +19,7 @@ public class StockEventSystem : MonoBehaviour
 
     void Start()
     {
+        //TODO: 스테이지 선택해서 각 시작 시점을 적용하도록 수정
         GameRoot.Instance.WaitTimeAndCallback(event1StartTime, StartEvent);
         GameRoot.Instance.WaitTimeAndCallback(event2StartTime, StartEvent);
         GameRoot.Instance.WaitTimeAndCallback(event3StartTime, StartEvent);
@@ -31,12 +32,7 @@ public class StockEventSystem : MonoBehaviour
 
         StockEventData eventData = new StockEventData();
         eventData.Init(stockEventType);
-
-        //TODO: ���̺� Ű �޾ƿ��°� �ӽ�
-        var duration = 3f;
-        //var duration = Tables.Instance.GetTable<Define>().GetData("Duration").value;
-        eventData.StartEvent(duration, CallBack);
-
+        eventData.StartEvent(CallBack);
     }
 
 
@@ -48,8 +44,8 @@ public class StockEventSystem : MonoBehaviour
     }
 
 
-    public void CallBack(StockEventType eventtype)
+    public void CallBack(StockEventType eventtype, EventInfoData eventInfoData)
     {
-        Debug.Log($"HighCl_{Time.time}:\nCallback: {eventtype}");
+        Debug.Log($"HighCl_{Time.time}:\nCallback: {eventtype}, EventInfoData: {eventInfoData}");
     }
 }
