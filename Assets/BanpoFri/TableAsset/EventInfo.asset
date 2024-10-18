@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf069ddfb058f347aec105ce4832af3, type: 3}
+  m_Name: EventInfo
+  m_EditorClassIdentifier: 
+  mFirstKey:
+  - 1
+  - 2
+  - 3
+  - 4
+  mSecondKey: []
+  mDataList:
+  - _eventid: 1
+    _stageId: 0
+    _eventType: changeStageValue
+    _eventSubtype: increaseSpeedMin
+    _eventTypeValue: 200
+    _eventDurationMs: 15000
+    _randomEventText: "\uBBF8 \uC5F0\uBC29\uC815\uBD80\uC5D0\uC11C 5,000\uC870 \uB2EC\uB7EC\uB9CC\uD07C
+      \uCD94\uAC00\uB85C \uCC0D\uC5B4\uB0B4\uAE30\uB85C \uBC1C\uD45C\uD568"
+  - _eventid: 2
+    _stageId: 1
+    _eventType: changeStageValue
+    _eventSubtype: changeDownRate
+    _eventTypeValue: 10
+    _eventDurationMs: 4000
+    _randomEventText: 
+  - _eventid: 3
+    _stageId: 0
+    _eventType: 
+    _eventSubtype: 
+    _eventTypeValue: 0
+    _eventDurationMs: 0
+    _randomEventText: 
+  - _eventid: 4
+    _stageId: 0
+    _eventType: 
+    _eventSubtype: 
+    _eventTypeValue: 0
+    _eventDurationMs: 0
+    _randomEventText: 
