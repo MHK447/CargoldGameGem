@@ -16,6 +16,27 @@ public class InGameBattle : MonoBehaviour
     {
         StockRoot.FirstStart();
     }
-  
+
+
+    public void Update()
+    {
+        if (!GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle) return;
+
+
+        //if (waveonesecondtime >= 1f) // one seconds updates;
+        //{
+        //    wavedeltime += 1;
+        //    var wavetime = WaveCoolTime - wavedeltime;
+        //    GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Value = (int)wavetime;
+        //    if (wavedeltime >= WaveCoolTime)
+        //    {
+        //        wavedeltime = 0;
+        //        NextWave();
+        //    }
+        //    waveonesecondtime -= 1f;
+        //}
+        //waveonesecondtime += Time.deltaTime;
+    }
+
 
 }

@@ -253,6 +253,10 @@ MonoBehaviour:
     m_Address: UI/InGame/StockNodeComponent
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9d07bc9077bed4e348330778150122bb
+    m_Address: UI/Page/HUDInGame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
