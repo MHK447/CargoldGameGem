@@ -7,60 +7,53 @@ namespace BanpoFri
     public class EventInfoData
     {
         [SerializeField]
-		private int _event_id;
-		public int event_id
+		private int _eventid;
+		public int eventid
 		{
-			get { return _event_id;}
-			set { _event_id = value;}
+			get { return _eventid;}
+			set { _eventid = value;}
 		}
 		[SerializeField]
-		private int _stage_id;
-		public int stage_id
+		private int _stageId;
+		public int stageId
 		{
-			get { return _stage_id;}
-			set { _stage_id = value;}
+			get { return _stageId;}
+			set { _stageId = value;}
 		}
 		[SerializeField]
-		private string _event_type;
-		public string event_type
+		private string _eventType;
+		public string eventType
 		{
-			get { return _event_type;}
-			set { _event_type = value;}
+			get { return _eventType;}
+			set { _eventType = value;}
 		}
 		[SerializeField]
-		private string _event_subtype;
-		public string event_subtype
+		private string _eventSubtype;
+		public string eventSubtype
 		{
-			get { return _event_subtype;}
-			set { _event_subtype = value;}
+			get { return _eventSubtype;}
+			set { _eventSubtype = value;}
 		}
 		[SerializeField]
-		private int _event_weight;
-		public int event_weight
+		private int _eventTypeValue;
+		public int eventTypeValue
 		{
-			get { return _event_weight;}
-			set { _event_weight = value;}
+			get { return _eventTypeValue;}
+			set { _eventTypeValue = value;}
 		}
 		[SerializeField]
-		private int _event_type_value;
-		public int event_type_value
+		private int _eventDurationMs;
+		public int eventDurationMs
 		{
-			get { return _event_type_value;}
-			set { _event_type_value = value;}
+			get { return _eventDurationMs;}
+			set { _eventDurationMs = value;}
 		}
 		[SerializeField]
-		private int _event_duration;
-		public int event_duration
+		private string _randomEventText;
+		public string randomEventText
 		{
-			get { return _event_duration;}
-			set { _event_duration = value;}
-		}
-		[SerializeField]
-		private string _event_description;
-		public string event_description
-		{
-			get { return _event_description;}
-			set { _event_description = value;}
+			get { return _randomEventText;}
+			set { _randomEventText = value;}
 		}
 
     }

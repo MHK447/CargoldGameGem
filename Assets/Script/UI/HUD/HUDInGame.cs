@@ -17,4 +17,29 @@ public class HUDInGame : UIBase
     [SerializeField]
     private Button BuyBtn;
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        BuyBtn.onClick.AddListener(OnClickBuy);
+        SellBtn.onClick.AddListener(OnClickSell);
+    }
+
+    public void Init()
+    {
+        var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+        TopComponent.Set(stageidx);
+    }
+
+    public void OnClickBuy()
+    {
+
+    }
+
+    public void OnClickSell()
+    {
+
+    }
+
 }

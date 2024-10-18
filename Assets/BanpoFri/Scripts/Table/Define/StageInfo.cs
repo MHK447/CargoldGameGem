@@ -104,6 +104,13 @@ namespace BanpoFri
 			get { return _stage_name;}
 			set { _stage_name = value;}
 		}
+		[SerializeField]
+		private int _stage_end_time;
+		public int stage_end_time
+		{
+			get { return _stage_end_time;}
+			set { _stage_end_time = value;}
+		}
 
     }
 

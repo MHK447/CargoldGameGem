@@ -28,7 +28,7 @@ public class InGameTopComponent : MonoBehaviour
     [SerializeField]
     private Slider TimeSlider;
 
-    private CompositeDisposable disposables;
+    private CompositeDisposable disposables = new CompositeDisposable();
 
     public void Set(int stageidx)
     {
@@ -38,11 +38,11 @@ public class InGameTopComponent : MonoBehaviour
 
         if (infotd != null)
         {
-            GoalPriceText.tag = infotd.target_money.ToString();
+            GoalPriceText.text = infotd.target_money.ToString();
 
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);
 
-           //GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Subscribe(WaveTime).AddTo(disposables);
+           GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Subscribe(WaveTime).AddTo(disposables);
         }
     }
 
@@ -52,27 +52,21 @@ public class InGameTopComponent : MonoBehaviour
     }
 
 
-    //public void WaveTime(int time)
-    //{
-    //    if (time == 0 && GameRoot.Instance.UserData.CurMode.StageData.WaveIdxProperty.Value > 1)
-    //    {
-    //        StartWave(GameRoot.Instance.UserData.CurMode.StageData.WaveIdxProperty.Value + 1);
-    //    }
+    public void WaveTime(int time)
+    {
+        if (time <= 0)
+        {
+            //death
+        }
 
-    //    TimeText.text = ProjectUtility.GetTimeStringFormattingShort(time);
+        LimitTimeText.text = $"Time:{ProjectUtility.GetTimeStringFormattingShort(time)}";
+        TimeSlider.value = (float)time / (float)GameRoot.Instance.UserData.CurMode.StageData.StageCoolTime;
 
-
-    //}
+    }
 
 
     private void OnDestroy()
     {
         disposables.Clear();
     }
-
-    private void OnDisable()
-    {
-        disposables.Clear();
-    }
-
 }

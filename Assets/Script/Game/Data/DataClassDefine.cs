@@ -28,6 +28,8 @@ public class StageData
 
 	public bool IsStartBattle = false;
 
+	public float StageCoolTime = 0f;
+
 	public IReactiveProperty<bool> IsBossProperty = new ReactiveProperty<bool>(false);
 
 	public void StageEndClear()

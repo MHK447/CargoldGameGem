@@ -36,6 +36,8 @@ public class InGameStockRoot : MonoBehaviour
 
     public void FirstStart()
     {
+        GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
+
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
