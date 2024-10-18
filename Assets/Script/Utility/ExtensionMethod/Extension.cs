@@ -88,10 +88,9 @@ namespace DefaultSetting.Utility
             return component;
         }
 
-        public static void BindEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.Click)
-        {
-            UI_Base.BindEvent(go, action, type);
-        }
+        //public static void BindEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.Click)
+        //{
+        //}
         #endregion
 
         #region Transform
