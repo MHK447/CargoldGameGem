@@ -14,6 +14,7 @@ public interface IClientData { }
 
 public class StageData
 {
+	public IReactiveProperty<int> CurStockPriceProperty = new ReactiveProperty<int>();
 	public int StageIdx { get; set; } = 0;
 	public IReactiveProperty<int> WaveIdxProperty = new ReactiveProperty<int>();
 	public IReactiveProperty<int> UnitCountPropety = new ReactiveProperty<int>();

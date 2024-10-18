@@ -54,6 +54,7 @@ MonoBehaviour:
   TrackingPos: 0
   SliderValue: {fileID: 2728280657846508042}
   GuageBar: {fileID: 395942900046962284}
+  ProgressTr: {fileID: 2038534818530368392}
   Type: 0
 --- !u!1 &1273269386106778615
 GameObject:

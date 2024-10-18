@@ -466,9 +466,7 @@ public class PanAndZoom : MonoBehaviour {
         focusing = false;
         follow = true;
         followTrans = worldTrans;
-        focusSize = _focusSize;
         focusDeltaTime = 0f;
-        focusOriginCameraSize = cam.orthographicSize;
     }
 
     public void EndFollow()
@@ -497,7 +495,7 @@ public class PanAndZoom : MonoBehaviour {
         if(follow)
         {
             //cam.orthographicSize = Mathf.Lerp(focusOriginCameraSize, focusSize, Easing.Quartic.Out(focusDeltaTime / focusMoveDuration));
-            cam.transform.position = new Vector3(cam.transform.position.x, followTrans.position.y, cam.transform.position.z);
+            cam.transform.position = new Vector3(followTrans.position.x, followTrans.position.y, cam.transform.position.z);
             //if(focusDeltaTime < focusMoveDuration)
             //    focusDeltaTime += Time.deltaTime;
             //else

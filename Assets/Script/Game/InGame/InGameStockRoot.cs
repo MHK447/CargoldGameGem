@@ -26,23 +26,29 @@ public class InGameStockRoot : MonoBehaviour
 
     public float CameraX = 1f;
 
+    public float CameraY = 1f;
+
     private PanAndZoom Cam;
 
     private StockNodeComponent CurStock;
+
+    private StageInfoData StageInfoData; 
 
     public void FirstStart()
     {
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
-        var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+        StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
 
-        if(td != null)
+        if(StageInfoData != null)
         {
-            delcreatetime = (float)td.node_time / 100f;
+            delcreatetime = (float)StageInfoData.node_time / 100f;
 
             NodeCreateTime = Time.time + delcreatetime;
 
             Cam = GameRoot.Instance.InGameSystem.CurInGame.IngameCamera;
+
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, StageInfoData.start_money);
         }
 
     }
@@ -55,27 +61,55 @@ public class InGameStockRoot : MonoBehaviour
             stock.transform.SetParent(stock.transform);
             stock.transform.position = Vector3.zero;
 
-            Cam.transform.position = new Vector3(Cam.transform.position.x + CameraX, Cam.transform.position.y, 0f);
+            int curstockvalue = GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value;
 
-            if(CurStock != null)
+            if (CurStock != null)
             {
                 float curstockx = CurStock.transform.position.x;
                 float curstocky = CurStock.transform.position.y;
 
+
+
                 if(CurStock.Type == StockNodeComponent.GuageType.RedCandle)
                 {
-                    var istype = IsChangeUpNode();
+                    int percentvalue = 0;
+
+                    var istype = IsChangeDownNode();
+
+                    percentvalue = GetStocUpPercent();
+
+                    var plusvalue = ProjectUtility.GetPercentValue(GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value, percentvalue);
+
+                    plusvalue = curstockvalue + plusvalue;
+
+                    var pluspercentvalue = percentvalue / 20;
+
+                    NodeSpaceIncreaseX = NodeSpaceIncreaseX * pluspercentvalue;
+
                     stock.transform.position =
                     new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + NodeSpaceIncreaseY, 1f);
-                    stock.Set(1, istype);
+                    stock.Set((int)plusvalue, istype,percentvalue);
                     CurStock = stock;
                 }
                 else
                 {
+                    int percentvalue = 0;
+
                     var istype = IsChangeDownNode();
+
+                    percentvalue = GetStocUpPercent();
+
+                    var plusvalue = ProjectUtility.GetPercentValue(GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value, percentvalue);
+
+                    plusvalue = curstockvalue - plusvalue;
+
+                    var pluspercentvalue = percentvalue / 20;
+
+                    NodeSpaceIncreaseX = NodeSpaceIncreaseX * pluspercentvalue;
+
                     stock.transform.position =
                     new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -NodeSpaceIncreaseY, 1f);
-                    stock.Set(1, istype);
+                    stock.Set((int)plusvalue, istype , percentvalue);
                     CurStock = stock;
                 }
             }
@@ -83,9 +117,14 @@ public class InGameStockRoot : MonoBehaviour
             {
                 CurStock = stock;
                 stock.transform.position = Vector3.zero;
-                stock.Set(1, StockNodeComponent.GuageType.RedCandle);
+                stock.Set(StageInfoData.start_price, StockNodeComponent.GuageType.RedCandle);
 
             }
+
+            var cameray = CurStock.Type == StockNodeComponent.GuageType.RedCandle ? CameraY : -CameraY;
+
+            Cam.FollowCameraPos(CurStock.transform);
+            //Cam.transform.position = new Vector3(Cam.transform.position.x + CameraX, Cam.transform.position.y + CameraY, 0f);
         });
 
 
@@ -132,5 +171,42 @@ public class InGameStockRoot : MonoBehaviour
         return type;
     }
 
+
+    public int GetStockDownPercent()
+    {
+        int returnvalue = 0;
+
+        var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+        var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+
+        if(td != null)
+        {
+            returnvalue = Random.Range(td.down_stock_min, td.down_stock_max);
+
+
+        }
+
+        return returnvalue;
+    }
+
+
+    public int GetStocUpPercent()
+    {
+        int returnvalue = 0;
+
+        var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+        var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+
+        if (td != null)
+        {
+            returnvalue = Random.Range(td.down_stock_min, td.down_stock_max);
+
+
+        }
+
+        return returnvalue;
+    }
 
 }
