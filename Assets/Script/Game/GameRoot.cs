@@ -211,7 +211,6 @@ public class GameRoot : Singleton<GameRoot>
 			// Cold start and Application.absoluteURL not null so process Deep Link.
 			//OnDeepLinkActivated(Application.absoluteURL);
 		}
-        StockEventSystem.Init();
     }
 
 	private IEnumerator LoadGameData()
@@ -231,6 +230,7 @@ public class GameRoot : Singleton<GameRoot>
 		//InGameBattleSystem.Create();
 		//UnitUpgradeSystem.Create();
 		//GachaSkillSystem.Create();
+		StockEventSystem.Init();
 
 		LoadComplete = true;
 
@@ -314,6 +314,7 @@ public class GameRoot : Singleton<GameRoot>
 		//ProjectUtility.Init();
 		//InGameBattleSystem.Create();
 		//UnitUpgradeSystem.Create();
+		StockEventSystem.Init();
 	}
 
 	private void SetNativeLanguage()
