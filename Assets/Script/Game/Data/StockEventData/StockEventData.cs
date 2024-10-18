@@ -8,43 +8,96 @@ using UnityEngine;
 
 public class StockEventData
 {
-    private int _stockEventID;
-    private EventInfoData eventInfoTable;
-    private Action<int, EventInfoData> _callback;
+    private EventInfoData _eventInfoData;
+    private Action<EventInfoData> _callback;
 
-    public void Init(int stockEventID)
+    public void Init(EventInfoData stockEventInfo)
     {
-        this._stockEventID = stockEventID;
-        eventInfoTable = Tables.Instance.GetTable<EventInfo>().GetData(stockEventID);
+        _eventInfoData = stockEventInfo;
     }
 
-    public void StartEvent(Action<int, EventInfoData> callback)
+    public void StartEvent(Action<EventInfoData> callback)
     {
         _callback = callback;
         SetData(true);
-        GameRoot.Instance.WaitTimeAndCallback(eventInfoTable.eventDurationMs / 1000, EndEvent);
+        GameRoot.Instance.WaitTimeAndCallback(_eventInfoData.eventDurationMs / 100, EndEvent);
     }
 
     public void EndEvent()
     {
         SetData(false);
-        _callback.Invoke(_stockEventID, eventInfoTable);
+
+        _callback.Invoke(_eventInfoData);
     }
 
     //TODO: Start인 경우 의도한 값 그대로 세팅하고, 끝나는 경우 -1 곱하기
     private void SetData(bool isStart)
     {
-        switch (_stockEventID)
+        switch (_eventInfoData.eventid)
         {
             case 1:
-                Debug.Log($"HighCl_{Time.time}:\nEvent1 Data Setting");
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
                 break;
             case 2:
-                Debug.Log($"HighCl_{Time.time}:\nEvent2 Data Setting");
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
                 break;
             case 3:
-                Debug.Log($"HighCl_{Time.time}:\nEvent3 Data Setting");
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
                 break;
+            case 4:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+            case 5:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+            case 6:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+
+            case 7:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 8:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 9:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+            case 10:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 11:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 12:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 13:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 14:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 15:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 16:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
+            case 17:
+                Debug.Log($"HighCl_{Time.time}: SetData\nEvent{_eventInfoData.eventid} Data Setting");
+                break;
+
             default:
                 break;
         }
