@@ -14,22 +14,22 @@ namespace BanpoFri
 			set { _stage_id = value;}
 		}
 		[SerializeField]
-		private int _start_price;
-		public int start_price
+		private string _start_price;
+		public string start_price
 		{
 			get { return _start_price;}
 			set { _start_price = value;}
 		}
 		[SerializeField]
-		private int _start_money;
-		public int start_money
+		private string _start_money;
+		public string start_money
 		{
 			get { return _start_money;}
 			set { _start_money = value;}
 		}
 		[SerializeField]
-		private int _target_money;
-		public int target_money
+		private string _target_money;
+		public string target_money
 		{
 			get { return _target_money;}
 			set { _target_money = value;}

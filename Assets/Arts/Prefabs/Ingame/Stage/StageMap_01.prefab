@@ -48,6 +48,7 @@ MonoBehaviour:
   CachedComponents: []
   NodePrefab: {fileID: 1017694813467802991, guid: 39acf7367e68744bfbb03a1682064ae6, type: 3}
   NodeRoot: {fileID: 1521384825307130178}
+  CameraX: 0.5
 --- !u!1 &2103061425278037048
 GameObject:
   m_ObjectHideFlags: 0

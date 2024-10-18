@@ -20,10 +20,11 @@ public class InGameStage : MonoBehaviour
 
     public void Init()
     {
+        GameRoot.Instance.UserData.CurMode.StageData.StageIdx = 1;
         IsLoadComplete = false;
         disposable.Clear();
         Battle.Init();
     }
 
-   
+    
 }

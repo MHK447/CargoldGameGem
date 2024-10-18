@@ -20,7 +20,7 @@ public class StockNodeComponent : InGameFloatingUI
     [SerializeField]
     private Image GuageBar;
 
-    private GuageType Type;
+    public GuageType Type;
 
 
     public void Set(int value , GuageType type)

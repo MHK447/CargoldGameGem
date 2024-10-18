@@ -253,6 +253,11 @@ public class PanAndZoom : MonoBehaviour {
         //}
     }
 
+    public void SetCamX(float x)
+    {
+
+    }
+
     void UpdateWithTouch() {
         int touchCount = Input.touches.Length;
 

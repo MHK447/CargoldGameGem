@@ -31,12 +31,12 @@ MonoBehaviour:
     _down_speed_max: 30
     _up_speed_min: 10
     _up_speed_max: 50
-    _event_time: e8030000c800000090010000
+    _event_time: e8030000d0070000a00f0000
     _stage_name: "\uD14C\uC2AC\uB77C"
   - _stage_id: 2
-    _start_price: 0
-    _start_money: 0
-    _target_money: 0
+    _start_price: 
+    _start_money: 
+    _target_money: 
     _start_up_rate: 0
     _node_time: 0
     _change_down_rate: 0
@@ -48,9 +48,9 @@ MonoBehaviour:
     _event_time: 
     _stage_name: 
   - _stage_id: 3
-    _start_price: 0
-    _start_money: 0
-    _target_money: 0
+    _start_price: 
+    _start_money: 
+    _target_money: 
     _start_up_rate: 0
     _node_time: 0
     _change_down_rate: 0
@@ -62,9 +62,9 @@ MonoBehaviour:
     _event_time: 
     _stage_name: 
   - _stage_id: 4
-    _start_price: 0
-    _start_money: 0
-    _target_money: 0
+    _start_price: 
+    _start_money: 
+    _target_money: 
     _start_up_rate: 0
     _node_time: 0
     _change_down_rate: 0
