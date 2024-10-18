@@ -17,31 +17,61 @@ MonoBehaviour:
   - 2
   - 3
   - 4
-  - 5
-  - 6
   mSecondKey: []
   mDataList:
-  - _stage_idx: 1
-    _stage_prefab: Stage_01
-    _start_hp: 10
-    _planet_img: Stage_01
-  - _stage_idx: 2
-    _stage_prefab: Stage_02
-    _start_hp: 3
-    _planet_img: Stage_02
-  - _stage_idx: 3
-    _stage_prefab: Stage_03
-    _start_hp: 10
-    _planet_img: Stage_03
-  - _stage_idx: 4
-    _stage_prefab: Stage_04
-    _start_hp: 3
-    _planet_img: Stage_04
-  - _stage_idx: 5
-    _stage_prefab: Stage_05
-    _start_hp: 10
-    _planet_img: Stage_05
-  - _stage_idx: 6
-    _stage_prefab: Stage_06
-    _start_hp: 3
-    _planet_img: Stage_06
+  - _stage_id: 1
+    _start_price: 100
+    _start_money: 1000
+    _target_money: 10000
+    _start_up_rate: 50
+    _node_time: 50
+    _change_down_rate: 30
+    _change_up_rate: 50
+    _down_speed_min: 20
+    _down_speed_max: 30
+    _up_speed_min: 10
+    _up_speed_max: 50
+    _event_time: e8030000c800000090010000
+    _stage_name: "\uD14C\uC2AC\uB77C"
+  - _stage_id: 2
+    _start_price: 0
+    _start_money: 0
+    _target_money: 0
+    _start_up_rate: 0
+    _node_time: 0
+    _change_down_rate: 0
+    _change_up_rate: 0
+    _down_speed_min: 0
+    _down_speed_max: 0
+    _up_speed_min: 0
+    _up_speed_max: 0
+    _event_time: 
+    _stage_name: 
+  - _stage_id: 3
+    _start_price: 0
+    _start_money: 0
+    _target_money: 0
+    _start_up_rate: 0
+    _node_time: 0
+    _change_down_rate: 0
+    _change_up_rate: 0
+    _down_speed_min: 0
+    _down_speed_max: 0
+    _up_speed_min: 0
+    _up_speed_max: 0
+    _event_time: 
+    _stage_name: 
+  - _stage_id: 4
+    _start_price: 0
+    _start_money: 0
+    _target_money: 0
+    _start_up_rate: 0
+    _node_time: 0
+    _change_down_rate: 0
+    _change_up_rate: 0
+    _down_speed_min: 0
+    _down_speed_max: 0
+    _up_speed_min: 0
+    _up_speed_max: 0
+    _event_time: 
+    _stage_name: 
