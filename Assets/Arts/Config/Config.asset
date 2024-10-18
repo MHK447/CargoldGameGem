@@ -149,12 +149,10 @@ MonoBehaviour:
     color: {r: 0.8666667, g: 0.007843138, b: 0, a: 0.21176471}
   - key_string: DecoColor_05
     color: {r: 0.8, g: 0.1882353, b: 0, a: 0.3529412}
-  - key_string: Unit_Grade_1
-    color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0.50980395}
-  - key_string: Unit_Grade_2
-    color: {r: 0, g: 0.21631074, b: 1, a: 0.5058824}
-  - key_string: Unit_Grade_3
-    color: {r: 0.9926069, g: 1, b: 0, a: 0.5058824}
+  - key_string: StockNode_Red
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - key_string: StockNode_Blue
+    color: {r: 0, g: 0.21631074, b: 1, a: 1}
   _eventImgaeColorDefines: []
   SkeletonGraphicMat: {fileID: 0}
   DisableSpriteMat: {fileID: 0}

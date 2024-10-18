@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395581141440432814}
-  - component: {fileID: 8961706864142629498}
+  - component: {fileID: 4870112020380256960}
   m_Layer: 9
-  m_Name: HpUI
+  m_Name: StockNodeComponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017694813467802991}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7023868, w: 0.71179545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32,13 +32,13 @@ RectTransform:
   - {fileID: 2038534818530368392}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.238}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 9}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &8961706864142629498
+--- !u!114 &4870112020380256960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,12 +47,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1017694813467802991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833679b57b64f4324a310cc3ceab6987, type: 3}
+  m_Script: {fileID: 11500000, guid: b7e30ff62facc40f680f4602b2f5444e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TrackingScale: 0
-  TrackingPos: 1
+  TrackingPos: 0
   SliderValue: {fileID: 2728280657846508042}
+  GuageBar: {fileID: 395942900046962284}
 --- !u!1 &1273269386106778615
 GameObject:
   m_ObjectHideFlags: 0

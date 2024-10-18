@@ -121,10 +121,6 @@ MonoBehaviour:
     m_Address: Unit016
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: aab414c4247c8a942b2837a45b69a82b
-    m_Address: UI/InGame/InGameHpUI
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 7b5c3e2130054d4409abbc55f73079dc
     m_Address: UI/InGame/InGameDamageUI
     m_ReadOnly: 0
@@ -251,6 +247,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5e6f0f502e8c9334abfb82236c2a869a
     m_Address: Effect/TornadoEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39acf7367e68744bfbb03a1682064ae6
+    m_Address: UI/InGame/StockNodeComponent
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -29,9 +29,6 @@ public class InGameTycoon : InGameMode
     {
         base.Load();
 
-
-
-
         Addressables.InstantiateAsync("InGame1_1").Completed += (handle) =>
         {
             curInGameStage = handle.Result.GetComponent<InGameStage>();
@@ -40,16 +37,7 @@ public class InGameTycoon : InGameMode
                 curInGameStage.Init();
             }
         };
-
-        //CalculateGameSpeed();
-
     }
-
-    //public void CalculateGameSpeed()
-    //{
-    //    var buffValue = GameRoot.Instance.BuffSystem.GetValueByBuffType(BuffSystem.BuffType.ProductSpeed);
-    //    GameSpeedMultiValue.Value = 1f - buffValue;
-    //}
 
     protected override void LoadUI()
     {

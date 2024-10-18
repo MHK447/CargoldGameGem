@@ -22,6 +22,8 @@ public class InGameStage : MonoBehaviour
     {
         IsLoadComplete = false;
         disposable.Clear();
-        //Battle.Init();
+        Battle.Init();
     }
+
+   
 }
