@@ -50,7 +50,12 @@ public class StockEventSystem
 
     private EventInfoData GetRandomEvent()
     {
-        EventInfoData randomEventInfoData = _cashingCurrentStageEventList[Random.Range(0, _cashingCurrentStageEventList.Count)];
+        float[] eventWeights = new float[_cashingCurrentStageEventList.Count];
+        for (int i = 0; i < _cashingCurrentStageEventList.Count; i++)
+            eventWeights[i] = _cashingCurrentStageEventList[i].event_weight; //TODO: 추후 가중치 변수로 변경
+        int randomIdx = Extension.RandomWeightedIndex(eventWeights);
+
+        EventInfoData randomEventInfoData = _cashingCurrentStageEventList[randomIdx];
         return randomEventInfoData;
     }
 
