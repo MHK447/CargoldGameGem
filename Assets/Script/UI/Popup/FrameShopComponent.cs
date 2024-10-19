@@ -22,6 +22,8 @@ public class FrameShopComponent : MonoBehaviour
     [SerializeField]
     private Button BuyBtn;
 
+    [SerializeField]
+    private Animator Anim;
 
 
     private int ItemInfoIdx = 0;
@@ -64,6 +66,8 @@ public class FrameShopComponent : MonoBehaviour
             GameRoot.Instance.UserData.CurMode.WeaponDatas.Add(neweapondata);
 
             ProjectUtility.SetActiveCheck(BuyBtn.gameObject, false);
+
+            Anim.Play("Anime_Shop", 0, 0f);
         }
     }
 }
