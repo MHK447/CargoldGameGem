@@ -185,7 +185,6 @@ public class AdsAbilitySystem
             if (x == AdAbilityState.Show)
             {
                 //GameRoot.Instance.UserData.CurMode.StageData.AdsShowCount += 1;
-                Cash.Value = CalcCurrencyAbility((int)Config.CurrencyID.Cash);
             }
         }).AddTo(disposables);
 
@@ -414,14 +413,7 @@ public class AdsAbilitySystem
                         returnvalue = (td.value_1 * multiplefactor1) / 100;
                         return returnvalue;
                     }
-                case (int)Config.CurrencyID.Cash:
-                    {
-                        return td.value_1;
-                    }
             }
-
-
-
         }
 
         return 0;

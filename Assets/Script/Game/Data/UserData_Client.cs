@@ -30,7 +30,8 @@ public partial class UserDataSystem
 	public IReactiveCollection<int> OneLink { get; private set; } = new ReactiveCollection<int>();
 
 	public IReactiveProperty<BigInteger> HUDMoney = new ReactiveProperty<BigInteger>(0);
-	public IReactiveProperty<BigInteger> HudEnergyMoney = new ReactiveProperty<BigInteger>(0);
+    public IReactiveProperty<BigInteger> HUDUpgradeCoin = new ReactiveProperty<BigInteger>(0);
+    public IReactiveProperty<BigInteger> HudEnergyMoney = new ReactiveProperty<BigInteger>(0);
 	public IReactiveProperty<int> HUDCash = new ReactiveProperty<int>(0);
 
 
@@ -117,13 +118,9 @@ public partial class UserDataSystem
             HudEnergyMoney.Value = CurMode.EnergyMoney.Value;
             HUDCash.Value = Cash.Value;
         }
-        else if (currencyID == (int)Config.CurrencyID.Cash)
+        else if (currencyID == (int)Config.CurrencyID.UpgradeCoin)
         {
-            HUDCash.Value = Cash.Value;
-        }
-        else if (currencyID == (int)Config.CurrencyID.EnergyMoney)
-        {
-            HudEnergyMoney.Value = CurMode.EnergyMoney.Value;
+            HUDUpgradeCoin.Value = CurMode.EnergyMoney.Value;
         }
         else if (currencyID == (int)Config.CurrencyID.Money)
         {
@@ -136,19 +133,14 @@ public partial class UserDataSystem
         if (rewardType != (int)Config.RewardType.Currency) return;
         switch (rewardIdx)
         {
-            case (int)Config.CurrencyID.EnergyMoney:
-                {
-                    HudEnergyMoney.Value += (int)rewardCnt;
-                }
-                break;
             case (int)Config.CurrencyID.Money:
                 {
                     HUDMoney.Value += rewardCnt;
                 }
                 break;
-            case (int)Config.CurrencyID.Cash:
+            case (int)Config.CurrencyID.UpgradeCoin:
                 {
-                    HUDCash.Value += (int)rewardCnt;
+                    HUDUpgradeCoin.Value += rewardCnt;
                 }
                 break;
         }
@@ -167,23 +159,11 @@ public partial class UserDataSystem
                                 CurMode.Money.Value += rewardCnt;
                             }
                             break;
-                        case (int)Config.CurrencyID.Cash:
+                        case (int)Config.CurrencyID.UpgradeCoin:
                             {
-                                Cash.Value += (int)rewardCnt;
+                                CurMode.UpgradeCoin.Value += rewardCnt;
                             }
                             break;
-                        case (int)Config.CurrencyID.EnergyMoney:
-                            {   
-                                CurMode.EnergyMoney.Value += (int)rewardCnt;
-                            }
-                            break;
-                        case (int)Config.CurrencyID.GachaCoin:
-                            {
-                                CurMode.GachaCoin.Value += (int)rewardCnt;
-                            }
-                            break;
-
-
                     }
                     if (hudRefresh)
                     {

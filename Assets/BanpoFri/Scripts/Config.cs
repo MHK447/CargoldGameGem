@@ -69,9 +69,7 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     public enum CurrencyID
     {
         Money = 1,
-        Cash = 2,
-        EnergyMoney = 3,
-        GachaCoin = 4,
+        UpgradeCoin = 2,
     }
 
 
@@ -251,12 +249,6 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     {
         switch(currenyidx)
         {
-            case (int)Config.CurrencyID.Cash:
-                return GetCommonImg("Icon_Gem03_Diamond_Purple");
-            case (int)Config.CurrencyID.GachaCoin:
-                return GetCommonImg("Icon_Cards");
-            case (int)Config.CurrencyID.EnergyMoney:
-                return GetCommonImg("Icon_Energy_Green");
             case (int)Config.CurrencyID.Money:
                 return GetCommonImg("Icon_Gem01_Blue");
         }

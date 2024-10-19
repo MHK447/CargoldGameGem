@@ -12,6 +12,9 @@ public class HUDInGame : UIBase
     [SerializeField]
     private InGameTopComponent TopComponent;
 
+    [HideInInspector]
+    public StageResultComponent ResultComponent;
+
     [SerializeField]
     private Button SellBtn;
 
@@ -36,10 +39,12 @@ public class HUDInGame : UIBase
 
     public void Init()
     {
+        ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
+
         disposables.Clear();
 
         var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
-        TopComponent.Set(stageidx);
+        TopComponent.Set(stageidx , this);
 
         GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Subscribe(x => {
             CurPlayerStockText.text = $"{x}주";
@@ -55,6 +60,7 @@ public class HUDInGame : UIBase
     {
         GameRoot.Instance.PlayerSystem.AddStock();
     }
+
 
     public void OnClickSell()
     {

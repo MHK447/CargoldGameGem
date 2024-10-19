@@ -8,6 +8,7 @@ public interface IUserDataMode
 {
 	// Config.Language Language {get; set;}= Config.Language.en;
 	IReactiveProperty<BigInteger> Money { get; set; }
+	IReactiveProperty<BigInteger> UpgradeCoin { get; set; }
 	DateTime LastLoginTime { get; set; }
 	DateTime CurPlayDateTime { get; set; }
 	public PlayerData PlayerData { get; set; }
@@ -41,8 +42,10 @@ public class UserDataMain : IUserDataMode
 	public List<InGameUpgradeData> InGameUpgradeDataList { get; set; } = new List<InGameUpgradeData>();
 	public IReactiveProperty<BigInteger> EnergyMoney { get; set; } = new ReactiveProperty<BigInteger>(0);
 	public IReactiveProperty<int> GachaCoin { get; set; } = new ReactiveProperty<int>(0);
+	public IReactiveProperty<BigInteger> UpgradeCoin { get; set; } = new ReactiveProperty<BigInteger>(0);
 	public List<UnitCardData> UnitCardDatas { get; set; } = new List<UnitCardData>();
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; } = new List<InGameUnitUpgradeData>();
+
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; } = new List<PassiveSkillData>();
 	public IReactiveCollection<SkillCardData> SkillCardDatas { get; set; } = new ReactiveCollection<SkillCardData>();
 	public IReactiveCollection<OutGameUnitUpgradeData> OutGameUnitUpgradeDatas { get; set; } = new ReactiveCollection<OutGameUnitUpgradeData>();

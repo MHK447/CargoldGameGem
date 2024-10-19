@@ -30,9 +30,13 @@ public class InGameTopComponent : MonoBehaviour
 
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    public void Set(int stageidx)
+    private HUDInGame HudInGame;
+
+    public void Set(int stageidx , HUDInGame hudingame)
     {
-        disposables.Clear();    
+        disposables.Clear();
+
+        HudInGame = hudingame;
 
         var infotd = Tables.Instance.GetTable<StageInfo>().GetData(stageidx);
 
@@ -56,12 +60,57 @@ public class InGameTopComponent : MonoBehaviour
     {
         if (time <= 0)
         {
-            //death
+            Result();
         }
 
         LimitTimeText.text = $"Time:{ProjectUtility.GetTimeStringFormattingShort(time)}";
         TimeSlider.value = (float)time / (float)GameRoot.Instance.UserData.CurMode.StageData.StageCoolTime;
 
+    }
+
+
+    public void Result()
+    {
+        ProjectUtility.SetActiveCheck(HudInGame.ResultComponent.gameObject, true);
+
+        var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+        var td = Tables.Instance.GetTable<StageInfo>().GetData(stageidx);
+
+        if(td != null)
+        {
+            if (GameRoot.Instance.UserData.CurMode.Money.Value >= td.target_money)
+            {
+                var stagerewardtd = Tables.Instance.GetTable<StageRewardInfo>().GetData(stageidx);
+
+                if(stagerewardtd != null)
+                {
+                    var stagereward_1 = ProjectUtility.
+                        GetPercentValue((float)td.target_money, stagerewardtd.bonus_percent_1);
+
+                    var stagereward_2 = ProjectUtility.
+                        GetPercentValue((float)td.target_money, stagerewardtd.bonus_percent_2);
+
+                    var stageresult = stagerewardtd.base_reward;
+
+                    if ((int)stagereward_1 <= GameRoot.Instance.UserData.CurMode.Money.Value)
+                    {
+                        stageresult = stagerewardtd.base_reward + stagerewardtd.bonus_reward_1;
+                    }
+                    else if((int)stagereward_2 <= GameRoot.Instance.UserData.CurMode.Money.Value)
+                    {
+                        stageresult = stagerewardtd.base_reward + stagerewardtd.bonus_reward_2;
+                    }
+
+                    HudInGame.ResultComponent.Set(stageresult, true);
+                }
+            }
+            else
+            {
+
+                HudInGame.ResultComponent.Set(0, false);
+            }
+        }
     }
 
 
