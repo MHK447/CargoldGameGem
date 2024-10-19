@@ -212,7 +212,7 @@ public class InGameStockRoot : MonoBehaviour
 
         if (td != null)
         {
-            returnvalue = Random.Range(td.down_stock_min, td.down_stock_max);
+            returnvalue = Random.Range(td.up_stock_min, td.up_stock_max);
 
 
         }
