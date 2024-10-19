@@ -29,6 +29,7 @@ public class PlayerSystem
             GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value += 1;
 
 
+            SoundPlayer.Instance.PlaySound("Effect_Btn_Buy");
             GameRoot.Instance.EffectSystem.MultiPlay<PirceTextEffect>(btntr.position, effect =>
             {
                 ProjectUtility.SetActiveCheck(effect.gameObject, true);
@@ -37,6 +38,10 @@ public class PlayerSystem
 
                 effect.SetText(stockvalue.ToString());
             });
+        }
+        else
+        {
+            SoundPlayer.Instance.PlaySound("Effect_Btn_Fail");
         }
 
     }
@@ -89,7 +94,12 @@ public class PlayerSystem
                 effect.transform.SetParent(GameRoot.Instance.UISystem.WorldCanvas.transform);
 
                 effect.SetText(stockvalue.ToString());
+                SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
             });
+        }
+        else
+        {
+            SoundPlayer.Instance.PlaySound("Effect_Btn_Fail");
         }
 
     }

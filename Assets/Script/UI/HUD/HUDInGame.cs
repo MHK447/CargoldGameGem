@@ -53,6 +53,9 @@ public class HUDInGame : UIBase
     [SerializeField]
     private Image CompanyLogoImage;
 
+    [SerializeField]
+    private StagePrologueComponent PrologueComponent;
+
     private CompositeDisposable disposables = new CompositeDisposable();
 
     protected override void Awake()
@@ -63,39 +66,81 @@ public class HUDInGame : UIBase
         SellBtn.onClick.AddListener(OnClickSell);
     }
 
-    public void Init()
+    public void Init(System.Action action)
     {
-        Debug.Log("InGameLoad!!");
+        if (action != null)
+        {
+            ProjectUtility.SetActiveCheck(PrologueComponent.gameObject, true);
+            PrologueComponent.Init(() =>
+            {
+                Debug.Log("InGameLoad!!");
+                action?.Invoke();
 
-        ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
+                GameRoot.Instance.WaitTimeAndCallback(0.25f, () =>
+                {
 
-        GameRoot.Instance.StockEventSystem.onStartEventAction -= OnStartEvent;
-        GameRoot.Instance.StockEventSystem.onStartEventAction += OnStartEvent;
-        GameRoot.Instance.StockEventSystem.onEndEventAction -= OnEndEvent;
-        GameRoot.Instance.StockEventSystem.onEndEventAction += OnEndEvent;
+                    ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
 
-        var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
-        TopComponent.Set(stageidx , this);
+                    GameRoot.Instance.StockEventSystem.onStartEventAction -= OnStartEvent;
+                    GameRoot.Instance.StockEventSystem.onStartEventAction += OnStartEvent;
+                    GameRoot.Instance.StockEventSystem.onEndEventAction -= OnEndEvent;
+                    GameRoot.Instance.StockEventSystem.onEndEventAction += OnEndEvent;
 
-        GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Subscribe(x => {
-            CurPlayerStockText.text = $"{x}주";
-        }).AddTo(disposables);
-            
+                    var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+                    TopComponent.Set(stageidx, this);
 
-        GameRoot.Instance.UserData.CurMode.Money.Subscribe(x=> {
-            SetMyMoneyText((int)x);
-        }).AddTo(disposables);
+                    GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Subscribe(x =>
+                    {
+                        CurPlayerStockText.text = $"{x}주";
+                    }).AddTo(disposables);
 
-        string iconFileName = Tables.Instance.GetTable<StageInfo>().GetData(stageidx).stage_icon_filename;
-        CompanyLogoImage.sprite = Config.Instance.GetCompanyAtlasImg(iconFileName);
-        GoodNewsText.gameObject.SetActive(false);
-        BadNewsText.gameObject.SetActive(false);
-        ConcentrationLine.enabled = false;
+
+                    GameRoot.Instance.UserData.CurMode.Money.Subscribe(x =>
+                    {
+                        SetMyMoneyText((int)x);
+                    }).AddTo(disposables);
+
+                    string iconFileName = Tables.Instance.GetTable<StageInfo>().GetData(stageidx).stage_icon_filename;
+                    CompanyLogoImage.sprite = Config.Instance.GetCompanyAtlasImg(iconFileName);
+                    GoodNewsText.gameObject.SetActive(false);
+                    BadNewsText.gameObject.SetActive(false);
+                    ConcentrationLine.enabled = false;
+                });
+            });
+        }
+        else
+        {
+
+            ProjectUtility.SetActiveCheck(PrologueComponent.gameObject, false);
+            ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
+
+            GameRoot.Instance.StockEventSystem.onStartEventAction -= OnStartEvent;
+            GameRoot.Instance.StockEventSystem.onStartEventAction += OnStartEvent;
+            GameRoot.Instance.StockEventSystem.onEndEventAction -= OnEndEvent;
+            GameRoot.Instance.StockEventSystem.onEndEventAction += OnEndEvent;
+
+            var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+            TopComponent.Set(stageidx, this);
+
+            GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Subscribe(x => {
+                CurPlayerStockText.text = $"{x}주";
+            }).AddTo(disposables);
+
+
+            GameRoot.Instance.UserData.CurMode.Money.Subscribe(x => {
+                SetMyMoneyText((int)x);
+            }).AddTo(disposables);
+
+            string iconFileName = Tables.Instance.GetTable<StageInfo>().GetData(stageidx).stage_icon_filename;
+            CompanyLogoImage.sprite = Config.Instance.GetCompanyAtlasImg(iconFileName);
+            GoodNewsText.gameObject.SetActive(false);
+            BadNewsText.gameObject.SetActive(false);
+            ConcentrationLine.enabled = false;
+        }
     }
 
     public void OnClickBuy()
     {
-        SoundPlayer.Instance.PlaySound("Effect_Btn_Buy");
         if (GameRoot.Instance.PlayerSystem.IsLuckyBuy())
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
@@ -109,7 +154,6 @@ public class HUDInGame : UIBase
 
     public void OnClickSell()
     {
-        SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
         characterAnim.SetTrigger("Click");
         //TreepllaNative.Vibrate();

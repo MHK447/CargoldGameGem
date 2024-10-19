@@ -29,14 +29,14 @@ public class InGameTycoon : InGameMode
     {
         base.Load();
 
-        Addressables.InstantiateAsync("InGame1_1").Completed += (handle) =>
-        {
-            curInGameStage = handle.Result.GetComponent<InGameStage>();
-            if (curInGameStage != null)
-            {
-                curInGameStage.Init();
-            }
-        };
+        //Addressables.InstantiateAsync("InGame1_1").Completed += (handle) =>
+        //{
+        //    curInGameStage = handle.Result.GetComponent<InGameStage>();
+        //    if (curInGameStage != null)
+        //    {
+        //        curInGameStage.Init();
+        //    }
+        //};
     }
 
     protected override void LoadUI()
@@ -45,9 +45,19 @@ public class InGameTycoon : InGameMode
 
         GameRoot.Instance.InGameSystem.InitPopups();
 
-        GameRoot.Instance.WaitTimeAndCallback(1f, () =>
+        GameRoot.Instance.WaitTimeAndCallback(0.25f, () =>
         {
-            GameRoot.Instance.UISystem.OpenUI<HUDInGame>(popup => popup.Init());
+            GameRoot.Instance.UISystem.OpenUI<HUDInGame>(popup => popup.Init(()=> {
+
+                Addressables.InstantiateAsync("InGame1_1").Completed += (handle) =>
+                {
+                    curInGameStage = handle.Result.GetComponent<InGameStage>();
+                    if (curInGameStage != null)
+                    {
+                        curInGameStage.Init();
+                    }
+                };
+            }));
         });
     }
 

@@ -44,7 +44,7 @@ public class StageResultComponent : MonoBehaviour
 
             if (gethudingame != null)
             {
-                gethudingame.Init();
+                gethudingame.Init(null);
             }
 
             ProjectUtility.SetActiveCheck(this.gameObject, false);
