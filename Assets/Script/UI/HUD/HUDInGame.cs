@@ -65,9 +65,9 @@ public class HUDInGame : UIBase
 
     public void Init()
     {
-        ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
+        Debug.Log("InGameLoad!!");
 
-        disposables.Clear();
+        ProjectUtility.SetActiveCheck(ResultComponent.gameObject, false);
 
         GameRoot.Instance.StockEventSystem.onStartEventAction -= OnStartEvent;
         GameRoot.Instance.StockEventSystem.onStartEventAction += OnStartEvent;
@@ -100,7 +100,7 @@ public class HUDInGame : UIBase
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
         }
-        TreepllaNative.Vibrate();
+        //TreepllaNative.Vibrate();
         GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
 
         characterAnim.SetTrigger("Click");
@@ -112,7 +112,7 @@ public class HUDInGame : UIBase
         SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
         characterAnim.SetTrigger("Click");
-        TreepllaNative.Vibrate();
+        //TreepllaNative.Vibrate();
     }
 
     public void SetMyMoneyText(int mymoney)
@@ -137,10 +137,5 @@ public class HUDInGame : UIBase
         GoodNewsText.gameObject.SetActive(false);
         BadNewsText.gameObject.SetActive(false);
         ConcentrationLine.enabled = false;
-    }
-
-    private void OnDestroy()
-    {
-        disposables.Clear();
     }
 }

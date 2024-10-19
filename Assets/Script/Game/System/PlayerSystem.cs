@@ -11,6 +11,8 @@ public class PlayerSystem
     public void Create()
     {
         min_stock_price = Tables.Instance.GetTable<Define>().GetData("min_stock_price").value;
+
+        var LocaleCode = TreepllaNative.getLocaleCountry();
     }
 
 
