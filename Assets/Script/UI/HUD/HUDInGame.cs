@@ -77,7 +77,7 @@ public class HUDInGame : UIBase
 
     public void OnClickBuy()
     {
-        SoundPlayer.Instance.PlaySound("btn");
+        SoundPlayer.Instance.PlaySound("Effect_Btn_Buy");
         if (GameRoot.Instance.PlayerSystem.IsLuckyBuy())
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
@@ -89,7 +89,7 @@ public class HUDInGame : UIBase
 
     public void OnClickSell()
     {
-        SoundPlayer.Instance.PlaySound("btn");
+        SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
     }
 
