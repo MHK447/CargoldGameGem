@@ -161,7 +161,7 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 10
+    _event_weight: 100
     _event_type_values: f6ffffffceffffff0a00000032000000
     _event_duration: 1000
     _event_filename: common_BG_icon_08
@@ -174,7 +174,7 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 10
+    _event_weight: 100
     _event_type_values: f6ffffffceffffff0a00000032000000
     _event_duration: 1000
     _event_filename: common_BG_icon_09
@@ -187,7 +187,7 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 10
+    _event_weight: 100
     _event_type_values: f6ffffffceffffff0a00000032000000
     _event_duration: 1000
     _event_filename: common_BG_icon_10
@@ -359,21 +359,6 @@ MonoBehaviour:
       '\uC885\uC774\uC640 \uC789\uD06C\uB294 \uB108\uBB34 \uADC0\uC911\uD574,"
   - _event_id: 22
     _stage_id: 0
-    _good_event_yn: 0
-    _event_types:
-    - add_up_stock
-    - add_up_rate
-    - add_down_stock
-    - add_down_rate
-    _event_weight: 1
-    _event_type_values: fbffffffe2ffffff050000001e000000
-    _event_duration: 1000
-    _event_filename: common_BG_icon_22
-    _event_description: "\"\uBE44\uD2B8\uCF54\uC778 1\uC5B5 \uB2EC\uB7EC \uB3CC\uD30C,
-      \uD558\uC9C0\uB9CC 3\uC13C\uD2B8\uB85C \uD3ED\uB77D\uD560 \uC218 \uC788\uB2E4?
-      \uD22C\uC790\uC790\uB4E4 \uACF5\uD3EC\uC5D0 \uD729\uC2F8\uC5EC\""
-  - _event_id: 23
-    _stage_id: 0
     _good_event_yn: 1
     _event_types:
     - add_up_stock
@@ -382,6 +367,21 @@ MonoBehaviour:
     - add_down_rate
     _event_weight: 1
     _event_type_values: 050000001e000000fbffffffe2ffffff
+    _event_duration: 1000
+    _event_filename: common_BG_icon_22
+    _event_description: "\"\uBE44\uD2B8\uCF54\uC778 1\uC5B5 \uB2EC\uB7EC \uB3CC\uD30C,
+      \uD558\uC9C0\uB9CC 3\uC13C\uD2B8\uB85C \uD3ED\uB77D\uD560 \uC218 \uC788\uB2E4?
+      \uD22C\uC790\uC790\uB4E4 \uACF5\uD3EC\uC5D0 \uD729\uC2F8\uC5EC\""
+  - _event_id: 23
+    _stage_id: 0
+    _good_event_yn: 0
+    _event_types:
+    - add_up_stock
+    - add_up_rate
+    - add_down_stock
+    - add_down_rate
+    _event_weight: 1
+    _event_type_values: fbffffffe2ffffff050000001e000000
     _event_duration: 1000
     _event_filename: common_BG_icon_23
     _event_description: "\"\uBE44\uD2B8\uCF54\uC778 3\uC13C\uD2B8 \uC774\uD558? \uC624\uD788\uB824
