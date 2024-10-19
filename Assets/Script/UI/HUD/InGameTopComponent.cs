@@ -117,11 +117,12 @@ public class InGameTopComponent : MonoBehaviour
                     }
 
                     HudInGame.ResultComponent.Set(stageresult, true);
+                    GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
                 }
             }
             else
             {
-
+                GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
                 HudInGame.ResultComponent.Set(0, false);
             }
         }

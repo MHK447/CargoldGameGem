@@ -36,6 +36,7 @@ public class InGameStockRoot : MonoBehaviour
     {
         GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime -= ChangedNodeCreateTime;
         GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime += ChangedNodeCreateTime;
+        GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
 
         foreach (var node in CachedComponents)
         {
@@ -112,11 +113,8 @@ public class InGameStockRoot : MonoBehaviour
 
                     var xvalue = NodeSpaceIncreaseX * pluspercentvalue;
 
-
-                    var yvalue = NodeSpaceIncreaseY * pluspercentvalue;
-
                     stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + yvalue, 1f);
+                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + NodeSpaceIncreaseY, 1f);
                     stock.Set((int)plusvalue, istype,percentvalue);
                     CurStock = stock;
                 }
@@ -126,7 +124,7 @@ public class InGameStockRoot : MonoBehaviour
 
                     var istype = IsChangeDownNode();
 
-                    percentvalue = GetStocUpPercent();
+                    percentvalue = GetStockDownPercent();
 
                     var plusvalue = ProjectUtility.GetPercentValue(GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value, percentvalue);
 
@@ -139,7 +137,7 @@ public class InGameStockRoot : MonoBehaviour
                     var yvalue = NodeSpaceIncreaseY * pluspercentvalue;
 
                     stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -yvalue, 1f);
+                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -NodeSpaceIncreaseY, 1f);
                     stock.Set((int)plusvalue, istype , percentvalue);
                     CurStock = stock;
                 }
@@ -168,6 +166,8 @@ public class InGameStockRoot : MonoBehaviour
 
     private void Update()
     {
+        if (GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle == false) return;
+
         if(NodeCreateTime <= Time.time)
         {
             CreateNode();
