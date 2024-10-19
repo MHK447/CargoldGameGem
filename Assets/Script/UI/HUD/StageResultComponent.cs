@@ -21,20 +21,23 @@ public class StageResultComponent : MonoBehaviour
 
     public void OnClickNextStage()
     {
-        if(IsSuccess)
-            GameRoot.Instance.UserData.CurMode.StageData.StageIdx += 1;
-
-        GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.Init();
-
-        var gethudingame = GameRoot.Instance.UISystem.GetUI<HUDInGame>();
-
-        if(gethudingame != null)
+        if(IsSuccess == false)
         {
-            gethudingame.Init();
+            GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.Init();
+
+            var gethudingame = GameRoot.Instance.UISystem.GetUI<HUDInGame>();
+
+            if (gethudingame != null)
+            {
+                gethudingame.Init();
+            }
+
+            ProjectUtility.SetActiveCheck(this.gameObject, false);
         }
-
-        ProjectUtility.SetActiveCheck(this.gameObject, false);
-
+        else
+        {
+            GameRoot.Instance.UISystem.OpenUI<PopupFrameShop>(popup => popup.Init());
+        }
     }
 
     public void Set(int reward , bool issuccess)

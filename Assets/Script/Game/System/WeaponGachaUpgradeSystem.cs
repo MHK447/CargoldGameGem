@@ -14,18 +14,6 @@ public class WeaponGachaUpgradeSystem
     {
         float value = 0f;
 
-        var weapondata = GameRoot.Instance.UserData.CurMode.PlayerWeapon.WeaponList.ToList().Find(x => x.WeaponIdx == weaponidx);
-
-        if(weapondata != null)
-        {
-            var td = Tables.Instance.GetTable<WeaponGachaUpgrade>().GetData(new KeyValuePair<int, int>(weaponidx, (int)level));
-
-            if(td != null)
-            {
-                value = (float)td.upgrade_value / 100f;
-            }
-        }
-
         return value;
     }
 

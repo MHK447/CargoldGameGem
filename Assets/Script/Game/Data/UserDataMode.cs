@@ -14,10 +14,8 @@ public interface IUserDataMode
 	public PlayerData PlayerData { get; set; }
 	public StageData StageData { get; set; }
 	public EventData EventData { get; set; }
-	public PlayerWeapon PlayerWeapon { get; set; }
 	List<LabUpgradeData> LABBuffList { get; set; }
 	public PlanetData PlanetData { get; set; }
-	List<LABUnLockData> LABUnLockDataList { get; set; }
 	List<InGameUpgradeData> InGameUpgradeDataList { get; set; }
 	IReactiveProperty<BigInteger> EnergyMoney { get; set; }
 	IReactiveProperty<int> GachaCoin { get; set; }
@@ -27,6 +25,7 @@ public interface IUserDataMode
 	public IReactiveCollection<SkillCardData> SkillCardDatas { get; set; }
 	public IReactiveCollection<OutGameUnitUpgradeData> OutGameUnitUpgradeDatas { get; set; }
 	public IReactiveCollection<SelectGachaWeaponSkillData> SelectGachaWeaponSkillDatas { get; set; }
+	public IReactiveCollection<WeaponData> WeaponDatas { get; set; }
 }
 
 public class UserDataMain : IUserDataMode
@@ -36,17 +35,17 @@ public class UserDataMain : IUserDataMode
 	public DateTime CurPlayDateTime { get; set; } = new DateTime(1, 1, 1);
 	public StageData StageData { get; set; } = new StageData();
 	public EventData EventData { get; set; } = new EventData();
-	public PlayerWeapon PlayerWeapon { get; set; } = new PlayerWeapon();
 	public PlayerData PlayerData { get; set; } = new PlayerData();
 	public List<LabUpgradeData> LABBuffList { get; set; } = new List<LabUpgradeData>();
 	public PlanetData PlanetData { get; set; } = new PlanetData();
-	public List<LABUnLockData> LABUnLockDataList { get; set; } = new List<LABUnLockData>();
 	public List<InGameUpgradeData> InGameUpgradeDataList { get; set; } = new List<InGameUpgradeData>();
 	public IReactiveProperty<BigInteger> EnergyMoney { get; set; } = new ReactiveProperty<BigInteger>(0);
 	public IReactiveProperty<int> GachaCoin { get; set; } = new ReactiveProperty<int>(0);
 	public IReactiveProperty<BigInteger> UpgradeCoin { get; set; } = new ReactiveProperty<BigInteger>(0);
 	public List<UnitCardData> UnitCardDatas { get; set; } = new List<UnitCardData>();
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; } = new List<InGameUnitUpgradeData>();
+
+	public IReactiveCollection<WeaponData> WeaponDatas { get; set; } = new ReactiveCollection<WeaponData>();
 
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; } = new List<PassiveSkillData>();
 	public IReactiveCollection<SkillCardData> SkillCardDatas { get; set; } = new ReactiveCollection<SkillCardData>();

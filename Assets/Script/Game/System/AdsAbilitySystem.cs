@@ -390,32 +390,6 @@ public class AdsAbilitySystem
 
         System.Numerics.BigInteger returnvalue = 0;
 
-        if (td != null)
-        {
-            switch (currencyidx)
-            {
-                case (int)Config.CurrencyID.Money:
-                    {
-                        //var upgradecount = GameRoot.Instance.UserData.CurMode.StageData.UpgradeClickCount;
-
-                        int level = 0;
-
-                        for(int i = 0; i < GameRoot.Instance.UserData.CurMode.PlayerWeapon.WeaponList.Count; ++i)
-                        {
-                            for(int j = 0; j < GameRoot.Instance.UserData.CurMode.PlayerWeapon.WeaponList[i].WeaponUpgradeList.Count; ++j)
-                            {
-                                level += GameRoot.Instance.UserData.CurMode.PlayerWeapon.WeaponList[i].WeaponUpgradeList[j].Level;
-                            }
-                        }
-
-                        System.Numerics.BigInteger multiplefactor1 = td.multiple_value * level;
-
-                        returnvalue = (td.value_1 * multiplefactor1) / 100;
-                        return returnvalue;
-                    }
-            }
-        }
-
         return 0;
     }
 

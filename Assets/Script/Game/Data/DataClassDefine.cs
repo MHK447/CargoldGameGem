@@ -25,6 +25,18 @@ public class PlayerData
 
 }
 
+
+public class WeaponData
+{
+	public int WeaponIdx = 0;
+
+
+	public WeaponData(int weaponidx)
+    {
+		WeaponIdx = weaponidx;
+    }
+}
+
 public class StageData
 {
 
@@ -261,104 +273,6 @@ public class PlanetData
 		HpProperty.Value = Hp;
 		HpProperty.Subscribe(x => { Hp = x; });
     }
-
-}
-
-
-public class LABUnLockData : IClientData
-{
-	public int UpgradeType;
-	public int UnLockOrder;
-
-	public LABUnLockData(int upgradetype, int unlockorder)
-	{
-		UpgradeType = upgradetype;
-		UnLockOrder = unlockorder;
-	}
-}
-
-public class PlayerWeapon
-{
-	public IReactiveCollection<WeaponData> WeaponList = new ReactiveCollection<WeaponData>();
-
-	public int WeaponUnLockCount = 0;
-
-	public void CreateWeapon(int weaponidx)
-    {
-		var finddata = WeaponList.ToList().Find(x => x.WeaponIdx == weaponidx);
-
-		if(finddata != null)
-        {
-			finddata.WeaponLevelProperty.Value += 1;
-        }
-		else
-        {
-			WeaponList.Add(new WeaponData(weaponidx));
-			WeaponUnLockCount += 1;
-		}
-	}
-
-	public void Clear()
-    {
-		WeaponList.Clear();
-		WeaponUnLockCount = 0;
-    }
-}
-public enum WeaponGachaUpgradeType
-{
-	AttackSpeed = 1,
-	AttackRegen = 2,
-	CriticalUp = 3,
-	BulletAdd = 4,
-	AttackUp = 5,
-}
-
-public class WeaponData
-{
-	public int WeaponIdx;
-
-	public int WeaponLevel = 0;
-
-	public IReactiveProperty<int> WeaponLevelProperty = new ReactiveProperty<int>();
-
-	public List<WeaponUpgrade> WeaponUpgradeList = new List<WeaponUpgrade>();
-
-
-	public WeaponData(int weaponidx)
-    {
-		WeaponIdx = weaponidx;
-		WeaponUpgradeList.Clear();
-
-		WeaponLevel = 0;
-
-		WeaponLevelProperty.Value = WeaponLevel;
-
-		WeaponLevelProperty.Subscribe(x => WeaponLevel = x);
-
-		for(int i = 0; i < (int)Config.WeaponUpgradeIdx.DONE; ++i)
-        {
-			WeaponUpgradeList.Add(new WeaponUpgrade(i, 1));
-        }
-    }
-
-	public float GetValue(int weaponidx, WeaponGachaUpgradeType type , bool ismultiple = false)
-	{
-		float value = ismultiple == true ? 1f : 0f;
-
-
-		var td = Tables.Instance.GetTable<WeaponGachaUpgrade>().DataList.Find(x => x.upgrade_type == (int)type);
-
-		if (td != null)
-		{
-			if (td.level <= WeaponLevel)
-			{
-				value = (float)td.upgrade_value / 100f;
-			}
-		}
-
-		return value;
-	}
-
 
 }
 

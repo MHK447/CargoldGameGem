@@ -69,44 +69,7 @@ public class PopupUpgrades : UIBase
 
     public void SelectTab(UPGRADETYPE tab)
     {
-        CurrentTab = tab;
-
-        foreach (var obj in CachedComponents)
-        {
-            ProjectUtility.SetActiveCheck(obj, false);
-        }
-
-        var unlockdata = GameRoot.Instance.UserData.CurMode.LABUnLockDataList.Find(x => x.UpgradeType == (int)tab + 1);
-
-        var tdlist = Tables.Instance.GetTable<PlayerUnitUpgradeInfo>().DataList.FindAll(x => x.upgrade_type == (int)tab + 1 && x.order <= unlockdata.UnLockOrder);
-
-        RectTransform SkillRecT = CachedComponents.FindAll(x => x.gameObject.activeSelf == true).LastOrDefault().transform as RectTransform;
-
-        RectTransform RecT = SkillRoot.transform as RectTransform;
-
-        RecT.anchoredPosition = new Vector2(RecT.anchoredPosition.x, SkillRecT.anchoredPosition.y - 200);
-
-        SkillRoot.transform.SetAsLastSibling();
-
-        if (unlockdata.UnLockOrder == 1)
-        {
-            var td = Tables.Instance.GetTable<Define>().GetData("upgrades_unlock_cost_1");
-
-            CostValue = td.value;
-        }
-        else
-        {
-            CostValue = Tables.Instance.GetTable<Define>().GetData("upgrades_unlock_cost_2").value;
-        }
-
-        CostText.text = Utility.CalculateMoneyToString(CostValue);
-        Utility.SetActiveCheck(SkillRoot.gameObject, unlockdata.UnLockOrder < 3);
-
-
-        disposables.Clear();
-
-
-        GameRoot.Instance.StartCoroutine(SkillPosWaitOneFrame());
+      
     }
 
     private IEnumerator SkillPosWaitOneFrame()
@@ -132,26 +95,6 @@ public class PopupUpgrades : UIBase
 
     private void OnClickUnLockBtn()
     {
-        var unlockdata = GameRoot.Instance.UserData.CurMode.LABUnLockDataList.Find(x => x.UpgradeType == (int)CurrentTab + 1);
-
-        int pricevalue = 0;
-
-
-        if (unlockdata.UnLockOrder == 1)
-        {
-            pricevalue = Tables.Instance.GetTable<Define>().GetData("upgrades_unlock_cost_1").value;
-        }
-        else
-        {
-            pricevalue = Tables.Instance.GetTable<Define>().GetData("upgrades_unlock_cost_2").value;
-        }
-
-
-
-        SelectTab(CurrentTab);
-
-
-
     }
 
     public override void OnShowBefore()
@@ -164,20 +107,6 @@ public class PopupUpgrades : UIBase
     {
         yield return new WaitForEndOfFrame();
 
-        var viewTab = defualtOption;
-        if (!UpgradeToggles[(int)defualtOption].isOn)
-        {
-            UpgradeToggles[(int)defualtOption].isOn = true;
-        }
-        else
-        {
-            var ani = UpgradeToggles[(int)defualtOption].gameObject.GetComponent<Animator>();
-            if (ani != null)
-            {
-                ani.SetTrigger("Selected");
-            }
-            ChangeTab(defualtOption, true);
-        }
     }
 
 
