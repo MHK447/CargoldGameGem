@@ -80,6 +80,7 @@ public class PopupFrameShop : UIBase
 
         GameRoot.Instance.UISystem.OpenUI<PageFade>(page => {
             page.Set(() => {
+                GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Value = 0;
                 Time.timeScale = 1f;
                 GameRoot.Instance.UserData.CurMode.StageData.StageIdx += 1;
 

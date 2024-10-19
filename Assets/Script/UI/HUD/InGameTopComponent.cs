@@ -72,7 +72,9 @@ public class InGameTopComponent : MonoBehaviour
 
     public void WaveTime(int time)
     {
-        if (time < 0)
+        if (GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle == false) return; 
+
+        if (time == -1)
         {
             Result();
         }

@@ -64,7 +64,7 @@ public class StageData
 		WaveIdxProperty.Value = 1;
 		UnitAddCount = 0;
 		UnitCountPropety.Value = 0;
-		WaveTimeProperty.Value = 0;
+		WaveTimeProperty.Value =0;
 
 	}
 
