@@ -36,6 +36,10 @@ public class InGameStockRoot : MonoBehaviour
 
     public void FirstStart()
     {
+        GameRoot.Instance.UserData.CurMode.Money.Value = 0;
+
+        GameRoot.Instance.UserData.HUDMoney.Value = 0;
+
         GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
 
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
