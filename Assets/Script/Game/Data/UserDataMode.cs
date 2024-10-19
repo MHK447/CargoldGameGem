@@ -10,6 +10,7 @@ public interface IUserDataMode
 	IReactiveProperty<BigInteger> Money { get; set; }
 	DateTime LastLoginTime { get; set; }
 	DateTime CurPlayDateTime { get; set; }
+	public PlayerData PlayerData { get; set; }
 	public StageData StageData { get; set; }
 	public PlayerWeapon PlayerWeapon { get; set; }
 	List<LabUpgradeData> LABBuffList { get; set; }
@@ -33,6 +34,7 @@ public class UserDataMain : IUserDataMode
 	public DateTime CurPlayDateTime { get; set; } = new DateTime(1, 1, 1);
 	public StageData StageData { get; set; } = new StageData();
 	public PlayerWeapon PlayerWeapon { get; set; } = new PlayerWeapon();
+	public PlayerData PlayerData { get; set; } = new PlayerData();
 	public List<LabUpgradeData> LABBuffList { get; set; } = new List<LabUpgradeData>();
 	public PlanetData PlanetData { get; set; } = new PlanetData();
 	public List<LABUnLockData> LABUnLockDataList { get; set; } = new List<LABUnLockData>();

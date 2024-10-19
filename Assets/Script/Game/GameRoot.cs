@@ -32,6 +32,7 @@ public class GameRoot : Singleton<GameRoot>
 	public EffectSystem EffectSystem { get; private set; } = new EffectSystem();
 	public TutorialSystem TutorialSystem { get; private set; } = new TutorialSystem();
 	public StockEventSystem StockEventSystem { get; private set; } = new StockEventSystem();
+	public PlayerSystem PlayerSystem { get; private set; } = new PlayerSystem();
 
 	public AdManager GetAdManager { get { return AdManager; } }
 
@@ -231,6 +232,7 @@ public class GameRoot : Singleton<GameRoot>
 		//UnitUpgradeSystem.Create();
 		//GachaSkillSystem.Create();
 		StockEventSystem.Init();
+		PlayerSystem.Create();
 
 		LoadComplete = true;
 
@@ -315,6 +317,7 @@ public class GameRoot : Singleton<GameRoot>
 		//InGameBattleSystem.Create();
 		//UnitUpgradeSystem.Create();
 		StockEventSystem.Init();
+		PlayerSystem.Create();
 	}
 
 	private void SetNativeLanguage()

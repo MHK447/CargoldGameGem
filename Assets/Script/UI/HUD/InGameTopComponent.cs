@@ -32,7 +32,7 @@ public class InGameTopComponent : MonoBehaviour
 
     public void Set(int stageidx)
     {
-        disposables.Clear();
+        disposables.Clear();    
 
         var infotd = Tables.Instance.GetTable<StageInfo>().GetData(stageidx);
 

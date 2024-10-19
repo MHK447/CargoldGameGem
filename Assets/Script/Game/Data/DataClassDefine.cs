@@ -11,9 +11,23 @@ public interface IReadOnlyData : ICloneable {
 }
 public interface IClientData { }
 
+public class PlayerData
+{
+	public IReactiveProperty<int> CurStockCountProerty = new ReactiveProperty<int>();
+
+
+	public void Clear()
+    {
+		CurStockCountProerty.Value = 0;
+		GameRoot.Instance.UserData.CurMode.Money.Value = 0;
+		GameRoot.Instance.UserData.HUDMoney.Value = 0;
+    }
+
+}
 
 public class StageData
 {
+
 	public IReactiveProperty<int> CurStockPriceProperty = new ReactiveProperty<int>();
 	public int StageIdx { get; set; } = 0;
 	public IReactiveProperty<int> WaveIdxProperty = new ReactiveProperty<int>();

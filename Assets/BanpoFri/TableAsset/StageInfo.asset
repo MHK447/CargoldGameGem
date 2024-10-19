@@ -30,14 +30,14 @@ MonoBehaviour:
     _start_up_rate: 50
     _node_time: 50
     _change_down_rate: 30
-    _change_up_rate: 50
+    _change_up_rate: 60
     _down_stock_min: 20
     _down_stock_max: 30
-    _up_stock_min: 10
-    _up_stock_max: 50
+    _up_stock_min: 15
+    _up_stock_max: 45
     _event_time: e8030000d0070000a00f0000
     _stage_name: "\uC0BC\uC131"
-    _stage_end_time: 50
+    _stage_end_time: 60
   - _stage_id: 2
     _start_price: 150
     _start_money: 200

@@ -76,7 +76,7 @@ public class InGameStockRoot : MonoBehaviour
                 {
                     int percentvalue = 0;
 
-                    var istype = IsChangeDownNode();
+                    var istype = IsChangeUpNode();
 
                     percentvalue = GetStocUpPercent();
 
@@ -118,7 +118,7 @@ public class InGameStockRoot : MonoBehaviour
             else
             {
                 CurStock = stock;
-                stock.transform.position = Vector3.zero;
+                stock.transform.position = new Vector3(0, 20, 0);
                 stock.Set(StageInfoData.start_price, StockNodeComponent.GuageType.RedCandle);
 
             }
