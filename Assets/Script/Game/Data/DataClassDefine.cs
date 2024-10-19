@@ -98,7 +98,7 @@ public class EventData
 		set
 		{
 			_event_node_time = value;
-            ChangedEventNodeTime.Invoke();
+            ChangedEventNodeTime?.Invoke();
         }
 	}
 	public Action ChangedEventNodeTime;
