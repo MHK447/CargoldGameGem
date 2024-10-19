@@ -181,13 +181,13 @@ public class InGameStockRoot : MonoBehaviour
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
-        int eventChangeUpRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate;
+        int eventChangeDownRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate;
 
         var randavalue = Random.Range(1, 100);
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_down_rate + eventChangeUpRate) > randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
+        type = (td.change_down_rate + eventChangeDownRate) > randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
 
         return type;
     }
@@ -197,13 +197,13 @@ public class InGameStockRoot : MonoBehaviour
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
-        int eventChangeDownRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate;
+        int eventChangeUpRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate;
 
         var randavalue = Random.Range(1, 100);
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_up_rate + eventChangeDownRate) > randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        type = (td.change_up_rate + eventChangeUpRate) > randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
