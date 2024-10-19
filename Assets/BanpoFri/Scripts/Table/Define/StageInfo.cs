@@ -91,6 +91,13 @@ namespace BanpoFri
 			set { _event_time = value;}
 		}
 		[SerializeField]
+		private List<int> _event_goodbad;
+		public List<int> event_goodbad
+		{
+			get { return _event_goodbad;}
+			set { _event_goodbad = value;}
+		}
+		[SerializeField]
 		private string _stage_name;
 		public string stage_name
 		{
