@@ -2,15 +2,11 @@ using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
 
-[UIPath("UI/Page/HUDEventMessagePopup", true)]
+[UIPath("UI/Page/HUDEvent", true)]
 public class HUDEvent : UIBase
 {
-    [SerializeField]
-    private RectTransform moveRectTr;
-
-    [SerializeField]
-    private Text messageText;
-    private Button closePopupButton;
+    [SerializeField] private Image eventImage;
+    [SerializeField] private Text messageText;
 
     protected override void Awake()
     {

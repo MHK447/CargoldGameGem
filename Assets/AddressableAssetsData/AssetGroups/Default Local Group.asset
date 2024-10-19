@@ -258,7 +258,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b96defaf801e01548b958abe8d7404cc
-    m_Address: UI/Page/HUDEventMessagePopup
+    m_Address: UI/Page/HUDEvent
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 24197aaba1dadbc47954c426092407e4
