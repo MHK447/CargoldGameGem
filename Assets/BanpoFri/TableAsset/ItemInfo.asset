@@ -79,7 +79,7 @@ MonoBehaviour:
     _item_effect_value: 7000
   - _item_id: 4
     _item_name: "\uB124\uAC70\uD2F0\uBE0C \uC784\uD50C\uB780\uD2B8"
-    _item_icon: UI_BuffIcon_Brain
+    _item_icon: UI_BuffIcon_Negative
     _item_appearance_weight: 1
     _item_rarity: 3
     _item_price: 3
@@ -92,7 +92,7 @@ MonoBehaviour:
     _item_effect_value: 0
   - _item_id: 5
     _item_name: "\uB300\uCD9C\uC9C0\uD5A5\uC801 \uC804\uB450\uC5FD \uC784\uD50C\uB780\uD2B8"
-    _item_icon: UI_BuffIcon_Card
+    _item_icon: UI_BuffIcon_Brain
     _item_appearance_weight: 1
     _item_rarity: 3
     _item_price: 3
