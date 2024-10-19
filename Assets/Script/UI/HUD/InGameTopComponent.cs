@@ -87,21 +87,24 @@ public class InGameTopComponent : MonoBehaviour
         LimitTimeText.text = $"Time:{ProjectUtility.GetTimeStringFormattingShort(time)}";
         TimeSlider.value = (float)time / (float)GameRoot.Instance.UserData.CurMode.StageData.StageCoolTime;
 
-        if(TimeSlider.value > 0.5f)
+        if (Anim = null)
         {
-            Anim.Play("Char_Idle_Anime", 0, 0f);
-        }
-        else
-        {
-            if(GameRoot.Instance.UserData.CurMode.Money.Value >= TargetMoney)
+            if (TimeSlider.value > 0.5f)
             {
-                Anim.Play("Char_Cheer_Anime", 0, 0f);
+                Anim.Play("Char_Idle_Anime", 0, 0f);
             }
             else
             {
-                Anim.Play("Char_Depressed_Anime", 0, 0f);
-            }
+                if (GameRoot.Instance.UserData.CurMode.Money.Value >= TargetMoney)
+                {
+                    Anim.Play("Char_Cheer_Anime", 0, 0f);
+                }
+                else
+                {
+                    Anim.Play("Char_Depressed_Anime", 0, 0f);
+                }
 
+            }
         }
     }
 
