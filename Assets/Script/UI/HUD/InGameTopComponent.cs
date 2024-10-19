@@ -144,14 +144,14 @@ public class InGameTopComponent : MonoBehaviour
                         stageresult = stagerewardtd.base_reward + stagerewardtd.bonus_reward_2;
                     }
 
-                    HudInGame.ResultComponent.Set(stageresult, true);
+                    HudInGame.ResultComponent.Set(stageresult, true, TargetMoney);
                     GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
                 }
             }
             else
             {
                 GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
-                HudInGame.ResultComponent.Set(0, false);
+                HudInGame.ResultComponent.Set(0, false, TargetMoney);
             }
         }
     }
