@@ -19,7 +19,10 @@ public class StageResultComponent : MonoBehaviour
     private Text GoalText;
 
     [SerializeField]
-    private Text MyMoney;
+    private Text ActivedMoney;
+
+    [SerializeField]
+    private Text ResultText;
 
     [SerializeField]
     private Slider SliderValue;
@@ -54,12 +57,22 @@ public class StageResultComponent : MonoBehaviour
         }
     }
 
-    public void Set(int reward , bool issuccess)
+    public void Set(int reward , bool issuccess , int goalvalue )
     {
         IsSuccess = issuccess;
         ProjectUtility.SetActiveCheck(this.gameObject, true);
         GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.UpgradeCoin, reward);
         ResultRewardText.text = reward.ToString();
+
+        SliderValue.value = (float)GameRoot.Instance.UserData.CurMode.Money.Value / (float)goalvalue;
+
+        GoalAndMyMoneyText.text = $"Goal:{GameRoot.Instance.UserData.CurMode.Money.Value}/{goalvalue}";
+
+        GoalText.text = $"Goal:{goalvalue}";
+
+        ResultText.text = IsSuccess ? "VICTORY!!" : "FAILED!!";
+
+        ActivedMoney.text = $"ACTIVED MONEY:{GameRoot.Instance.UserData.CurMode.Money.Value}";
     }
 
 
