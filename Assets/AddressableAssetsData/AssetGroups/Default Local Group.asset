@@ -261,6 +261,10 @@ MonoBehaviour:
     m_Address: UI/Page/HUDEventMessagePopup
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 24197aaba1dadbc47954c426092407e4
+    m_Address: Assets/Arts/Atlas/New Sprite Atlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

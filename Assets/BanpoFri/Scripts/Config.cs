@@ -165,6 +165,9 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     [SerializeField]
     private SpriteAtlas InGameSkillAtlas;
 
+    [SerializeField]
+    private SpriteAtlas UIEventAtlas;
+
 
 
 
@@ -292,6 +295,11 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     public Sprite GetUIBgImg(string key)
     {
         return UiBgAtlas.GetSprite(key);
+    }
+
+    public Sprite GetUIEventImg(string key)
+    {
+        return UIEventAtlas.GetSprite(key);
     }
 
 
