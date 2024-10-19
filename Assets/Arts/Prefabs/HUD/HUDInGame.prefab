@@ -1642,6 +1642,7 @@ MonoBehaviour:
   CurPriceText: {fileID: 8141254705831246510}
   LimitTimeText: {fileID: 4760178291087905071}
   TimeSlider: {fileID: 4190896630328452439}
+  Anim: {fileID: 2138040586063248621}
 --- !u!1 &4190896629072905413
 GameObject:
   m_ObjectHideFlags: 0

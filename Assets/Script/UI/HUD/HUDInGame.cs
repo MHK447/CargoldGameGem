@@ -26,6 +26,7 @@ public class HUDInGame : UIBase
     [SerializeField]
     private Text CurPlayerStockText;
 
+
     private CompositeDisposable disposables = new CompositeDisposable();
 
     protected override void Awake()
