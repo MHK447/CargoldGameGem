@@ -12,7 +12,7 @@ public class StockEventSystem
     private bool _isInit = false;
     private List<EventInfoData> _cashingCurrentStageEventList;
 
-    int currentStage = 2;
+    int currentStage = 1;
 
     public void Init()
     {

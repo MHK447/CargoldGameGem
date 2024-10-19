@@ -31,7 +31,7 @@ MonoBehaviour:
     _event_weight: 3
     _event_type_values: 14000000
     _event_duration: 2000
-    _event_filename: tesla1.png
+    _event_filename: tesla1
     _event_description: "\uC804\uAE30\uCC28 \uD1B5\uC6D0\uBC84\uC2A4 \uD3ED\uBC1C
       \uC0AC\uACE0\uB85C \uC544\uB3D9 7\uBA85 \uC0AC\uB9DD"
   - _event_id: 2
@@ -42,7 +42,7 @@ MonoBehaviour:
     _event_weight: 3
     _event_type_values: 0a000000
     _event_duration: 1600
-    _event_filename: tesla2.png
+    _event_filename: tesla2
     _event_description: "\uBBF8\uD63C \uC5EC\uC131 80% \"\uC804\uAE30\uCC28\uB97C
       \uD0C0\uC9C0 \uC54A\uB294 \uB0A8\uC131\uC740 \uAE30\uB984\uB0C4\uC0C8\uAC00
       \uB098\uC11C \uC601 \uBCC4\uB85C...\""
@@ -54,7 +54,7 @@ MonoBehaviour:
     _event_weight: 3
     _event_type_values: 0f000000
     _event_duration: 1400
-    _event_filename: tesla3.png
+    _event_filename: tesla3
     _event_description: "\uCC9C\uB465\uBC88\uAC1C\uCE58\uB294 \uB0A0 \uBE68\uB77C\uC9C0\uB294
       \uC804\uAE30\uCC28 <\uD53C\uB8B0\uD2B8\uB7ED> \uCD9C\uC2DC \"\uC804\uAD11\uC11D\uD654\""
   - _event_id: 4
@@ -66,7 +66,7 @@ MonoBehaviour:
     _event_weight: 1
     _event_type_values: 140000001e000000
     _event_duration: 2000
-    _event_filename: common1.png
+    _event_filename: common1
     _event_description: "\uBBF8\uC5F0\uC900, \uC62C\uD574\uB294 \uB2EC\uB7EC\uB97C
       \uC778\uC1C4\uD558\uC9C0 \uC54A\uC744 \uC608\uC815. \"\uC885\uC774\uC640 \uC789\uD06C\uB294
       \uADC0\uC911\uD558\uB2E4\""
@@ -78,7 +78,7 @@ MonoBehaviour:
     _event_weight: 1
     _event_type_values: 0f000000
     _event_duration: 1400
-    _event_filename: common2.png
+    _event_filename: common2
     _event_description: "\uBBF8\uC5F0\uC900, \uC62C\uD574\uB294 \uB2EC\uB7EC\uB97C
       \uB300\uD3ED \uC99D\uC1C4\uD560 \uC608\uC815. \"1\uB2EC\uB7EC\uB97C \uC0DD\uC0B0\uD558\uB294\uB370
       0.5\uB2EC\uB7EC\uBC16\uC5D0 \uB4E4\uC9C0 \uC54A\uC544. \uC0AC\uC2E4\uC0C1 \uACF5\uC9DC
@@ -91,7 +91,7 @@ MonoBehaviour:
     _event_weight: 1
     _event_type_values: 1e000000
     _event_duration: 300
-    _event_filename: common3.png
+    _event_filename: common3
     _event_description: "\uBE44\uD2B8\uCF54\uC778 6\uB9CC \uB2EC\uB7EC \uB3C4\uB2EC.
       \uC774\uAC83\uC774 \uB2E4\uC74C \uC8FC\uAE4C\uC9C0 \uBE44\uD2B8\uCF54\uC778\uC774
       3\uB2EC\uB7EC \uC774\uD558\uB85C \uB5A8\uC5B4\uC9C8 \uC9D5\uC870\uC778 \uB2E4\uC12F\uAC00\uC9C0
@@ -104,7 +104,7 @@ MonoBehaviour:
     _event_weight: 1
     _event_type_values: 1e000000
     _event_duration: 300
-    _event_filename: common4.png
+    _event_filename: common4
     _event_description: "\uBE44\uD2B8\uCF54\uC778 6\uB9CC \uB2EC\uB7EC \uB3C4\uB2EC.
       \uC774\uAC83\uC774 \uB2E4\uC74C \uC8FC\uAE4C\uC9C0 \uBE44\uD2B8\uCF54\uC778\uC774
       1\uC5B5\uB2EC\uB7EC\uB97C \uB3CC\uD30C\uD560 \uC9D5\uC870\uC778 \uB2E4\uC12F
@@ -117,7 +117,7 @@ MonoBehaviour:
     _event_weight: 1
     _event_type_values: 06000000
     _event_duration: 300
-    _event_filename: common5.png
+    _event_filename: common5
     _event_description: "\uB108\uAD6C\uB9AC\uB85C\uBD80\uD130 \uC804\uC5FC\uB418\uB294
       \uC2E0\uADDC \uBCD1\uC6D0\uADE0 rovid-40k \uC720\uD589. \uAC78\uB9AC\uBA74
       \uC5B5\uC6B8\uD55C \uB2E4\uD06C\uC11C\uD074\uC774 \uC601\uAD6C\uC801\uC73C\uB85C
