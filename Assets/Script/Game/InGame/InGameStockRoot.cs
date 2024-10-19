@@ -95,10 +95,13 @@ public class InGameStockRoot : MonoBehaviour
 
                     var pluspercentvalue = percentvalue / 20;
 
-                    NodeSpaceIncreaseX = NodeSpaceIncreaseX * pluspercentvalue;
+                    var xvalue = NodeSpaceIncreaseX * pluspercentvalue;
+
+
+                    var yvalue = NodeSpaceIncreaseY * pluspercentvalue;
 
                     stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + NodeSpaceIncreaseY, 1f);
+                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + yvalue, 1f);
                     stock.Set((int)plusvalue, istype,percentvalue);
                     CurStock = stock;
                 }
@@ -114,12 +117,14 @@ public class InGameStockRoot : MonoBehaviour
 
                     plusvalue = curstockvalue - plusvalue;
 
-                    var pluspercentvalue = percentvalue / 20;
+                    var pluspercentvalue = percentvalue / 10;
 
-                    NodeSpaceIncreaseX = NodeSpaceIncreaseX * pluspercentvalue;
+                    var xvalue = NodeSpaceIncreaseX * pluspercentvalue;
+
+                    var yvalue = NodeSpaceIncreaseY * pluspercentvalue;
 
                     stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -NodeSpaceIncreaseY, 1f);
+                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -yvalue, 1f);
                     stock.Set((int)plusvalue, istype , percentvalue);
                     CurStock = stock;
                 }
@@ -163,7 +168,7 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_up_rate + eventChangeUpRate) < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        type = (td.change_down_rate + eventChangeUpRate) < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
@@ -179,7 +184,7 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_down_rate + eventChangeDownRate) < randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
+        type = (td.change_up_rate + eventChangeDownRate) < randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
 
         return type;
     }
