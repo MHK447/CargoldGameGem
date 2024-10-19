@@ -72,6 +72,8 @@ public class StageResultComponent : MonoBehaviour
 
         ResultText.text = IsSuccess ? "VICTORY!!" : "FAILED!!";
 
+        ResultText.color = issuccess ? Color.green : Color.red;
+
         ActivedMoney.text = $"ACTIVED MONEY:{GameRoot.Instance.UserData.CurMode.Money.Value}";
     }
 
