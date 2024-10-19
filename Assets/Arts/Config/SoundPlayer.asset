@@ -18,7 +18,7 @@ MonoBehaviour:
   - soundKey: btn
     audioData: {fileID: 8300000, guid: 3e3f161166ba72041a40891bd268001f, type: 3}
   - soundKey: popup
-    audioData: {fileID: 8300000, guid: a61db0af9d0fe41a68fd15e4d087dac5, type: 3}
+    audioData: {fileID: 8300000, guid: d14e63ae57eff42c2aaddd2ed259fe20, type: 3}
   - soundKey: effect_player_unit_death
     audioData: {fileID: 8300000, guid: 53d527ace258b485b83095b35b9a17c4, type: 3}
   - soundKey: Effect_Btn_Sell
