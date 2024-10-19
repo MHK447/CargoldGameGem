@@ -27,6 +27,108 @@ MonoBehaviour:
     _start_price: 128
     _start_money: 2000
     _target_money: 10000
+    _node_time: 50
+    _change_down_rate: 43
+    _change_up_rate: 44
+    _down_stock_min: 5
+    _down_stock_max: 10
+    _up_stock_min: 5
+    _up_stock_max: 10
+    _event_time: e8030000d0070000ac0d0000
+    _event_goodbad: 000000000100000002000000
+    _stage_name: "\uD14C\uC2AC\uB791"
+    _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 50
+  - _stage_id: 2
+    _start_price: 1175
+    _start_money: 1500
+    _target_money: 20000
+    _node_time: 50
+    _change_down_rate: 55
+    _change_up_rate: 30
+    _down_stock_min: 3
+    _down_stock_max: 6
+    _up_stock_min: 2
+    _up_stock_max: 4
+    _event_time: e8030000d0070000ac0d0000
+    _event_goodbad: 010000000100000000000000
+    _stage_name: "\uC560\uBFD4"
+    _stage_number_name: "2\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 50
+  - _stage_id: 3
+    _start_price: 121
+    _start_money: 1500
+    _target_money: 20000
+    _node_time: 50
+    _change_down_rate: 30
+    _change_up_rate: 55
+    _down_stock_min: 2
+    _down_stock_max: 4
+    _up_stock_min: 3
+    _up_stock_max: 6
+    _event_time: e8030000d0070000ac0d0000
+    _event_goodbad: 000000000000000000000000
+    _stage_name: "\uB124\uD06C\uC2A8"
+    _stage_number_name: "3\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 50
+  - _stage_id: 4
+    _start_price: 128
+    _start_money: 2000
+    _target_money: 20000
+    _node_time: 25
+    _change_down_rate: 45
+    _change_up_rate: 40
+    _down_stock_min: 5
+    _down_stock_max: 10
+    _up_stock_min: 5
+    _up_stock_max: 10
+    _event_time: e8030000d0070000b80b000094110000
+    _event_goodbad: 00000000010000000000000001000000
+    _stage_name: "\uB85C\uB610\uB9AC\uC544"
+    _stage_number_name: "4\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 50
+  - _stage_id: 5
+    _start_price: 1000
+    _start_money: 10000
+    _target_money: 30000
+    _node_time: 40
+    _change_down_rate: 69
+    _change_up_rate: 69
+    _down_stock_min: 5
+    _down_stock_max: 10
+    _up_stock_min: 5
+    _up_stock_max: 10
+    _event_time: e8030000d0070000b80b000094110000
+    _event_goodbad: 02000000020000000200000002000000
+    _stage_name: "GS \uCE7C\uD30C\uC2A4"
+    _stage_number_name: "5\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 60
+  - _stage_id: 6
+    _start_price: 1367
+    _start_money: 3000
+    _target_money: 40000
+    _node_time: 40
+    _change_down_rate: 55
+    _change_up_rate: 30
+    _down_stock_min: 3
+    _down_stock_max: 6
+    _up_stock_min: 2
+    _up_stock_max: 4
+    _event_time: e8030000d0070000b80b00009411000070170000
+    _event_goodbad: 0100000001000000000000000100000001000000
+    _stage_name: "\uB458\uB458 \uBC29\uC0B0"
+    _stage_number_name: "6\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
+    _stage_end_time: 80
+  - _stage_id: 7
+    _start_price: 278
+    _start_money: 3000
+    _target_money: 40000
     _node_time: 40
     _change_down_rate: 43
     _change_up_rate: 44
@@ -34,128 +136,26 @@ MonoBehaviour:
     _down_stock_max: 10
     _up_stock_min: 5
     _up_stock_max: 10
-    _event_time: e8030000d0070000a00f0000
-    _event_goodbad: 000000000100000002000000
-    _stage_name: "\uD14C\uC2AC\uB354\uC2AC"
-    _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 2
-    _start_price: 370
-    _start_money: 1500
-    _target_money: 20000
-    _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 010000000000000001000000
-    _stage_name: "\uC560\uD50C\uC560\uD50C"
-    _stage_number_name: "2\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 3
-    _start_price: 10
-    _start_money: 1000
-    _target_money: 30000
-    _node_time: 40
-    _change_down_rate: 5
-    _change_up_rate: 90
-    _down_stock_min: 80
-    _down_stock_max: 90
-    _up_stock_min: 2
-    _up_stock_max: 8
-    _event_time: 7f969800
-    _event_goodbad: 000000000200000001000000
-    _stage_name: "\uC560\uD50C"
-    _stage_number_name: "3\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 4
-    _start_price: 500
-    _start_money: 3500
-    _target_money: 40000
-    _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 000000000100000002000000
-    _stage_name: "Neck\uC2A8"
-    _stage_number_name: "4\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 5
-    _start_price: 1000
-    _start_money: 4000
-    _target_money: 40000
-    _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 010000000000000001000000
-    _stage_name: "\uB86F\uB370\uB9AC\uC544"
-    _stage_number_name: "5\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 6
-    _start_price: 1500
-    _start_money: 3000
-    _target_money: 40000
-    _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 000000000100000002000000
-    _stage_name: "GS \uCE7C\uD14D\uC2A4"
-    _stage_number_name: "6\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
-    _stage_end_time: 60
-  - _stage_id: 7
-    _start_price: 130
-    _start_money: 1000
-    _target_money: 40000
-    _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 010000000000000001000000
-    _stage_name: "\uD55C\uD654 \uBC29\uC0B0"
+    _event_time: e8030000d0070000b80b00009411000070170000
+    _event_goodbad: 0200000002000000020000000200000002000000
+    _stage_name: "\uAC2D\uC218"
     _stage_number_name: "7\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 60
+    _stage_end_time: 80
   - _stage_id: 8
-    _start_price: 125
-    _start_money: 900
-    _target_money: 40000
+    _start_price: 136
+    _start_money: 3000
+    _target_money: 100000
     _node_time: 40
-    _change_down_rate: 45
-    _change_up_rate: 40
+    _change_down_rate: 43
+    _change_up_rate: 44
     _down_stock_min: 5
     _down_stock_max: 10
-    _up_stock_min: 7
-    _up_stock_max: 30
-    _event_time: 7f969800
-    _event_goodbad: 000000000200000001000000
-    _stage_name: "\uAC2D\uC2A4"
+    _up_stock_min: 5
+    _up_stock_max: 10
+    _event_time: e8030000d0070000b80b000094110000701700004c1d0000
+    _event_goodbad: 000000000100000002000000000000000100000002000000
+    _stage_name: "\uC0BC\uC22D\uC774"
     _stage_number_name: "8\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 60
+    _stage_end_time: 90

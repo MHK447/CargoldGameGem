@@ -207,7 +207,7 @@ MonoBehaviour:
   - _item_id: 19
     _item_name: "\uC2A4\uCE74\uC774\uB2E4\uC774\uBC84\uC758 \uB2EC\uD33D\uC774\uAD00
       \uC784\uD50C\uB780\uD2B8 Mk. I"
-    _item_appearance_weight: 1
+    _item_appearance_weight: 0
     _item_rarity: 1
     _item_price: 1
     _item_stage_min_id: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   - _item_id: 20
     _item_name: "\uC2A4\uCE74\uC774\uB2E4\uC774\uBC84\uC758 \uB2EC\uD33D\uC774\uAD00
       \uC784\uD50C\uB780\uD2B8 Mk. II"
-    _item_appearance_weight: 1
+    _item_appearance_weight: 0
     _item_rarity: 2
     _item_price: 2
     _item_stage_min_id: 3
@@ -230,7 +230,7 @@ MonoBehaviour:
   - _item_id: 21
     _item_name: "\uC2A4\uCE74\uC774\uB2E4\uC774\uBC84\uC758 \uB2EC\uD33D\uC774\uAD00
       \uC784\uD50C\uB780\uD2B8 Mk. III"
-    _item_appearance_weight: 1
+    _item_appearance_weight: 0
     _item_rarity: 3
     _item_price: 3
     _item_stage_min_id: 6
@@ -241,7 +241,7 @@ MonoBehaviour:
     _item_effect_value: 12
   - _item_id: 22
     _item_name: "\uB85C\uCF13 \uB2E4\uB9AC \uC784\uD50C\uB780\uD2B8 Mk. I"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 1
     _item_price: 1
     _item_stage_min_id: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
     _item_effect_value: 4
   - _item_id: 23
     _item_name: "\uB85C\uCF13 \uB2E4\uB9AC \uC784\uD50C\uB780\uD2B8 Mk. II"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 2
     _item_price: 2
     _item_stage_min_id: 3
@@ -262,7 +262,7 @@ MonoBehaviour:
     _item_effect_value: 8
   - _item_id: 24
     _item_name: "\uB85C\uCF13 \uB2E4\uB9AC \uC784\uD50C\uB780\uD2B8 Mk. III"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 3
     _item_price: 3
     _item_stage_min_id: 6
@@ -273,7 +273,7 @@ MonoBehaviour:
     _item_effect_value: 12
   - _item_id: 25
     _item_name: "\uD0C8\uCD9C \uB85C\uD504 \uC784\uD50C\uB780\uD2B8 Mk. I"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 1
     _item_price: 1
     _item_stage_min_id: 1
@@ -284,7 +284,7 @@ MonoBehaviour:
     _item_effect_value: 3
   - _item_id: 26
     _item_name: "\uD0C8\uCD9C \uB85C\uD504 \uC784\uD50C\uB780\uD2B8 Mk. II"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 2
     _item_price: 2
     _item_stage_min_id: 3
@@ -295,7 +295,7 @@ MonoBehaviour:
     _item_effect_value: 6
   - _item_id: 27
     _item_name: "\uD0C8\uCD9C \uB85C\uD504 \uC784\uD50C\uB780\uD2B8 Mk. III"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 3
     _item_price: 3
     _item_stage_min_id: 6
@@ -306,7 +306,7 @@ MonoBehaviour:
     _item_effect_value: 9
   - _item_id: 31
     _item_name: "\uCE74\uD398\uC778 \uB9C1\uAC94"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 1
     _item_price: 1
     _item_stage_min_id: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
     _item_effect_value: 5
   - _item_id: 32
     _item_name: "\uCF54\uCE74\uC778 \uB9C1\uAC94"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 2
     _item_price: 2
     _item_stage_min_id: 3
@@ -328,7 +328,7 @@ MonoBehaviour:
     _item_effect_value: 10
   - _item_id: 33
     _item_name: "\uBA54\uAC00\uCF54\uCE74\uC778 \uC288\uD37C\uB9C1\uAC94"
-    _item_appearance_weight: 2
+    _item_appearance_weight: 0
     _item_rarity: 3
     _item_price: 3
     _item_stage_min_id: 6
