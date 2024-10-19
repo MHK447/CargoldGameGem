@@ -15,6 +15,7 @@ public class EventDataController : MonoBehaviour
     public Event eventList;
     public int setValue;
 
+    public int currentStageIdx;
     public int event_change_up_rate;
     public int event_change_down_rate;
     public int event_up_stock_min;
@@ -60,6 +61,8 @@ public class EventDataController : MonoBehaviour
                     break;
             }
         }
+
+        currentStageIdx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         event_change_up_rate = GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate;
         event_change_down_rate = GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate;

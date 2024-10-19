@@ -1834,6 +1834,8 @@ MonoBehaviour:
   CurPriceText: {fileID: 8141254705831246510}
   LimitTimeText: {fileID: 4760178291087905071}
   TimeSlider: {fileID: 4190896630328452439}
+  goodEndingResult: {fileID: 9101220868999596792}
+  badEndingResult: {fileID: 1919024777374833781}
   Anim: {fileID: 0}
   IconsList:
   - {fileID: 5714837569774693815}
@@ -10326,3 +10328,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6327767194941865195, guid: 8a4fe3d337f84714f86aea7598c607f4, type: 3}
   m_PrefabInstance: {fileID: 9182002362302927231}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9101220868999596792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 81925337181248391, guid: 8a4fe3d337f84714f86aea7598c607f4, type: 3}
+  m_PrefabInstance: {fileID: 9182002362302927231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d288520902d1428485b8dd374240907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

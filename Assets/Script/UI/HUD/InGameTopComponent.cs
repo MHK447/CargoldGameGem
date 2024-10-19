@@ -28,6 +28,12 @@ public class InGameTopComponent : MonoBehaviour
     [SerializeField]
     private Slider TimeSlider;
 
+    [SerializeField]
+    private StageResultComponent goodEndingResult;
+
+    [SerializeField]
+    private StageResultComponent badEndingResult;
+
 
     [SerializeField]
     private Animator Anim;
@@ -140,7 +146,7 @@ public class InGameTopComponent : MonoBehaviour
     {
         if (GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle == false) return;
 
-        ProjectUtility.SetActiveCheck(HudInGame.ResultComponent.gameObject, true);
+        //ProjectUtility.SetActiveCheck(HudInGame.ResultComponent.gameObject, true);
 
         var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
@@ -171,14 +177,18 @@ public class InGameTopComponent : MonoBehaviour
                         stageresult = stagerewardtd.base_reward + stagerewardtd.bonus_reward_2;
                     }
 
-                    HudInGame.ResultComponent.Set(stageresult, true, TargetMoney);
+                    if (stageidx < 8)
+                        HudInGame.ResultComponent.Set(stageresult, true, TargetMoney);
+                    else
+                        goodEndingResult.Set(stageresult, true, TargetMoney);
                     GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
                 }
             }
             else
             {
                 GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
-                HudInGame.ResultComponent.Set(0, false, TargetMoney);
+                //HudInGame.ResultComponent.Set(0, false, TargetMoney);
+                badEndingResult.Set(0, false, TargetMoney);
             }
         }
     }
