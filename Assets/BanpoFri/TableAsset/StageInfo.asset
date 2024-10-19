@@ -45,10 +45,10 @@ MonoBehaviour:
     _start_money: 1500
     _target_money: 20000
     _node_time: 50
-    _change_down_rate: 55
+    _change_down_rate: 60
     _change_up_rate: 30
-    _down_stock_min: 3
-    _down_stock_max: 6
+    _down_stock_min: 8
+    _down_stock_max: 20
     _up_stock_min: 2
     _up_stock_max: 4
     _event_time: e8030000d0070000ac0d0000
@@ -63,11 +63,11 @@ MonoBehaviour:
     _target_money: 20000
     _node_time: 50
     _change_down_rate: 30
-    _change_up_rate: 55
+    _change_up_rate: 60
     _down_stock_min: 2
     _down_stock_max: 4
-    _up_stock_min: 3
-    _up_stock_max: 6
+    _up_stock_min: 6
+    _up_stock_max: 12
     _event_time: e8030000d0070000ac0d0000
     _event_goodbad: 000000000000000000000000
     _stage_name: "\uB124\uD06C\uC2A8"
@@ -113,10 +113,10 @@ MonoBehaviour:
     _start_money: 3000
     _target_money: 40000
     _node_time: 40
-    _change_down_rate: 55
+    _change_down_rate: 60
     _change_up_rate: 30
-    _down_stock_min: 3
-    _down_stock_max: 6
+    _down_stock_min: 8
+    _down_stock_max: 20
     _up_stock_min: 2
     _up_stock_max: 4
     _event_time: e8030000d0070000b80b00009411000070170000
