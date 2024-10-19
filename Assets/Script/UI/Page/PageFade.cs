@@ -40,6 +40,7 @@ public class PageFade : UIBase
             sequenceFadeInOut = DOTween.Sequence()
         .SetAutoKill(false)
         .Append(FadeImg.DOFade(1.0f, 1f))
+        .SetUpdate(true) // Ignore Time.timeScale
         .AppendCallback(() => {
             FadeAction?.Invoke();
             FadeAction = null;

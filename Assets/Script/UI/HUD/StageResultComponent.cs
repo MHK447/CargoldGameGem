@@ -36,6 +36,7 @@ public class StageResultComponent : MonoBehaviour
         }
         else
         {
+            ProjectUtility.SetActiveCheck(this.gameObject, false);
             GameRoot.Instance.UISystem.OpenUI<PopupFrameShop>(popup => popup.Init());
         }
     }

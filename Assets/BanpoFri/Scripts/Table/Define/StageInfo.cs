@@ -35,13 +35,6 @@ namespace BanpoFri
 			set { _target_money = value;}
 		}
 		[SerializeField]
-		private int _start_up_rate;
-		public int start_up_rate
-		{
-			get { return _start_up_rate;}
-			set { _start_up_rate = value;}
-		}
-		[SerializeField]
 		private int _node_time;
 		public int node_time
 		{

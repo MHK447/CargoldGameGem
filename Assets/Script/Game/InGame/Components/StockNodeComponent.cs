@@ -35,9 +35,11 @@ public class StockNodeComponent : InGameFloatingUI
 
         var finddata = GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.StockMinus);
 
-        if(value <= GameRoot.Instance.PlayerSystem.min_stock_price && finddata > -1)
+        if(value <= GameRoot.Instance.PlayerSystem.min_stock_price && finddata <= -1)
         {
-            value = GameRoot.Instance.PlayerSystem.min_stock_price; 
+            value = GameRoot.Instance.PlayerSystem.min_stock_price;
+            GuageBar.color = Config.Instance.GetImageColor("StockNode_Red");
+            percent = 0;
         }
 
         GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value = value;

@@ -24,11 +24,11 @@ MonoBehaviour:
   mSecondKey: []
   mDataList:
   - _stage_id: 1
-    _start_price: 100
-    _start_money: 1000
-    _target_money: 10000
+    _start_price: 1000
+    _start_money: 10000
+    _target_money: 100000
     _node_time: 50
-    _change_down_rate: 45
+    _change_down_rate: 0
     _change_up_rate: 45
     _down_stock_min: 5
     _down_stock_max: 35

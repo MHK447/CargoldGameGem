@@ -67,7 +67,7 @@ public class PlayerSystem
 
 
             if(!IsLuckySell())
-            GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value -= 1;
+                GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value -= 1;
         }
 
     }
