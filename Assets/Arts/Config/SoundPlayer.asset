@@ -15,6 +15,10 @@ MonoBehaviour:
   soundDatas:
   - soundKey: bgm
     audioData: {fileID: 8300000, guid: 244f720fa6ae349c8a3ef39b597df319, type: 3}
+  - soundKey: bgm_gameover
+    audioData: {fileID: 8300000, guid: 855e515f00984438db37744aa6cb21ff, type: 3}
+  - soundKey: bgm_ending
+    audioData: {fileID: 8300000, guid: 88fb39d686c27400ca2dbdb57b86bb16, type: 3}
   - soundKey: btn
     audioData: {fileID: 8300000, guid: 3e3f161166ba72041a40891bd268001f, type: 3}
   - soundKey: popup
@@ -25,3 +29,5 @@ MonoBehaviour:
     audioData: {fileID: 8300000, guid: e4ac9f00284194f7e9529ceecc724edb, type: 3}
   - soundKey: Effect_Btn_Buy
     audioData: {fileID: 8300000, guid: 3e3f161166ba72041a40891bd268001f, type: 3}
+  - soundKey: Effect_Btn_Fail
+    audioData: {fileID: 8300000, guid: 2b9a8f7a4ae9a43b69fa0249e2a7e79f, type: 3}
