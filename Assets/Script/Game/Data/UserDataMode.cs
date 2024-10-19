@@ -13,6 +13,7 @@ public interface IUserDataMode
 	DateTime CurPlayDateTime { get; set; }
 	public PlayerData PlayerData { get; set; }
 	public StageData StageData { get; set; }
+	public EventData EventData { get; set; }
 	public PlayerWeapon PlayerWeapon { get; set; }
 	List<LabUpgradeData> LABBuffList { get; set; }
 	public PlanetData PlanetData { get; set; }
@@ -34,6 +35,7 @@ public class UserDataMain : IUserDataMode
 	public DateTime LastLoginTime { get; set; } = default(DateTime);
 	public DateTime CurPlayDateTime { get; set; } = new DateTime(1, 1, 1);
 	public StageData StageData { get; set; } = new StageData();
+	public EventData EventData { get; set; } = new EventData();
 	public PlayerWeapon PlayerWeapon { get; set; } = new PlayerWeapon();
 	public PlayerData PlayerData { get; set; } = new PlayerData();
 	public List<LabUpgradeData> LABBuffList { get; set; } = new List<LabUpgradeData>();

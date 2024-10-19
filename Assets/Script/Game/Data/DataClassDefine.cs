@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Numerics;
 using UniRx;
 using System.Collections.Generic;
@@ -65,6 +65,18 @@ public class StageData
     {
 		WaveIdxProperty.Value = waveidx;	
     }
+}
+
+public class EventData
+{
+	public IReactiveProperty<int> event_target_money = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_change_down_rate = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_change_up_rate = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_down_stock_min = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_down_stock_max = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_up_stock_min = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_up_stock_max = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_node_time = new ReactiveProperty<int>(0);
 }
 
 public class OutGameUnitUpgradeData

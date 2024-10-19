@@ -41,22 +41,24 @@ public class StockEventData
             switch (_eventInfoData.event_types[i])
             {
                 case "add_target_money":
-                    StockEventSystem.Temp_SpeedMin += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_target_money.Value += value;
                     break;
                 case "add_up_rate":
-                    StockEventSystem.Temp_SpeedMin += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate.Value += value;
                     break;
                 case "add_down_rate":
-                    StockEventSystem.Temp_DownRate += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate.Value += value;
                     break;
                 case "add_up_stock":
-                    StockEventSystem.Temp_SpeedMin += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max.Value += value;
                     break;
                 case "add_down_stock":
-                    StockEventSystem.Temp_SpeedMin += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max.Value += value;
                     break;
                 case "add_node_time":
-                    StockEventSystem.Temp_SpeedMin += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_node_time.Value += value;
                     break;
                 default:
                     break;

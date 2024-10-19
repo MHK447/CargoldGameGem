@@ -16,8 +16,6 @@ public class HUDEvent : UIBase
 
     public void Init(EventInfoData eventInfoData)
     {
-        if(_beforeTimeScale != 0)
-            _beforeTimeScale = Time.timeScale;
         Time.timeScale = 0;
 
         eventImage.sprite = Config.Instance.GetUIEventImg(eventInfoData.event_filename);
@@ -28,6 +26,6 @@ public class HUDEvent : UIBase
     {
         base.Hide();
 
-        Time.timeScale = _beforeTimeScale;
+        Time.timeScale = 1f ;
     }
 }
