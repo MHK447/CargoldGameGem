@@ -752,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1087545953981554486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   GoalAndMyMoneyText: {fileID: 6969360879393733790}
   GoalText: {fileID: 218408944789657094}
   ActivedMoney: {fileID: 5499643163394494973}
-  ResultText: {fileID: 5499643163394494973}
+  ResultText: {fileID: 1436936063967796583}
   SliderValue: {fileID: 6484799966082412546}
 --- !u!1 &3156109003579467867
 GameObject:
@@ -4531,11 +4531,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6892fc815c54b425fb3a2049582c0aec, type: 3}
     - target: {fileID: 5817066555680873381, guid: eee8c3ade92824703be079b911344194, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.325
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5817066555680873381, guid: eee8c3ade92824703be079b911344194, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee8c3ade92824703be079b911344194, type: 3}
@@ -6553,6 +6553,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
+--- !u!114 &1436936063967796583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6011367413414980966, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
+  m_PrefabInstance: {fileID: 4656070471170322433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7465375375712141188 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2812489400629317509, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
