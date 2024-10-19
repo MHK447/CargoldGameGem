@@ -24,16 +24,16 @@ MonoBehaviour:
   mSecondKey: []
   mDataList:
   - _stage_id: 1
-    _start_price: 1000
-    _start_money: 10000
-    _target_money: 100000
+    _start_price: 100
+    _start_money: 2000
+    _target_money: 10000
     _node_time: 50
-    _change_down_rate: 0
+    _change_down_rate: 45
     _change_up_rate: 45
     _down_stock_min: 5
-    _down_stock_max: 35
+    _down_stock_max: 15
     _up_stock_min: 5
-    _up_stock_max: 35
+    _up_stock_max: 15
     _event_time: e8030000d0070000ac0d0000
     _stage_name: "\uD14C\uC2AC\uB354\uC2AC"
     _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"

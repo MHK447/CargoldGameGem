@@ -32,8 +32,6 @@ public class InGameStockRoot : MonoBehaviour
 
     private StockNodeComponent CurStock;
 
-    private StageInfoData StageInfoData; 
-
     public void FirstStart()
     {
         GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime -= ChangedNodeCreateTime;
@@ -52,7 +50,7 @@ public class InGameStockRoot : MonoBehaviour
 
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
-        StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+        var StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
 
         if(StageInfoData != null)
         {
@@ -72,6 +70,10 @@ public class InGameStockRoot : MonoBehaviour
 
     public void ChangedNodeCreateTime()
     {
+        var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+        var StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+
         var eventNodeTime = GameRoot.Instance.UserData.CurMode.EventData.Event_node_time;
         delcreatetime = ((float)StageInfoData.node_time + (float)eventNodeTime) / 100f;
         NodeCreateTime = Time.time + delcreatetime;
@@ -144,6 +146,10 @@ public class InGameStockRoot : MonoBehaviour
             }
             else
             {
+                var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+
+                var StageInfoData = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
+
                 CurStock = stock;
                 stock.transform.position = new Vector3(0, 20, 0);
                 stock.Set(StageInfoData.start_price, StockNodeComponent.GuageType.RedCandle);
@@ -181,7 +187,7 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_up_rate + eventChangeUpRate) <= randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
+        type = (td.change_down_rate + eventChangeUpRate) > randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
 
         return type;
     }
@@ -197,7 +203,7 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_down_rate + eventChangeDownRate) <= randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        type = (td.change_up_rate + eventChangeDownRate) > randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
