@@ -51,6 +51,7 @@ public class FrameShopComponent : MonoBehaviour
             ProjectUtility.SetActiveCheck(BuyBtn.gameObject, true);
 
             Icon.sprite = Config.Instance.GetBuffIconAtlas(td.item_icon);
+            Anim.Play("Anime_Shop_Default", 0, 0f);
         }
     }
 
