@@ -36,7 +36,8 @@ public class StageResultComponent : MonoBehaviour
 
     public void OnClickNextStage()
     {
-        if(IsSuccess == false)
+        int stageIdx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+        if (IsSuccess == false)
         {
             GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.Init();
 
@@ -53,28 +54,39 @@ public class StageResultComponent : MonoBehaviour
         else
         {
             ProjectUtility.SetActiveCheck(this.gameObject, false);
-            GameRoot.Instance.UISystem.OpenUI<PopupFrameShop>(popup => popup.Init());
+            if (stageIdx < 8)
+                GameRoot.Instance.UISystem.OpenUI<PopupFrameShop>(popup => popup.Init());
+            else
+            {
+                GameRoot.Instance.UISystem.OpenUI<PopupFrameShop>(popup => { popup.Init(); GameRoot.Instance.UserData.CurMode.StageData.StageIdx = 0; popup.OnClickExit(); });
+            }
         }
     }
 
-    public void Set(int reward , bool issuccess , int goalvalue )
+    public void Set(int reward, bool issuccess, int goalvalue)
     {
         IsSuccess = issuccess;
+        int stageIdx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
         ProjectUtility.SetActiveCheck(this.gameObject, true);
-        GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.UpgradeCoin, reward);
-        ResultRewardText.text = reward.ToString();
+        if (issuccess && stageIdx == 8)
+            Debug.Log("Clear");
+        else if (issuccess)
+        {
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.UpgradeCoin, reward);
+            ResultRewardText.text = reward.ToString();
 
-        SliderValue.value = (float)GameRoot.Instance.UserData.CurMode.Money.Value / (float)goalvalue;
+            SliderValue.value = (float)GameRoot.Instance.UserData.CurMode.Money.Value / (float)goalvalue;
 
-        GoalAndMyMoneyText.text = $"Goal:{GameRoot.Instance.UserData.CurMode.Money.Value}/{goalvalue}";
+            GoalAndMyMoneyText.text = $"Goal:{GameRoot.Instance.UserData.CurMode.Money.Value}/{goalvalue}";
 
-        GoalText.text = $"Goal:{goalvalue}";
+            GoalText.text = $"Goal:{goalvalue}";
 
-        ResultText.text = IsSuccess ? "VICTORY!!" : "FAILED!!";
+            ResultText.text = IsSuccess ? "VICTORY!!" : "FAILED!!";
 
-        ResultText.color = issuccess ? Color.green : Color.red;
+            ResultText.color = issuccess ? Color.green : Color.red;
 
-        ActivedMoney.text = $"ACTIVED MONEY:{GameRoot.Instance.UserData.CurMode.Money.Value}";
+            ActivedMoney.text = $"ACTIVED MONEY:{GameRoot.Instance.UserData.CurMode.Money.Value}";
+        }
     }
 
 
