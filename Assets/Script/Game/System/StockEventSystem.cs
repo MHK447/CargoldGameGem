@@ -74,6 +74,7 @@ public class StockEventSystem
         _EventCoroutineList.Add(co);
 
         onStartEventAction?.Invoke();
+        SoundPlayer.Instance.PlaySound("popup");
         _eventOrderIdx++;
     }
 
