@@ -375,6 +375,7 @@ MonoBehaviour:
   touchLockTime: 0.5
   eventImage: {fileID: 2436746244775131361}
   messageText: {fileID: 3393964861764136577}
+  buttonDelay: 0.5
 --- !u!1 &5416356496173140682
 GameObject:
   m_ObjectHideFlags: 0
