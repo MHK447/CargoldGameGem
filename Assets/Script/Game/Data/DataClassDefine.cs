@@ -69,14 +69,14 @@ public class StageData
 
 public class EventData
 {
-	public int event_target_money = 0; // 예정
-	public int event_change_down_rate = 0; // 연결 완
-	public int event_change_up_rate = 0; // 연결 완
-    public int event_down_stock_min = 0; // 연결 완
-    public int event_down_stock_max = 0; // 연결 완
-    public int event_up_stock_min = 0; // 연결 완
-    public int event_up_stock_max = 0; // 연결 완
-	public int event_node_time = 0; // 시작에서만 사용??
+	public IReactiveProperty<int> event_target_money = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_change_down_rate = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_change_up_rate = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_down_stock_min = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_down_stock_max = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_up_stock_min = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_up_stock_max = new ReactiveProperty<int>(0);
+	public IReactiveProperty<int> event_node_time = new ReactiveProperty<int>(0);
 }
 
 public class OutGameUnitUpgradeData

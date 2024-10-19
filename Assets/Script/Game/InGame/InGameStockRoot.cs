@@ -157,13 +157,12 @@ public class InGameStockRoot : MonoBehaviour
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
-        int eventChangeUpRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate;
 
         var randavalue = Random.Range(0, 100);
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_up_rate + eventChangeUpRate) < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        type = td.change_up_rate < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
@@ -173,16 +172,16 @@ public class InGameStockRoot : MonoBehaviour
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
 
         var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
-        int eventChangeDownRate = GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate;
 
         var randavalue = Random.Range(0, 100);
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_down_rate + eventChangeDownRate) < randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
+        type = td.change_down_rate < randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
 
         return type;
     }
+
 
     public int GetStockDownPercent()
     {
@@ -192,12 +191,11 @@ public class InGameStockRoot : MonoBehaviour
 
         var td = Tables.Instance.GetTable<StageInfo>().GetData(curstageidx);
 
-
-        if (td != null)
+        if(td != null)
         {
-            int eventDownStockMin = GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min;
-            int eventDownStockMax = GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max;
-            returnvalue = Random.Range(td.down_stock_min + eventDownStockMin, td.down_stock_max + eventDownStockMax);
+            returnvalue = Random.Range(td.down_stock_min, td.down_stock_max);
+
+
         }
 
         return returnvalue;
@@ -214,9 +212,7 @@ public class InGameStockRoot : MonoBehaviour
 
         if (td != null)
         {
-            int eventUpStockMin = GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min;
-            int eventUpStockMax = GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max;
-            returnvalue = Random.Range(td.up_stock_min + eventUpStockMin, td.up_stock_max + eventUpStockMax);
+            returnvalue = Random.Range(td.up_stock_min, td.up_stock_max);
         }
 
         return returnvalue;
