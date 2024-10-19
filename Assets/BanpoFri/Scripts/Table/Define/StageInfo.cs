@@ -105,6 +105,20 @@ namespace BanpoFri
 			set { _stage_name = value;}
 		}
 		[SerializeField]
+		private string _stage_number_name;
+		public string stage_number_name
+		{
+			get { return _stage_number_name;}
+			set { _stage_number_name = value;}
+		}
+		[SerializeField]
+		private string _stage_icon_filename;
+		public string stage_icon_filename
+		{
+			get { return _stage_icon_filename;}
+			set { _stage_icon_filename = value;}
+		}
+		[SerializeField]
 		private int _stage_end_time;
 		public int stage_end_time
 		{

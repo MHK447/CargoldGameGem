@@ -44,7 +44,8 @@ public class InGameBattle : MonoBehaviour
             GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Value = (int)wavetime;
             if (wavedeltime >= GameRoot.Instance.UserData.CurMode.StageData.StageCoolTime)
             {
-                wavedeltime = 0;
+                GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Value = -1;
+                   wavedeltime = 0;
                 //NextWave();
             }
             waveonesecondtime -= 1f;

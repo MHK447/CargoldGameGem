@@ -19,62 +19,62 @@ public class GestureDetector : MonoBehaviour
     private float offsetY = 100f;
     private State state = State.None;
 
-	private void Awake()
-	{
-		firstX = Screen.width / 2f;
-		secondY = Screen.height / 2f;
-	}
+    private void Awake()
+    {
+        firstX = Screen.width / 2f;
+        secondY = Screen.height / 2f;
+    }
 
 #if TREEPLLA_LOG
 	private void Update()
     {       
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
-        #else
+#else
          if(Input.touchCount < 1)
             return;
 
         var touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
-        #endif        
+#endif
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             fingerDownPosition = Input.mousePosition;
-            #else
+#else
             fingerDownPosition = touch.position;
-            #endif
+#endif
             state = State.First;
         }
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (state != State.None)
-        #else
+#else
         if (state != State.None && touch.phase == TouchPhase.Moved)
-        #endif
+#endif
         {
             switch(state)
             {
                 case State.First:
-                    #if UNITY_EDITOR
+#if UNITY_EDITOR
                     CheckFirstMove(Input.mousePosition);
-                    #else
+#else
                     CheckFirstMove(touch.position);
-                    #endif
+#endif
                 break;
                 default:
-                    #if UNITY_EDITOR
+#if UNITY_EDITOR
                     CheckSecondMove(Input.mousePosition);
-                    #else
+#else
                     CheckSecondMove(touch.position);
-                    #endif
+#endif
                 break;
             }
         }
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (Input.GetMouseButtonUp(0))
-        #else
+#else
         if (touch.phase == TouchPhase.Ended)
-        #endif        
+#endif
         {
             state = State.None;
         }
@@ -83,13 +83,13 @@ public class GestureDetector : MonoBehaviour
 
     private void CheckFirstMove(Vector2 pos)
     {
-        if(Mathf.Abs( pos.y - fingerDownPosition.y ) > offsetY)
+        if (Mathf.Abs(pos.y - fingerDownPosition.y) > offsetY)
         {
             state = State.None;
             return;
         }
 
-		if (pos.x - fingerDownPosition.x > firstX)
+        if (pos.x - fingerDownPosition.x > firstX)
         {
             state = State.Second;
             fingerDownPosition = pos;
@@ -98,20 +98,20 @@ public class GestureDetector : MonoBehaviour
 
     private void CheckSecondMove(Vector2 pos)
     {
-        if(Mathf.Abs( pos.x - fingerDownPosition.x ) > offsetX)
+        if (Mathf.Abs(pos.x - fingerDownPosition.x) > offsetX)
         {
             state = State.None;
             return;
         }
-        if(fingerDownPosition.y - pos.y > secondY)
+        if (fingerDownPosition.y - pos.y > secondY)
         {
             state = State.None;
-            //Complete();
+            Complete();
         }
     }
 
-    //private void Complete()
-    //{
-    //    GameRoot.Instance.SetCheatWindow(true);
-    //}
+    private void Complete()
+    {
+        GameRoot.Instance.SetCheatWindow(true);
+    }
 }

@@ -492,7 +492,7 @@ public class PanAndZoom : MonoBehaviour {
     }
 
     void CameraInBounds() {
-        if(follow)
+        if(follow && followTrans != null)
         {
             //cam.orthographicSize = Mathf.Lerp(focusOriginCameraSize, focusSize, Easing.Quartic.Out(focusDeltaTime / focusMoveDuration));
             cam.transform.position = new Vector3(followTrans.position.x, followTrans.position.y, cam.transform.position.z);

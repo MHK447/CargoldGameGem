@@ -42,6 +42,10 @@ public class InGameTopComponent : MonoBehaviour
 
         if (infotd != null)
         {
+            StageCompanyNameTexrt.text = infotd.stage_name.ToString();
+
+            StageCountText.text = infotd.stage_number_name.ToString();
+
             GoalPriceText.text = infotd.target_money.ToString();
 
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);

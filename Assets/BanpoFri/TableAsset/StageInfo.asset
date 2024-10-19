@@ -36,7 +36,9 @@ MonoBehaviour:
     _up_stock_min: 15
     _up_stock_max: 45
     _event_time: e8030000d0070000a00f0000
-    _stage_name: "\uC0BC\uC131"
+    _stage_name: "\uD14C\uC2AC\uB354\uC2AC"
+    _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 60
   - _stage_id: 2
     _start_price: 150
@@ -51,7 +53,9 @@ MonoBehaviour:
     _up_stock_min: 15
     _up_stock_max: 40
     _event_time: dc050000d0070000b80b0000
-    _stage_name: "\uD14C\uC2AC\uB77C"
+    _stage_name: "\uC560\uD50C\uC560\uD50C"
+    _stage_number_name: "2\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 3
     _start_price: 100
@@ -67,6 +71,8 @@ MonoBehaviour:
     _up_stock_max: 30
     _event_time: d0070000b80b0000a00f0000
     _stage_name: "\uC560\uD50C"
+    _stage_number_name: "3\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 4
     _start_price: 200
@@ -81,7 +87,9 @@ MonoBehaviour:
     _up_stock_min: 15
     _up_stock_max: 40
     _event_time: e8030000881300007c150000
-    _stage_name: "\uC5D4\uC2DC\uC18C\uD504\uD2B8"
+    _stage_name: "Neck\uC2A8"
+    _stage_number_name: "4\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 5
     _start_price: 50
@@ -97,6 +105,8 @@ MonoBehaviour:
     _up_stock_max: 40
     _event_time: e8030000dc050000d0070000b80b000088130000
     _stage_name: "\uB86F\uB370\uB9AC\uC544"
+    _stage_number_name: "5\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 6
     _start_price: 30
@@ -112,6 +122,8 @@ MonoBehaviour:
     _up_stock_max: 20
     _event_time: 2c01000088130000
     _stage_name: "GS \uCE7C\uD14D\uC2A4"
+    _stage_number_name: "6\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 7
     _start_price: 300
@@ -127,6 +139,8 @@ MonoBehaviour:
     _up_stock_max: 30
     _event_time: e8030000d0070000a00f0000
     _stage_name: "\uD55C\uD654 \uBC29\uC0B0"
+    _stage_number_name: "7\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50
   - _stage_id: 8
     _start_price: 400
@@ -142,4 +156,6 @@ MonoBehaviour:
     _up_stock_max: 20
     _event_time: dc050000d0070000b80b0000
     _stage_name: "\uAC2D\uC2A4"
+    _stage_number_name: "8\uC8FC\uCC28 \uBAA9\uD45C"
+    _stage_icon_filename: 
     _stage_end_time: 50

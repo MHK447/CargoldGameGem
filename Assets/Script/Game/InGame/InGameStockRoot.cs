@@ -36,6 +36,11 @@ public class InGameStockRoot : MonoBehaviour
 
     public void FirstStart()
     {
+        foreach(var node in CachedComponents)
+        {
+            Destroy(node.gameObject);
+        }
+
         GameRoot.Instance.UserData.CurMode.Money.Value = 0;
 
         GameRoot.Instance.UserData.HUDMoney.Value = 0;
