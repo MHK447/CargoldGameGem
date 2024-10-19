@@ -187,7 +187,8 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_down_rate + eventChangeDownRate) > randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
+        int finalValue = Mathf.Clamp(td.change_down_rate + eventChangeDownRate, 0, 100);
+        type = finalValue > randavalue ? StockNodeComponent.GuageType.BlueCandle : StockNodeComponent.GuageType.RedCandle;
 
         return type;
     }
@@ -203,7 +204,8 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = (td.change_up_rate + eventChangeUpRate) > randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        int finalValue = Mathf.Clamp(td.change_up_rate + eventChangeUpRate, 0, 100);
+        type = finalValue > randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
@@ -221,7 +223,9 @@ public class InGameStockRoot : MonoBehaviour
         {
             int eventDownStockMin = GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min;
             int eventDownStockMax = GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max;
-            returnvalue = Random.Range(td.down_stock_min + eventDownStockMin, td.down_stock_max + eventDownStockMax);
+            int finalDownStockMinValue = Mathf.Clamp(td.down_stock_min + eventDownStockMin, 0, 99999);
+            int finalDownStockMaxValue = Mathf.Clamp(td.down_stock_max + eventDownStockMax, 0, 99999);
+            returnvalue = Random.Range(finalDownStockMinValue, finalDownStockMaxValue);
         }
 
         return returnvalue;
@@ -240,7 +244,9 @@ public class InGameStockRoot : MonoBehaviour
         {
             int eventUpStockMin = GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min;
             int eventUpStockMax = GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max;
-            returnvalue = Random.Range(td.up_stock_min + eventUpStockMin, td.up_stock_max + eventUpStockMax);
+            int finalDownStockMinValue = Mathf.Clamp(td.up_stock_min + eventUpStockMin, 0, 99999);
+            int finalDownStockMaxValue = Mathf.Clamp(td.up_stock_max + eventUpStockMax, 0, 99999);
+            returnvalue = Random.Range(finalDownStockMinValue, finalDownStockMaxValue);
         }
 
         return returnvalue;
