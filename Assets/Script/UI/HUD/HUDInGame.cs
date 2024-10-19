@@ -57,7 +57,8 @@ public class HUDInGame : UIBase
 
     public void OnClickBuy()
     {
-        if(GameRoot.Instance.PlayerSystem.IsLuckyBuy())
+        SoundPlayer.Instance.PlaySound("btn");
+        if (GameRoot.Instance.PlayerSystem.IsLuckyBuy())
         {
             GameRoot.Instance.PlayerSystem.AddStock();
         }
@@ -68,12 +69,13 @@ public class HUDInGame : UIBase
 
     public void OnClickSell()
     {
+        SoundPlayer.Instance.PlaySound("btn");
         GameRoot.Instance.PlayerSystem.SellStock();
     }
 
     public void SetMyMoneyText(int mymoney)
     {
-        MyMoneyText.text = mymoney.ToString();
+        MyMoneyText.text = $"{mymoney}";
     }
 
 

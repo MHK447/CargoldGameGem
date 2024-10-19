@@ -33,6 +33,7 @@ public class StageResultComponent : MonoBehaviour
             }
 
             ProjectUtility.SetActiveCheck(this.gameObject, false);
+            GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
         }
         else
         {

@@ -49,14 +49,14 @@ public class InGameTopComponent : MonoBehaviour
             var buffvalue = GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.MoneyDecrease) == -1 ? 0
                 : GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.MoneyDecrease);
 
-            TargetMoney = buffvalue;
+            TargetMoney = TargetMoney - buffvalue;
 
 
             StageCompanyNameTexrt.text = infotd.stage_name.ToString();
 
             StageCountText.text = infotd.stage_number_name.ToString();
 
-            GoalPriceText.text = TargetMoney.ToString();
+            GoalPriceText.text = $"${TargetMoney}";
 
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);
 
@@ -87,6 +87,8 @@ public class InGameTopComponent : MonoBehaviour
 
     public void Result()
     {
+        if (GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle == false) return;
+
         ProjectUtility.SetActiveCheck(HudInGame.ResultComponent.gameObject, true);
 
         var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;

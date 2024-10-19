@@ -43,6 +43,9 @@ public class InGameStockRoot : MonoBehaviour
             Destroy(node.gameObject);
         }
 
+        GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value = 0;
+        GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value = 0;
+
         GameRoot.Instance.UserData.CurMode.Money.Value = 0;
 
         GameRoot.Instance.UserData.HUDMoney.Value = 0;

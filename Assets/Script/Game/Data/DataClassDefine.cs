@@ -65,7 +65,7 @@ public class StageData
 		UnitAddCount = 0;
 		UnitCountPropety.Value = 0;
 		WaveTimeProperty.Value =0;
-
+		GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value = 0;
 	}
 
 

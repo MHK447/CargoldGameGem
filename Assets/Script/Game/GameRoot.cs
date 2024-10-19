@@ -221,9 +221,10 @@ public class GameRoot : Singleton<GameRoot>
 		yield return Config.Create();
 		yield return Tables.Create();
 		yield return SoundPlayer.Create();
+		SoundPlayer.Instance.SetRoot(transform);
 
 		// 로딩 팝업 어드레서블 로드
-	    loadcount = 0;
+		loadcount = 0;
 		InitUILoading();
 
 		yield return new WaitUntil(() => loadcount == 1);
@@ -234,6 +235,8 @@ public class GameRoot : Singleton<GameRoot>
 		//GachaSkillSystem.Create();
 		StockEventSystem.Init();
 		PlayerSystem.Create();
+
+		GameRoot.instance.WaitTimeAndCallback(1f, () => { SoundPlayer.Instance.PlayBGM("bgm", true); });
 
 		LoadComplete = true;
 
