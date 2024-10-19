@@ -21,6 +21,13 @@ namespace BanpoFri
 			set { _item_name = value;}
 		}
 		[SerializeField]
+		private string _item_icon;
+		public string item_icon
+		{
+			get { return _item_icon;}
+			set { _item_icon = value;}
+		}
+		[SerializeField]
 		private int _item_appearance_weight;
 		public int item_appearance_weight
 		{

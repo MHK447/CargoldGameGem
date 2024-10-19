@@ -56,7 +56,7 @@ MonoBehaviour:
     - add_down_stock
     - add_down_rate
     _event_weight: 3
-    _event_type_values: fbffffffe2ffffff050000001e000000
+    _event_type_values: faffffffe2ffffff050000001e000000
     _event_duration: 1000
     _event_filename: common_BG_icon_01
     _event_description: "\"\uC11C\uC6B8 \uBD09\uCC9C\uB3D9 \uCC9C\uC5F0\uAE30\uB150\uBB3C
@@ -71,7 +71,7 @@ MonoBehaviour:
     - add_down_stock
     - add_down_rate
     _event_weight: 3
-    _event_type_values: 050000001e000000fbffffffe2ffffff
+    _event_type_values: 080000001e000000fbffffffe2ffffff
     _event_duration: 1000
     _event_filename: common_BG_icon_02
     _event_description: "\uC77C\uB860 \uBA38\uC2A4\uD06C, \uD654\uC131 \uB300\uD1B5\uB839
@@ -86,7 +86,7 @@ MonoBehaviour:
     - add_down_stock
     - add_down_rate
     _event_weight: 3
-    _event_type_values: 050000001e000000fbffffffe2ffffff
+    _event_type_values: 080000001e000000fbffffffe2ffffff
     _event_duration: 1000
     _event_filename: common_BG_icon_03
     _event_description: "\"\uBC88\uAC1C\uB97C \uB9DE\uC544\uC57C \uAC00\uC18D\uD55C\uB2E4?
@@ -116,8 +116,8 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 10
-    _event_type_values: 0a00000032000000f6ffffffceffffff
+    _event_weight: 100
+    _event_type_values: 6400000032000000f6ffffffceffffff
     _event_duration: 500
     _event_filename: common_BG_icon_05
     _event_description: "\uC624\uB298\uC740 \uC2DC\uB9AC\uC640 \uACB0\uD63C\uD55C
@@ -131,8 +131,8 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 10
-    _event_type_values: 0a00000032000000f6ffffffceffffff
+    _event_weight: 100
+    _event_type_values: 6400000032000000f6ffffffceffffff
     _event_duration: 500
     _event_filename: common_BG_icon_06
     _event_description: "\"\uD0C0\uC790\uB97C \uCE58\uACE0 \uC2F6\uB2E4\uBA74...

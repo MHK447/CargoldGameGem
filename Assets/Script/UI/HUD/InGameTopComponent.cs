@@ -71,7 +71,7 @@ public class InGameTopComponent : MonoBehaviour
 
     public void SetCurPrice(int price)
     {
-        CurPriceText.text = $"NOW SELL:${price}";
+        CurPriceText.text = $"PRICE:${price}";
     }
 
 
