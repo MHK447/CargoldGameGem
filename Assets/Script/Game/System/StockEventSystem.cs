@@ -11,6 +11,7 @@ public class StockEventSystem
 
     private bool _isInit = false;
     private List<EventInfoData> _cashingCurrentStageEventList;
+    private List<Coroutine> _EventCoroutineList = new();
 
     private int _currentStage = 1;
     private int _eventOrderIdx = 0;
@@ -27,10 +28,26 @@ public class StockEventSystem
     {
         _currentStage = stageID;
         _eventOrderIdx = 0;
+        ResetEventData();
 
         _cashingCurrentStageEventList = CashingCurrentStageEventData();
         StageInfoData stageInfo = Tables.Instance.GetTable<StageInfo>().GetData(_currentStage);
         stageInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 100, StartEvent));
+    }
+
+    private void ResetEventData()
+    {
+        if(_EventCoroutineList.Count > 0)
+            _EventCoroutineList.ForEach(e => GameRoot.Instance.StopCoroutine(e));
+        _EventCoroutineList.Clear();
+
+        GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max = 0;
+        GameRoot.Instance.UserData.CurMode.EventData.Event_node_time = 0;
     }
 
     private List<EventInfoData> CashingCurrentStageEventData()
@@ -46,7 +63,8 @@ public class StockEventSystem
 
         StockEventData stockEventData = new StockEventData();
         stockEventData.Init(stockEventInfo);
-        stockEventData.StartEvent(CallBack);
+        Coroutine co = stockEventData.StartEvent(CallBack);
+        _EventCoroutineList.Add(co);
 
         _eventOrderIdx++;
     }

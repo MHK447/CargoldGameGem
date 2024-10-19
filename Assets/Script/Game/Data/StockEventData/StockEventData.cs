@@ -1,5 +1,7 @@
 using BanpoFri;
 using System;
+using System.Collections;
+using UnityEngine;
 
 public class StockEventData
 {
@@ -11,7 +13,7 @@ public class StockEventData
         _eventInfoData = stockEventInfo;
     }
 
-    public void StartEvent(Action<EventInfoData> callback)
+    public Coroutine StartEvent(Action<EventInfoData> callback)
     {
         HUDEvent eventPopup = GameRoot.Instance.UISystem.GetUI<HUDEvent>();
         if (eventPopup != null && eventPopup.gameObject.activeSelf == true)
@@ -21,7 +23,13 @@ public class StockEventData
 
         _callback = callback;
         SetData(true);
-        GameRoot.Instance.WaitTimeAndCallback(_eventInfoData.event_duration / 100, EndEvent);
+        return GameRoot.Instance.StartCoroutine(waitTimeAndCallback(_eventInfoData.event_duration / 100, EndEvent));
+    }
+
+    IEnumerator waitTimeAndCallback(float time, System.Action callback)
+    {
+        yield return new WaitForSeconds(time);
+        callback?.Invoke();
     }
 
     public void EndEvent()
