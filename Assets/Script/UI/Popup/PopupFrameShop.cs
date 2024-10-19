@@ -10,6 +10,11 @@ using UniRx;
 [UIPath("UI/Popup/PopupUpgrades")]
 public class PopupFrameShop : UIBase
 {
+    [SerializeField]
+    private Text CurrencyText;
+
+    [SerializeField]
+    private List<Image> IconsList = new List<Image>();
 
     [SerializeField]
     private List<GameObject> CachedComponents = new List<GameObject>();
@@ -21,7 +26,7 @@ public class PopupFrameShop : UIBase
     private GameObject UpgradeComponentPrefb;
 
     [SerializeField]
-    private Text CurUpgradeCost;
+    private Text CurUpgradeCostText;
 
     private CompositeDisposable disposable = new CompositeDisposable();
 
@@ -42,8 +47,52 @@ public class PopupFrameShop : UIBase
         Time.timeScale = 0f;
         disposable.Clear();
 
+        CurUpgradeCostText.text = GameRoot.Instance.UserData.CurMode.UpgradeCoin.ToString();
+
         GameRoot.Instance.UserData.CurMode.UpgradeCoin.Subscribe(x => {
-            CurUpgradeCost.text = x.ToString();
+            CurUpgradeCostText.text = x.ToString();
+        }).AddTo(disposable);
+
+        foreach (var icons in IconsList)
+        {
+            ProjectUtility.SetActiveCheck(icons.gameObject, false);
+        }
+
+        foreach(var weapon in GameRoot.Instance.UserData.CurMode.WeaponDatas)
+        {
+            var findobj = IconsList.Find(x => !x.gameObject.activeSelf);
+
+            if (findobj != null)
+            {
+                var td = Tables.Instance.GetTable<ItemInfo>().GetData(weapon.WeaponIdx);
+
+                if (td != null)
+                {
+                    findobj.sprite = Config.Instance.GetBuffIconAtlas(td.item_icon);
+                    ProjectUtility.SetActiveCheck(findobj.gameObject, true);
+                }
+            }
+        }
+
+        GameRoot.Instance.UserData.CurMode.WeaponDatas.ObserveAdd().Subscribe(x => {
+
+            var findobj = IconsList.Find(x => !x.gameObject.activeSelf);
+
+            if(findobj != null)
+            {
+                var td = Tables.Instance.GetTable<ItemInfo>().GetData(x.Value.WeaponIdx);
+
+                if(td != null)
+                {
+                    ProjectUtility.SetActiveCheck(findobj.gameObject, true);
+                    findobj.sprite = Config.Instance.GetBuffIconAtlas(td.item_icon);
+                }
+            }
+
+        }).AddTo(disposable);
+
+        GameRoot.Instance.UserData.CurMode.UpgradeCoin.Subscribe(x => {
+            CurUpgradeCostText.text = x.ToString();
         }).AddTo(disposable);
 
         var curstageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;

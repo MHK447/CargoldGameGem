@@ -32,6 +32,9 @@ public class InGameTopComponent : MonoBehaviour
     [SerializeField]
     private Animator Anim;
 
+    [SerializeField]
+    private List<Image> IconsList = new List<Image>();
+
 
     private CompositeDisposable disposables = new CompositeDisposable();
 
@@ -49,6 +52,27 @@ public class InGameTopComponent : MonoBehaviour
 
         if (infotd != null)
         {
+            foreach (var icons in IconsList)
+            {
+                ProjectUtility.SetActiveCheck(icons.gameObject, false);
+            }
+
+            foreach (var weapon in GameRoot.Instance.UserData.CurMode.WeaponDatas)
+            {
+                var findobj = IconsList.Find(x => !x.gameObject.activeSelf);
+
+                if (findobj != null)
+                {
+                    var td = Tables.Instance.GetTable<ItemInfo>().GetData(weapon.WeaponIdx);
+
+                    if (td != null)
+                    {
+                        findobj.sprite = Config.Instance.GetBuffIconAtlas(td.item_icon);
+                        ProjectUtility.SetActiveCheck(findobj.gameObject, true);
+                    }
+                }
+            }
+
             TargetMoney = infotd.target_money;
 
             var buffvalue = GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.MoneyDecrease) == -1 ? 0

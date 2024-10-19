@@ -161,7 +161,7 @@ MonoBehaviour:
   DynamicAtlas: {fileID: 0}
   DynamicShopAtlas: {fileID: 0}
   ItemCardAtlas: {fileID: 0}
-  CommonAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
+  BuffIconAtlas: {fileID: 4343727234628468602, guid: 9dda1ccbf4df6468aaa8a3c545e1d3bc, type: 2}
   facilityAtlas: {fileID: 0}
   UiIconAtlas: {fileID: 0}
   UiBgAtlas: {fileID: 0}
@@ -171,4 +171,5 @@ MonoBehaviour:
   UnitImgAtlas: {fileID: 4343727234628468602, guid: e4eeb7b3b02ad46fea1bb8d4d1181edf, type: 2}
   SkillAtlas: {fileID: 4343727234628468602, guid: 1c93609e065d34362968220ce99920c7, type: 2}
   InGameSkillAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
+  CommonAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
   UIEventAtlas: {fileID: 4343727234628468602, guid: 24197aaba1dadbc47954c426092407e4, type: 2}

@@ -1,5 +1,6 @@
 using BanpoFri;
 using DefaultSetting.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class StockEventSystem
     private bool _isInit = false;
     private List<EventInfoData> _cashingCurrentStageEventList;
     private List<Coroutine> _EventCoroutineList = new();
+
+    public Action onStartEventAction;
+    public Action onEndEventAction;
 
     private int _currentStage = 1;
     private int _eventOrderIdx = 0;
@@ -28,6 +32,9 @@ public class StockEventSystem
     {
         _currentStage = stageID;
         _eventOrderIdx = 0;
+        onStartEventAction = null;
+        onEndEventAction = null;
+
         ResetEventData();
 
         _cashingCurrentStageEventList = CashingCurrentStageEventData();
@@ -66,6 +73,7 @@ public class StockEventSystem
         Coroutine co = stockEventData.StartEvent(CallBack);
         _EventCoroutineList.Add(co);
 
+        onStartEventAction?.Invoke();
         _eventOrderIdx++;
     }
 
@@ -105,5 +113,6 @@ public class StockEventSystem
     public void CallBack(EventInfoData eventInfoData)
     {
         Debug.Log($"HighCl_{Time.time}: Callback\nEventInfoData: {eventInfoData.event_id}");
+        onEndEventAction?.Invoke();
     }
 }
