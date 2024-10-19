@@ -34,7 +34,7 @@ MonoBehaviour:
     _down_stock_max: 10
     _up_stock_min: 5
     _up_stock_max: 10
-    _event_time: e8030000d0070000ac0d0000
+    _event_time: f4010000a4060000ac0d0000
     _event_goodbad: 000000000100000002000000
     _stage_name: "\uD14C\uC2AC\uB791"
     _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
@@ -43,12 +43,12 @@ MonoBehaviour:
   - _stage_id: 2
     _start_price: 1175
     _start_money: 1500
-    _target_money: 20000
+    _target_money: 7000
     _node_time: 50
     _change_down_rate: 60
     _change_up_rate: 30
-    _down_stock_min: 8
-    _down_stock_max: 20
+    _down_stock_min: 16
+    _down_stock_max: 32
     _up_stock_min: 2
     _up_stock_max: 4
     _event_time: e8030000d0070000ac0d0000
