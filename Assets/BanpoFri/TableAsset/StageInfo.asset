@@ -111,7 +111,7 @@ MonoBehaviour:
   - _stage_id: 6
     _start_price: 1367
     _start_money: 3000
-    _target_money: 40000
+    _target_money: 20000
     _node_time: 30
     _change_down_rate: 60
     _change_up_rate: 30
@@ -128,7 +128,7 @@ MonoBehaviour:
   - _stage_id: 7
     _start_price: 278
     _start_money: 3000
-    _target_money: 40000
+    _target_money: 20000
     _node_time: 30
     _change_down_rate: 43
     _change_up_rate: 44
@@ -145,7 +145,7 @@ MonoBehaviour:
   - _stage_id: 8
     _start_price: 136
     _start_money: 3000
-    _target_money: 100000
+    _target_money: 40000
     _node_time: 20
     _change_down_rate: 43
     _change_up_rate: 44
