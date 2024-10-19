@@ -162,7 +162,7 @@ public class InGameStockRoot : MonoBehaviour
 
         StockNodeComponent.GuageType type;
 
-        type = td.change_down_rate < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
+        type = td.change_up_rate < randavalue ? StockNodeComponent.GuageType.RedCandle : StockNodeComponent.GuageType.BlueCandle;
 
         return type;
     }
@@ -213,8 +213,6 @@ public class InGameStockRoot : MonoBehaviour
         if (td != null)
         {
             returnvalue = Random.Range(td.up_stock_min, td.up_stock_max);
-
-
         }
 
         return returnvalue;
