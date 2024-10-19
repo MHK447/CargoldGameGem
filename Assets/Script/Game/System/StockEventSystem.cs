@@ -11,7 +11,7 @@ public class StockEventSystem
 
     private bool _isInit = false;
     private List<EventInfoData> _cashingCurrentStageEventList;
-    
+
     int currentStage = 2;
 
     public void Init()
@@ -41,7 +41,7 @@ public class StockEventSystem
     private void StartEvent()
     {
         EventInfoData stockEventInfo = GetRandomEvent();
-        Debug.Log($"HighCl_{Time.time}: Entry\n stockEventID: {stockEventInfo.event_id}");
+        //Debug.Log($"HighCl_{Time.time}: Entry\n stockEventID: {stockEventInfo.event_id}");
 
         StockEventData stockEventData = new StockEventData();
         stockEventData.Init(stockEventInfo);

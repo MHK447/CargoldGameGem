@@ -18,6 +18,12 @@ public class StockEventData
 
     public void StartEvent(Action<EventInfoData> callback)
     {
+        HUDEvent eventPopup = GameRoot.Instance.UISystem.GetUI<HUDEvent>();
+        if (eventPopup != null && eventPopup.gameObject.activeSelf == true)
+            eventPopup.Init(_eventInfoData.event_description);
+        else
+            GameRoot.Instance.UISystem.OpenUI<HUDEvent>(popup => popup.Init(_eventInfoData.event_description));
+
         _callback = callback;
         SetData(true);
         GameRoot.Instance.WaitTimeAndCallback(_eventInfoData.event_duration / 100, EndEvent);

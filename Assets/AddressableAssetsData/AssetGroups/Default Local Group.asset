@@ -257,6 +257,10 @@ MonoBehaviour:
     m_Address: UI/Page/HUDInGame
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b96defaf801e01548b958abe8d7404cc
+    m_Address: UI/Page/HUDEventMessagePopup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
