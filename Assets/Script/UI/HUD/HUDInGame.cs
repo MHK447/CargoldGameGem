@@ -38,6 +38,9 @@ public class HUDInGame : UIBase
 
     private CompositeDisposable disposables = new CompositeDisposable();
 
+    [SerializeField]
+    private Image ConcentrationLine;
+
     protected override void Awake()
     {
         base.Awake();
@@ -52,6 +55,11 @@ public class HUDInGame : UIBase
 
         disposables.Clear();
 
+        GameRoot.Instance.StockEventSystem.onStartEventAction -= OnStartEvent;
+        GameRoot.Instance.StockEventSystem.onStartEventAction += OnStartEvent;
+        GameRoot.Instance.StockEventSystem.onEndEventAction -= OnEndEvent;
+        GameRoot.Instance.StockEventSystem.onEndEventAction += OnEndEvent;
+
         var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
         TopComponent.Set(stageidx , this);
 
@@ -63,6 +71,8 @@ public class HUDInGame : UIBase
         GameRoot.Instance.UserData.CurMode.Money.Subscribe(x=> {
             SetMyMoneyText((int)x);
         }).AddTo(disposables);
+
+        ConcentrationLine.enabled = false;
     }
 
     public void OnClickBuy()
@@ -88,6 +98,15 @@ public class HUDInGame : UIBase
         MyMoneyText.text = $"${mymoney}";
     }
 
+    public void OnStartEvent()
+    {
+        ConcentrationLine.enabled = true;
+    }
+
+    public void OnEndEvent() 
+    {
+        ConcentrationLine.enabled = false;
+    }
 
     private void OnDestroy()
     {

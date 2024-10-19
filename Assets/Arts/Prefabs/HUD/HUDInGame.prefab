@@ -3118,6 +3118,7 @@ MonoBehaviour:
   SellTextRoot: {fileID: 5946929231116536849}
   BuyTrTextRoot: {fileID: 9095627229973127705}
   SellTrTextRoot: {fileID: 5946929231116536849}
+  ConcentrationLine: {fileID: 2516706029684273609}
 --- !u!1 &4300134725535792903
 GameObject:
   m_ObjectHideFlags: 0
