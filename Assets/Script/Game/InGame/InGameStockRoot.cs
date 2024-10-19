@@ -34,6 +34,9 @@ public class InGameStockRoot : MonoBehaviour
 
     public void FirstStart()
     {
+        int stageIdx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+        GameRoot.Instance.StockEventSystem.StageEventSetting(stageIdx);
+
         GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime -= ChangedNodeCreateTime;
         GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime += ChangedNodeCreateTime;
         GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;

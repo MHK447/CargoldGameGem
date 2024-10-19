@@ -21,17 +21,6 @@ public class StockEventSystem
             return;
 
         _isInit = true;
-
-        Debug.Log($"HighCl_{Time.time}:\nStock Event Init");
-
-        _cashingCurrentStageEventList = CashingCurrentStageEventData();
-        StageEventSetting(_currentStage);
-    }
-
-    private List<EventInfoData> CashingCurrentStageEventData()
-    {
-        EventInfo eventInfo = Tables.Instance.GetTable<EventInfo>();
-        return eventInfo.DataList.Where(e => e.stage_id == 0 || e.stage_id == _currentStage).ToList();
     }
 
     public void StageEventSetting(int stageID)
@@ -39,8 +28,15 @@ public class StockEventSystem
         _currentStage = stageID;
         _eventOrderIdx = 0;
 
+        _cashingCurrentStageEventList = CashingCurrentStageEventData();
         StageInfoData stageInfo = Tables.Instance.GetTable<StageInfo>().GetData(_currentStage);
         stageInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 100, StartEvent));
+    }
+
+    private List<EventInfoData> CashingCurrentStageEventData()
+    {
+        EventInfo eventInfo = Tables.Instance.GetTable<EventInfo>();
+        return eventInfo.DataList.Where(e => e.stage_id == 0 || e.stage_id == _currentStage).ToList();
     }
 
     private void StartEvent()
