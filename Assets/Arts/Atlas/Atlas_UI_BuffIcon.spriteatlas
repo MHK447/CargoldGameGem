@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas_UI_BuffIcon
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 16
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 0.5
+    packables:
+    - {fileID: 102900000, guid: ab7255f73f420cf4797540ef3b5b703a, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 13c9691030d61024db333fa65769fc7b, type: 3}
+  - {fileID: 21300000, guid: da01cf50cdb075c4f8278a824181976d, type: 3}
+  - {fileID: 21300000, guid: 4bd042013fd84d549b1b9c22a2b7fe6b, type: 3}
+  - {fileID: 21300000, guid: f38c12e1be2a6e440b54c543fcd999c8, type: 3}
+  - {fileID: 21300000, guid: f7479ab217a2e58468e8c8a8c819ae70, type: 3}
+  - {fileID: 21300000, guid: d0c893d2a9df9d0449b033f7faa9053d, type: 3}
+  - {fileID: 21300000, guid: c9465f2524d4f294899cbb9b8cedbc82, type: 3}
+  - {fileID: 21300000, guid: 1d6a01b61e38e3e4c81e062bcaccccab, type: 3}
+  - {fileID: 21300000, guid: 533234172e38d434dbfdf96aad8e2427, type: 3}
+  - {fileID: 21300000, guid: c6899ab733c63954d8502f22b9fcb855, type: 3}
+  - {fileID: 21300000, guid: 0f33310964bdd034ea7a0b0cd8fadf69, type: 3}
+  - {fileID: 21300000, guid: be1dd73bd83b97d40967317ad3373919, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - UI_BuffIcon_Card
+  - UI_BuffIcon_Brain
+  - UI_BuffIcon_Cocaine
+  - UI_BuffIcon_Negative
+  - UI_BuffIcon_Eye
+  - UI_BuffIcon_Leg
+  - UI_BuffIcon_Spine
+  - UI_BuffIcon_Gravity
+  - UI_BuffIcon_Snail
+  - UI_BuffIcon_Coffein
+  - UI_BuffIcon_Exit
+  - UI_BuffIcon_Cocaine_Super
+  m_RenderDataMap: {}
+  m_Tag: Atlas_UI_BuffIcon
+  m_IsVariant: 0

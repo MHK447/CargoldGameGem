@@ -8,6 +8,9 @@ using BanpoFri;
 public class FrameShopComponent : MonoBehaviour
 {
     [SerializeField]
+    private Image Icon;
+
+    [SerializeField]
     private Text NameText;
 
     [SerializeField]
@@ -40,9 +43,12 @@ public class FrameShopComponent : MonoBehaviour
         if(td != null)
         {
             Cost = td.item_price;
-            CostText.ToString();
+            CostText.text = Cost.ToString();
             NameText.text = td.item_name.ToString();
             DescText.text = td.item_description.ToString();
+            ProjectUtility.SetActiveCheck(BuyBtn.gameObject, true);
+
+            Icon.sprite = Config.Instance.GetBuffIconAtlas(td.item_icon);
         }
     }
 
@@ -56,6 +62,8 @@ public class FrameShopComponent : MonoBehaviour
 
             var neweapondata = new WeaponData(ItemInfoIdx, itemtd.item_effect_type);
             GameRoot.Instance.UserData.CurMode.WeaponDatas.Add(neweapondata);
+
+            ProjectUtility.SetActiveCheck(BuyBtn.gameObject, false);
         }
     }
 }
