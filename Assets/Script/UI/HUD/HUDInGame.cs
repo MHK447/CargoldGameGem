@@ -36,6 +36,15 @@ public class HUDInGame : UIBase
     private Transform SellTrTextRoot;
 
     [SerializeField]
+    private Animator HUDInGameAnim;
+
+    [SerializeField]
+    private Text GoodNewsText;
+
+    [SerializeField]
+    private Text BadNewsText;
+
+    [SerializeField]
     private Image ConcentrationLine;
 
     [SerializeField]
@@ -79,6 +88,8 @@ public class HUDInGame : UIBase
 
         string iconFileName = Tables.Instance.GetTable<StageInfo>().GetData(stageidx).stage_icon_filename;
         CompanyLogoImage.sprite = Config.Instance.GetCompanyAtlasImg(iconFileName);
+        GoodNewsText.gameObject.SetActive(false);
+        BadNewsText.gameObject.SetActive(false);
         ConcentrationLine.enabled = false;
     }
 
@@ -109,13 +120,22 @@ public class HUDInGame : UIBase
         MyMoneyText.text = $"${mymoney}";
     }
 
-    public void OnStartEvent()
+    public void OnStartEvent(EventInfoData eventInfoData)
     {
+        string hudTriggerStr = eventInfoData.good_event_yn == 1 ? "UP" : "Down";
+        if (hudTriggerStr == "UP")
+            GoodNewsText.gameObject.SetActive(true);
+        else if (hudTriggerStr == "Down")
+            BadNewsText.gameObject.SetActive(true);
+        HUDInGameAnim.SetTrigger(hudTriggerStr);
+
         ConcentrationLine.enabled = true;
     }
 
-    public void OnEndEvent() 
+    public void OnEndEvent(EventInfoData eventInfoData)
     {
+        GoodNewsText.gameObject.SetActive(false);
+        BadNewsText.gameObject.SetActive(false);
         ConcentrationLine.enabled = false;
     }
 

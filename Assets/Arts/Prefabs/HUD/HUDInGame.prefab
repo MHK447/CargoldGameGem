@@ -3109,6 +3109,9 @@ MonoBehaviour:
   SellTextRoot: {fileID: 5946929231116536849}
   BuyTrTextRoot: {fileID: 9095627229973127705}
   SellTrTextRoot: {fileID: 5946929231116536849}
+  HUDInGameAnim: {fileID: 4190896630588707535}
+  GoodNewsText: {fileID: 6290389821418674665}
+  BadNewsText: {fileID: 46865589187246426}
   ConcentrationLine: {fileID: 2516706029684273609}
   characterAnim: {fileID: 4859078644473807392}
   CompanyLogoImage: {fileID: 4190896629710975460}
@@ -3316,7 +3319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5402861777877951994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3491,7 +3494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2686502920686535645
 RectTransform:
   m_ObjectHideFlags: 0

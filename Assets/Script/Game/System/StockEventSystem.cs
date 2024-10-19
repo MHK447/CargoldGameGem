@@ -14,8 +14,8 @@ public class StockEventSystem
     private List<EventInfoData> _cashingCurrentStageEventList;
     private List<Coroutine> _EventCoroutineList = new();
 
-    public Action onStartEventAction;
-    public Action onEndEventAction;
+    public Action<EventInfoData> onStartEventAction;
+    public Action<EventInfoData> onEndEventAction;
 
     private int _currentStage = 1;
     private int _eventOrderIdx = 0;
@@ -73,7 +73,7 @@ public class StockEventSystem
         Coroutine co = stockEventData.StartEvent(CallBack);
         _EventCoroutineList.Add(co);
 
-        onStartEventAction?.Invoke();
+        onStartEventAction?.Invoke(stockEventData.EventInfoData);
         SoundPlayer.Instance.PlaySound("popup");
         _eventOrderIdx++;
     }
@@ -114,6 +114,6 @@ public class StockEventSystem
     public void CallBack(EventInfoData eventInfoData)
     {
         Debug.Log($"HighCl_{Time.time}: Callback\nEventInfoData: {eventInfoData.event_id}");
-        onEndEventAction?.Invoke();
+        onEndEventAction?.Invoke(eventInfoData);
     }
 }
