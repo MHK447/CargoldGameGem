@@ -43,8 +43,12 @@ public class InGameTycoon : InGameMode
     {
         base.LoadUI();
 
-        GameRoot.Instance.UISystem.OpenUI<HUDInGame>(popup=> popup.Init());
         GameRoot.Instance.InGameSystem.InitPopups();
+
+        GameRoot.Instance.WaitTimeAndCallback(1f, () =>
+        {
+            GameRoot.Instance.UISystem.OpenUI<HUDInGame>(popup => popup.Init());
+        });
     }
 
 

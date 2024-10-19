@@ -90,6 +90,9 @@ public class InGameTopComponent : MonoBehaviour
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);
 
            GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Subscribe(WaveTime).AddTo(disposables);
+
+
+            Debug.Log("GoalPrice 적용완료!!:" + GoalPriceText.ToString());
         }
     }
 
