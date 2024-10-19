@@ -752,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1087545953981554486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2146,7 +2146,6 @@ GameObject:
   - component: {fileID: 4190896629636760395}
   - component: {fileID: 4190896629636760394}
   - component: {fileID: 4190896629636760393}
-  - component: {fileID: 4190896629636760392}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -2203,7 +2202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 723b9e5587264024ca8d335c3b44b00b, type: 3}
+    m_Font: {fileID: 12800000, guid: 3e53c1bee5e5e43219f0342dc04f5be0, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
@@ -2229,25 +2228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyColor: TextColor_Btn_Point
---- !u!114 &4190896629636760392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4190896629636760398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fa14f34c688404480a7f1153f88d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.003921569, g: 0.14901961, b: 0.29803923, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
-  m_UseGraphicAlpha: 1
-  m_circleCount: 4
-  m_firstSample: 4
-  m_sampleIncrement: 4
-  keyColor: TextColor_Btn_Yes
 --- !u!1 &4190896629638718864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,14 +2432,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5803922, g: 0.5803922, b: 0.5803922, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1054474765, guid: 794f2fcd6287d9949bce1bd80870e362, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd4759a71cea242428e79566ae6299fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4693,11 +4673,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6892fc815c54b425fb3a2049582c0aec, type: 3}
     - target: {fileID: 5817066555680873381, guid: eee8c3ade92824703be079b911344194, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: 5817066555680873381, guid: eee8c3ade92824703be079b911344194, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee8c3ade92824703be079b911344194, type: 3}
