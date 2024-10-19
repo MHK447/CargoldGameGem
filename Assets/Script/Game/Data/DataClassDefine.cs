@@ -69,7 +69,6 @@ public class StageData
 
 public class EventData
 {
-	public int event_target_money = 0; // 예정
 	public int event_change_down_rate = 0; // 연결 완
 	public int event_change_up_rate = 0; // 연결 완
     public int event_down_stock_min = 0; // 연결 완

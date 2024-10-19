@@ -40,9 +40,6 @@ public class StockEventData
 
             switch (_eventInfoData.event_types[i])
             {
-                case "add_target_money":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_target_money += value;
-                    break;
                 case "add_up_rate":
                     GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate += value;
                     break;
