@@ -14,7 +14,7 @@ public class PlayerSystem
     }
 
 
-    public void AddStock()
+    public void AddStock(Transform btntr)
     {
         var stockvalue = GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value;
 
@@ -25,6 +25,16 @@ public class PlayerSystem
         {
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, -stockvalue);
             GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value += 1;
+
+
+            GameRoot.Instance.EffectSystem.MultiPlay<PirceTextEffect>(btntr.position, effect =>
+            {
+                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                effect.SetAutoRemove(true, 1f);
+                effect.transform.SetParent(GameRoot.Instance.UISystem.WorldCanvas.transform);
+
+                effect.SetText(stockvalue.ToString());
+            });
         }
 
     }
@@ -57,7 +67,7 @@ public class PlayerSystem
 
 
 
-    public void SellStock()
+    public void SellStock(Transform btntr)
     {
         var stockvalue = GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Value;
 
@@ -68,6 +78,16 @@ public class PlayerSystem
 
             if(!IsLuckySell())
                 GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Value -= 1;
+
+
+            GameRoot.Instance.EffectSystem.MultiPlay<PirceTextEffect>(btntr.position, effect =>
+            {
+                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                effect.SetAutoRemove(true, 1f);
+                effect.transform.SetParent(GameRoot.Instance.UISystem.WorldCanvas.transform);
+
+                effect.SetText(stockvalue.ToString());
+            });
         }
 
     }
