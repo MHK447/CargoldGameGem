@@ -35,11 +35,14 @@ public class HUDInGame : UIBase
     [SerializeField]
     private Transform SellTrTextRoot;
 
-
-    private CompositeDisposable disposables = new CompositeDisposable();
-
     [SerializeField]
     private Image ConcentrationLine;
+
+    [SerializeField]
+    private Animator characterAnim;
+
+
+    private CompositeDisposable disposables = new CompositeDisposable();
 
     protected override void Awake()
     {
@@ -77,20 +80,24 @@ public class HUDInGame : UIBase
 
     public void OnClickBuy()
     {
-        SoundPlayer.Instance.PlaySound("btn");
+        SoundPlayer.Instance.PlaySound("Effect_Btn_Buy");
         if (GameRoot.Instance.PlayerSystem.IsLuckyBuy())
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
         }
 
         GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
+
+        characterAnim.SetTrigger("Click");
     }
 
 
     public void OnClickSell()
     {
-        SoundPlayer.Instance.PlaySound("btn");
+        SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
+
+        characterAnim.SetTrigger("Click");
     }
 
     public void SetMyMoneyText(int mymoney)

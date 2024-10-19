@@ -3110,6 +3110,7 @@ MonoBehaviour:
   BuyTrTextRoot: {fileID: 9095627229973127705}
   SellTrTextRoot: {fileID: 5946929231116536849}
   ConcentrationLine: {fileID: 2516706029684273609}
+  characterAnim: {fileID: 4859078644473807392}
 --- !u!1 &4300134725535792903
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,6 +4296,11 @@ PrefabInstance:
 --- !u!224 &4758671604725514346 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5179145542433220389, guid: eb0ff796b0881504092e0af13be3d8bd, type: 3}
+  m_PrefabInstance: {fileID: 426214629721548623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4859078644473807392 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5081430073889580399, guid: eb0ff796b0881504092e0af13be3d8bd, type: 3}
   m_PrefabInstance: {fileID: 426214629721548623}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &519447858227975983
