@@ -2385,7 +2385,7 @@ GameObject:
   - component: {fileID: 4190896629710975461}
   - component: {fileID: 4190896629710975460}
   m_Layer: 0
-  m_Name: Image
+  m_Name: CompanyLogoImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3111,6 +3111,7 @@ MonoBehaviour:
   SellTrTextRoot: {fileID: 5946929231116536849}
   ConcentrationLine: {fileID: 2516706029684273609}
   characterAnim: {fileID: 4859078644473807392}
+  CompanyLogoImage: {fileID: 4190896629710975460}
 --- !u!1 &4300134725535792903
 GameObject:
   m_ObjectHideFlags: 0

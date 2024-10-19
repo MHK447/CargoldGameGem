@@ -41,6 +41,8 @@ public class HUDInGame : UIBase
     [SerializeField]
     private Animator characterAnim;
 
+    [SerializeField]
+    private Image CompanyLogoImage;
 
     private CompositeDisposable disposables = new CompositeDisposable();
 
@@ -75,6 +77,8 @@ public class HUDInGame : UIBase
             SetMyMoneyText((int)x);
         }).AddTo(disposables);
 
+        string iconFileName = Tables.Instance.GetTable<StageInfo>().GetData(stageidx).stage_icon_filename;
+        CompanyLogoImage.sprite = Config.Instance.GetCompanyAtlasImg(iconFileName);
         ConcentrationLine.enabled = false;
     }
 

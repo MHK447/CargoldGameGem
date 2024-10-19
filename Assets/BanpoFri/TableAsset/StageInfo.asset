@@ -38,7 +38,7 @@ MonoBehaviour:
     _event_goodbad: 000000000100000001000000
     _stage_name: "\uD14C\uC2AC\uB791"
     _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_0
     _stage_end_time: 45
   - _stage_id: 2
     _start_price: 1175
@@ -55,27 +55,27 @@ MonoBehaviour:
     _event_goodbad: 010000000000000001000000
     _stage_name: "\uC560\uBFD4"
     _stage_number_name: "2\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_1
     _stage_end_time: 40
   - _stage_id: 3
     _start_price: 121
     _start_money: 1500
-    _target_money: 10000
+    _target_money: 30000
     _node_time: 40
-    _change_down_rate: 17
-    _change_up_rate: 70
+    _change_down_rate: 30
+    _change_up_rate: 60
     _down_stock_min: 2
     _down_stock_max: 4
-    _up_stock_min: 20
-    _up_stock_max: 40
+    _up_stock_min: 16
+    _up_stock_max: 32
     _event_time: e8030000d0070000ac0d0000
     _event_goodbad: 000000000100000000000000
     _stage_name: "\uB124\uD06C\uC2A8"
     _stage_number_name: "3\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_2
     _stage_end_time: 40
   - _stage_id: 4
-    _start_price: 128
+    _start_price: 124
     _start_money: 2000
     _target_money: 20000
     _node_time: 40
@@ -89,7 +89,7 @@ MonoBehaviour:
     _event_goodbad: 00000000010000000000000001000000
     _stage_name: "\uB85C\uB610\uB9AC\uC544"
     _stage_number_name: "4\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_3
     _stage_end_time: 60
   - _stage_id: 5
     _start_price: 1000
@@ -106,7 +106,7 @@ MonoBehaviour:
     _event_goodbad: 02000000020000000200000002000000
     _stage_name: "GS \uCE7C\uD30C\uC2A4"
     _stage_number_name: "5\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_4
     _stage_end_time: 60
   - _stage_id: 6
     _start_price: 1367
@@ -123,7 +123,7 @@ MonoBehaviour:
     _event_goodbad: 0100000001000000000000000100000001000000
     _stage_name: "\uB458\uB458 \uBC29\uC0B0"
     _stage_number_name: "6\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_5
     _stage_end_time: 80
   - _stage_id: 7
     _start_price: 278
@@ -140,7 +140,7 @@ MonoBehaviour:
     _event_goodbad: 0200000002000000020000000200000002000000
     _stage_name: "\uAC2D\uC218"
     _stage_number_name: "7\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_6
     _stage_end_time: 80
   - _stage_id: 8
     _start_price: 136
@@ -157,5 +157,5 @@ MonoBehaviour:
     _event_goodbad: 000000000100000002000000000000000100000002000000
     _stage_name: "\uC0BC\uC22D\uC774"
     _stage_number_name: "8\uC8FC\uCC28 \uBAA9\uD45C"
-    _stage_icon_filename: 
+    _stage_icon_filename: Tesla_7
     _stage_end_time: 90

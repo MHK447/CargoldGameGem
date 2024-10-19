@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas_UI_CompanyIcons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 16
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 0.5
+    packables:
+    - {fileID: 102900000, guid: 19cd4bac574a7d7489e4afb348949749, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: aa998c3294a049343a85f0553225bb36, type: 3}
+  - {fileID: 21300000, guid: 3eebea928eb85cf4f8732f52b8429b0d, type: 3}
+  - {fileID: 21300000, guid: 795c64768e5079643804577bb07ef6fe, type: 3}
+  - {fileID: 21300000, guid: 9c82e3b6743f6e545b77e8e790159c1e, type: 3}
+  - {fileID: 21300000, guid: dd4759a71cea242428e79566ae6299fb, type: 3}
+  - {fileID: 21300000, guid: c5bef87a27b66fb41b764865e0ce944b, type: 3}
+  - {fileID: 21300000, guid: 95e1faeaaea2b664b99b1589458861bd, type: 3}
+  - {fileID: 21300000, guid: abcaaf0c0dc0ab24ab41e460dc88614f, type: 3}
+  - {fileID: 21300000, guid: c2768caccaa0f334c979d9543533731b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Tesla_8
+  - Tesla_1
+  - Tesla_3
+  - Tesla_4
+  - Tesla_0
+  - Tesla_5
+  - Tesla_6
+  - Tesla_2
+  - Tesla_7
+  m_RenderDataMap: {}
+  m_Tag: Atlas_UI_CompanyIcons
+  m_IsVariant: 0

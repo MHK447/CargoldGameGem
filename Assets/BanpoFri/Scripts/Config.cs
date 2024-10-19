@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
@@ -164,10 +164,11 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     private SpriteAtlas InGameSkillAtlas;
     [SerializeField]
     private SpriteAtlas CommonAtlas;
-
-
     [SerializeField]
     private SpriteAtlas UIEventAtlas;
+    [SerializeField]
+    private SpriteAtlas CompanyAtlas;
+
 
 
 
@@ -297,6 +298,10 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
         return UIEventAtlas.GetSprite(key);
     }
 
+    public Sprite GetCompanyAtlasImg(string key)
+    {
+        return CompanyAtlas.GetSprite(key);
+    }
 
     public Sprite GetCommonImg(string key)
     {
