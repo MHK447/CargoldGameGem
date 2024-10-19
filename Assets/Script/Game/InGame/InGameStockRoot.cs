@@ -36,7 +36,10 @@ public class InGameStockRoot : MonoBehaviour
 
     public void FirstStart()
     {
-        foreach(var node in CachedComponents)
+        GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime -= ChangedNodeCreateTime;
+        GameRoot.Instance.UserData.CurMode.EventData.ChangedEventNodeTime += ChangedNodeCreateTime;
+
+        foreach (var node in CachedComponents)
         {
             Destroy(node.gameObject);
         }
@@ -53,15 +56,21 @@ public class InGameStockRoot : MonoBehaviour
 
         if(StageInfoData != null)
         {
-            delcreatetime = (float)StageInfoData.node_time / 100f;
-
-            NodeCreateTime = Time.time + delcreatetime;
+            ChangedNodeCreateTime();
 
             Cam = GameRoot.Instance.InGameSystem.CurInGame.IngameCamera;
 
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, StageInfoData.start_money);
         }
 
+    }
+
+
+    public void ChangedNodeCreateTime()
+    {
+        var eventNodeTime = GameRoot.Instance.UserData.CurMode.EventData.Event_node_time;
+        delcreatetime = ((float)StageInfoData.node_time + (float)eventNodeTime) / 100f;
+        NodeCreateTime = Time.time + delcreatetime;
     }
 
     public void CreateNode()

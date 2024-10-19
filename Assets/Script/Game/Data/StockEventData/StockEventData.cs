@@ -58,7 +58,7 @@ public class StockEventData
                     GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max += value;
                     break;
                 case "add_node_time":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_node_time += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.Event_node_time += value;
                     break;
                 default:
                     break;

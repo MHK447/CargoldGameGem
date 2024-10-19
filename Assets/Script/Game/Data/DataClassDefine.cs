@@ -76,7 +76,20 @@ public class EventData
     public int event_down_stock_max = 0; // 연결 완
     public int event_up_stock_min = 0; // 연결 완
     public int event_up_stock_max = 0; // 연결 완
-	public int event_node_time = 0; // 시작에서만 사용??
+	private int _event_node_time; 
+	public int Event_node_time // 연결 완
+	{
+		get
+		{
+			return _event_node_time;
+        }
+		set
+		{
+			_event_node_time = value;
+            ChangedEventNodeTime.Invoke();
+        }
+	}
+	public Action ChangedEventNodeTime;
 }
 
 public class OutGameUnitUpgradeData
