@@ -23,7 +23,7 @@ public class HUDEvent : UIBase
         Time.timeScale = 0;
         _popupEntryTime = Time.realtimeSinceStartup;
 
-        eventImage.sprite = Config.Instance.GetUIEventImg(eventInfoData.event_filename);
+        eventImage.sprite = Config.Instance.GetCommonImg(eventInfoData.event_filename);
         messageText.text = eventInfoData.event_description;
     }
 

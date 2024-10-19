@@ -161,7 +161,7 @@ MonoBehaviour:
   DynamicAtlas: {fileID: 0}
   DynamicShopAtlas: {fileID: 0}
   ItemCardAtlas: {fileID: 0}
-  CommonAtlas: {fileID: 4343727234628468602, guid: 3b4b5bce2a9298e4abf4cc657ab8d55a, type: 2}
+  CommonAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
   facilityAtlas: {fileID: 0}
   UiIconAtlas: {fileID: 0}
   UiBgAtlas: {fileID: 0}

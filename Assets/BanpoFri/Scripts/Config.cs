@@ -163,6 +163,7 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     [SerializeField]
     private SpriteAtlas InGameSkillAtlas;
 
+
     [SerializeField]
     private SpriteAtlas UIEventAtlas;
 

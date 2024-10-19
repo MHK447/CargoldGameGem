@@ -76,7 +76,7 @@ public class HUDInGame : UIBase
 
     public void SetMyMoneyText(int mymoney)
     {
-        MyMoneyText.text = $"{mymoney}";
+        MyMoneyText.text = $"${mymoney}";
     }
 
 

@@ -12,6 +12,18 @@ public class StageResultComponent : MonoBehaviour
     [SerializeField]
     private Text ResultRewardText;
 
+    [SerializeField]
+    private Text GoalAndMyMoneyText;
+
+    [SerializeField]
+    private Text GoalText;
+
+    [SerializeField]
+    private Text MyMoney;
+
+    [SerializeField]
+    private Slider SliderValue;
+
     private bool IsSuccess = false;
 
     private void Awake()

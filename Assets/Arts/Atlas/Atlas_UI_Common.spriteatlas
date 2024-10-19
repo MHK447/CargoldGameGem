@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas_UI_Common
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 16
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 0.5
+    packables:
+    - {fileID: 102900000, guid: b326cc7c7a6bc9648a3346b7dd4f64cd, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ef33b7804e493a24099fabdb2eaa6b4a, type: 3}
+  - {fileID: 21300000, guid: 2d3dc4211dcd40749b6e72dc5e328552, type: 3}
+  - {fileID: 21300000, guid: 216f7451c2371414ebc44c1dbb650255, type: 3}
+  - {fileID: 21300000, guid: b418ba51ff19b474c831a85c438a244f, type: 3}
+  - {fileID: 21300000, guid: f77a0ab193589ec4abde9491f11275b6, type: 3}
+  - {fileID: 21300000, guid: 86afe9c149e85f84c978c084d0030254, type: 3}
+  - {fileID: 21300000, guid: a50d2203a0718ea43aed3dec6b451029, type: 3}
+  - {fileID: 21300000, guid: 28388263980140f4e88da557c60481e2, type: 3}
+  - {fileID: 21300000, guid: 905a5aa3c67e1a2498196c9c9ec4e8d3, type: 3}
+  - {fileID: 21300000, guid: 81f67064cbe63d44a8aee6816ab7d2e9, type: 3}
+  - {fileID: 21300000, guid: c04462d44f3b90e4e86deb466d529e9f, type: 3}
+  - {fileID: 21300000, guid: 82a3fb35b61c42447a4102c7d49866fa, type: 3}
+  - {fileID: 21300000, guid: 3869ac55cbeb55d42a46a287c00796b9, type: 3}
+  - {fileID: 21300000, guid: 6ba461653e797344c9042a18e773e7e4, type: 3}
+  - {fileID: 21300000, guid: c3614b95fbd6048479494bda1046b14b, type: 3}
+  - {fileID: 21300000, guid: 7515ce1730eec954c89d3063a13ae902, type: 3}
+  - {fileID: 21300000, guid: cbd6ae476b9c6fb4b98b4bdc0bdc0e11, type: 3}
+  - {fileID: 21300000, guid: 8dd9c41804f30b9439d13e9299c3d167, type: 3}
+  - {fileID: 21300000, guid: 967127b8fbee3204d8bcb79756f4cdfc, type: 3}
+  - {fileID: 21300000, guid: db0c64d8fbcbad949aaad5ce295a8463, type: 3}
+  - {fileID: 21300000, guid: 900c7de8779f2384faacafeca8831059, type: 3}
+  - {fileID: 21300000, guid: 6ec9cba943d8d0c4fb5d02c24dbd8fdf, type: 3}
+  - {fileID: 21300000, guid: ac69d1c9531023b47bf3e9c0e4782e34, type: 3}
+  - {fileID: 21300000, guid: be335a0ae20e24e45ab1555d727a33e6, type: 3}
+  - {fileID: 21300000, guid: e3ec5e6be4fae364f9bb7ad00a73842b, type: 3}
+  - {fileID: 21300000, guid: a70a927b5549e8f49ad1247e3e65a27f, type: 3}
+  - {fileID: 21300000, guid: 93fc62fb5f268ae43a9c9c1e99097d03, type: 3}
+  - {fileID: 21300000, guid: 8edc7bfb3b7b641b5ae2b79d3e621219, type: 3}
+  - {fileID: 21300000, guid: 02d0b16dffc78d74c8cab7e438cfec4d, type: 3}
+  - {fileID: 21300000, guid: ac74a96d44da5784aa0109ad6f13913c, type: 3}
+  - {fileID: 21300000, guid: 92b65f6dcfbb39742bef94247b6e1b62, type: 3}
+  - {fileID: 21300000, guid: 326caf6e47846fe468990e34c24c964b, type: 3}
+  - {fileID: 21300000, guid: 397c93de3aedab342b513cda72cb030e, type: 3}
+  - {fileID: 21300000, guid: 989344af8ca1a3944b1ca3b8fa240962, type: 3}
+  - {fileID: 7482667652216324306, guid: 5bcb70ff112928747a61761ff289acaf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - common_BG_icon_14
+  - common_BG_icon_16
+  - common_BG_icon_07
+  - common_BG_icon_30
+  - common_BG_icon_20
+  - common_BG_icon_04
+  - common_BG_icon_18
+  - common_BG_icon_21
+  - common_BG_icon_31
+  - common_BG_icon_17
+  - common_BG_icon_06
+  - common_BG_icon_29
+  - common_BG_icon_09
+  - common_BG_icon_03
+  - common_BG_icon_10
+  - common_BG_icon_05
+  - common_BG_icon_23
+  - UI_Dummy
+  - common_BG_icon_15
+  - common_BG_icon_32
+  - common_BG_icon_26
+  - dotic95_Draw_Elon_Musk_running_for_president_acc29d96-a9fc-4e5d-816a-5ade26b23f68
+  - common_BG_icon_24
+  - common_BG_icon_13
+  - common_BG_icon_11
+  - common_BG_icon_01
+  - common_BG_icon_08
+  - common_BG_icon_02
+  - common_BG_icon_25
+  - common_BG_icon_27
+  - common_BG_icon_12
+  - common_BG_icon_22
+  - common_BG_icon_28
+  - common_BG_icon_19
+  - Triangle
+  m_RenderDataMap: {}
+  m_Tag: Atlas_UI_Common
+  m_IsVariant: 0
