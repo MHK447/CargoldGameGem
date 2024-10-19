@@ -32,6 +32,8 @@ public class InGameTopComponent : MonoBehaviour
 
     private HUDInGame HudInGame;
 
+    int TargetMoney = 0;
+
     public void Set(int stageidx , HUDInGame hudingame)
     {
         disposables.Clear();
@@ -42,11 +44,19 @@ public class InGameTopComponent : MonoBehaviour
 
         if (infotd != null)
         {
+            TargetMoney = infotd.target_money;
+
+            var buffvalue = GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.MoneyDecrease) == -1 ? 0
+                : GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.MoneyDecrease);
+
+            TargetMoney = buffvalue;
+
+
             StageCompanyNameTexrt.text = infotd.stage_name.ToString();
 
             StageCountText.text = infotd.stage_number_name.ToString();
 
-            GoalPriceText.text = infotd.target_money.ToString();
+            GoalPriceText.text = TargetMoney.ToString();
 
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);
 
@@ -83,7 +93,7 @@ public class InGameTopComponent : MonoBehaviour
 
         if(td != null)
         {
-            if (GameRoot.Instance.UserData.CurMode.Money.Value >= td.target_money)
+            if (GameRoot.Instance.UserData.CurMode.Money.Value >= TargetMoney)
             {
                 var stagerewardtd = Tables.Instance.GetTable<StageRewardInfo>().GetData(stageidx);
 

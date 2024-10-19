@@ -57,6 +57,11 @@ public class HUDInGame : UIBase
 
     public void OnClickBuy()
     {
+        if(GameRoot.Instance.PlayerSystem.IsLuckyBuy())
+        {
+            GameRoot.Instance.PlayerSystem.AddStock();
+        }
+
         GameRoot.Instance.PlayerSystem.AddStock();
     }
 

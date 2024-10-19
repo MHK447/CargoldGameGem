@@ -33,6 +33,7 @@ public class GameRoot : Singleton<GameRoot>
 	public TutorialSystem TutorialSystem { get; private set; } = new TutorialSystem();
 	public StockEventSystem StockEventSystem { get; private set; } = new StockEventSystem();
 	public PlayerSystem PlayerSystem { get; private set; } = new PlayerSystem();
+	public WeaponSystem WeaponSystem { get; private set; } = new WeaponSystem();
 
 	public AdManager GetAdManager { get { return AdManager; } }
 

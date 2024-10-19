@@ -60,7 +60,11 @@ public class InGameStockRoot : MonoBehaviour
 
             Cam = GameRoot.Instance.InGameSystem.CurInGame.IngameCamera;
 
-            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, StageInfoData.start_money);
+            var buffvalue =  -1 == GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.StartMoneyIncrease) ? 0 :
+                GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.StartMoneyIncrease);
+
+
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, StageInfoData.start_money + buffvalue);
         }
 
     }

@@ -52,7 +52,9 @@ public class FrameShopComponent : MonoBehaviour
         {
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.UpgradeCoin, -Cost);
 
-            var neweapondata = new WeaponData(ItemInfoIdx);
+            var itemtd = Tables.Instance.GetTable<ItemInfo>().GetData(ItemInfoIdx);
+
+            var neweapondata = new WeaponData(ItemInfoIdx, itemtd.item_effect_type);
             GameRoot.Instance.UserData.CurMode.WeaponDatas.Add(neweapondata);
         }
     }

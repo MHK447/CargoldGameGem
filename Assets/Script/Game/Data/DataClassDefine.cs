@@ -29,11 +29,12 @@ public class PlayerData
 public class WeaponData
 {
 	public int WeaponIdx = 0;
+	public int Type = 0;
 
-
-	public WeaponData(int weaponidx)
+	public WeaponData(int weaponidx , int type)
     {
 		WeaponIdx = weaponidx;
+		Type = type;
     }
 }
 
