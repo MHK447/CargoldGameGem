@@ -102,8 +102,10 @@ public class InGameStockRoot : MonoBehaviour
                 float curstocky = CurStock.transform.position.y;
 
 
+                var finddata = GameRoot.Instance.WeaponSystem.GetBuffValue(WeaponSystem.Type.StockMinus);
 
-                if(CurStock.Type == StockNodeComponent.GuageType.RedCandle)
+
+                if (CurStock.Type == StockNodeComponent.GuageType.RedCandle)
                 {
                     int percentvalue = 0;
 
@@ -119,8 +121,19 @@ public class InGameStockRoot : MonoBehaviour
 
                     var xvalue = NodeSpaceIncreaseX * pluspercentvalue;
 
-                    stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + NodeSpaceIncreaseY, 1f);
+                    if ((int)plusvalue <= GameRoot.Instance.PlayerSystem.min_stock_price && finddata <= -1)
+                    {
+                        stock.transform.position =
+      new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y, 1f);
+
+                    }
+                    else
+                    {
+                        stock.transform.position =
+              new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + NodeSpaceIncreaseY, 1f);
+
+                    }
+
                     stock.Set((int)plusvalue, istype,percentvalue);
                     CurStock = stock;
                 }
@@ -142,8 +155,18 @@ public class InGameStockRoot : MonoBehaviour
 
                     var yvalue = NodeSpaceIncreaseY * pluspercentvalue;
 
-                    stock.transform.position =
-                    new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -NodeSpaceIncreaseY, 1f);
+
+                    if ((int)plusvalue <= GameRoot.Instance.PlayerSystem.min_stock_price && finddata <= -1)
+                    {
+                        stock.transform.position =
+      new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y, 1f);
+                    }
+                    else
+                    {
+                        stock.transform.position =
+              new Vector3(CurStock.transform.position.x + NodeSpaceIncreaseX, CurStock.transform.position.y + -NodeSpaceIncreaseY, 1f);
+                    }
+
                     stock.Set((int)plusvalue, istype , percentvalue);
                     CurStock = stock;
                 }

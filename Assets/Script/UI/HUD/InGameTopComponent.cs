@@ -61,7 +61,7 @@ public class InGameTopComponent : MonoBehaviour
 
             StageCountText.text = infotd.stage_number_name.ToString();
 
-            GoalPriceText.text = $"${TargetMoney}";
+            GoalPriceText.text = $"GOAL:${TargetMoney}!!";
 
             GameRoot.Instance.UserData.CurMode.StageData.CurStockPriceProperty.Subscribe(SetCurPrice).AddTo(disposables);
 
@@ -71,7 +71,7 @@ public class InGameTopComponent : MonoBehaviour
 
     public void SetCurPrice(int price)
     {
-        CurPriceText.text = $"${price}";
+        CurPriceText.text = $"NOW SELL:${price}";
     }
 
 
