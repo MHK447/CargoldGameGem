@@ -41,24 +41,24 @@ public class StockEventData
             switch (_eventInfoData.event_types[i])
             {
                 case "add_target_money":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_target_money.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_target_money += value;
                     break;
                 case "add_up_rate":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate += value;
                     break;
                 case "add_down_rate":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_change_down_rate += value;
                     break;
                 case "add_up_stock":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min.Value += value;
-                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_min += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_up_stock_max += value;
                     break;
                 case "add_down_stock":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min.Value += value;
-                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_min += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_down_stock_max += value;
                     break;
                 case "add_node_time":
-                    GameRoot.Instance.UserData.CurMode.EventData.event_node_time.Value += value;
+                    GameRoot.Instance.UserData.CurMode.EventData.event_node_time += value;
                     break;
                 default:
                     break;
