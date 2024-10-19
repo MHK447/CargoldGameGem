@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundDatas:
   - soundKey: bgm
-    audioData: {fileID: 8300000, guid: 4e6a0dbc05f2e440ba42fbca49471889, type: 3}
+    audioData: {fileID: 8300000, guid: 244f720fa6ae349c8a3ef39b597df319, type: 3}
   - soundKey: btn
     audioData: {fileID: 8300000, guid: 3e3f161166ba72041a40891bd268001f, type: 3}
   - soundKey: popup
