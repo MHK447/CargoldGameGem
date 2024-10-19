@@ -13,8 +13,9 @@ public class HUDEvent : UIBase
         base.Awake();
     }
 
-    public void Init(string message)
+    public void Init(EventInfoData eventInfoData)
     {
-        messageText.text = message;
+        eventImage.sprite = Config.Instance.GetUIEventImg(eventInfoData.event_filename);
+        messageText.text = eventInfoData.event_description;
     }
 }

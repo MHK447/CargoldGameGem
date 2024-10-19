@@ -1,10 +1,5 @@
 using BanpoFri;
-using DefaultSetting.Utility;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 
 public class StockEventData
 {
@@ -20,9 +15,9 @@ public class StockEventData
     {
         HUDEvent eventPopup = GameRoot.Instance.UISystem.GetUI<HUDEvent>();
         if (eventPopup != null && eventPopup.gameObject.activeSelf == true)
-            eventPopup.Init(_eventInfoData.event_description);
+            eventPopup.Init(_eventInfoData);
         else
-            GameRoot.Instance.UISystem.OpenUI<HUDEvent>(popup => popup.Init(_eventInfoData.event_description));
+            GameRoot.Instance.UISystem.OpenUI<HUDEvent>(popup => popup.Init(_eventInfoData));
 
         _callback = callback;
         SetData(true);
@@ -35,21 +30,37 @@ public class StockEventData
         _callback.Invoke(_eventInfoData);
     }
 
-    //TODO: Start인 경우 의도한 값 그대로 세팅하고, 끝나는 경우 -1 곱하기
     private void SetData(bool isStart)
     {
         int sign = isStart ? 1 : -1;
 
-        switch (_eventInfoData.event_type)
+        for (int i = 0; i < _eventInfoData.event_types.Count; i++)
         {
-            case "changeStageValue":
-                if (_eventInfoData.event_subtype == "increaseSpeedMin")
-                    StockEventSystem.SpeedMin += _eventInfoData.event_type_value * sign;
-                if (_eventInfoData.event_subtype == "changeDownRate")
-                    StockEventSystem.DownRate += _eventInfoData.event_type_value * sign;
-                break;
-            default:
-                break;
+            int value = _eventInfoData.event_type_values[i] * sign;
+
+            switch (_eventInfoData.event_types[i])
+            {
+                case "add_target_money":
+                    StockEventSystem.Temp_SpeedMin += value;
+                    break;
+                case "add_up_rate":
+                    StockEventSystem.Temp_SpeedMin += value;
+                    break;
+                case "add_down_rate":
+                    StockEventSystem.Temp_DownRate += value;
+                    break;
+                case "add_up_stock":
+                    StockEventSystem.Temp_SpeedMin += value;
+                    break;
+                case "add_down_stock":
+                    StockEventSystem.Temp_SpeedMin += value;
+                    break;
+                case "add_node_time":
+                    StockEventSystem.Temp_SpeedMin += value;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

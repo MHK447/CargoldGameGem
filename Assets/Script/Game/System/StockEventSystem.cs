@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class StockEventSystem
 {
-    public static int SpeedMin = 50;
-    public static int DownRate = 50;
+    public static int Temp_SpeedMin = 50;
+    public static int Temp_DownRate = 50;
 
     private bool _isInit = false;
     private List<EventInfoData> _cashingCurrentStageEventList;

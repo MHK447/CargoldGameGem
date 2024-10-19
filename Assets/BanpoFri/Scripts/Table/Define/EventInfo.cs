@@ -21,18 +21,18 @@ namespace BanpoFri
 			set { _stage_id = value;}
 		}
 		[SerializeField]
-		private string _event_type;
-		public string event_type
+		private int _good_event_yn;
+		public int good_event_yn
 		{
-			get { return _event_type;}
-			set { _event_type = value;}
+			get { return _good_event_yn;}
+			set { _good_event_yn = value;}
 		}
 		[SerializeField]
-		private string _event_subtype;
-		public string event_subtype
+		private List<string> _event_types;
+		public List<string> event_types
 		{
-			get { return _event_subtype;}
-			set { _event_subtype = value;}
+			get { return _event_types;}
+			set { _event_types = value;}
 		}
 		[SerializeField]
 		private int _event_weight;
@@ -42,11 +42,11 @@ namespace BanpoFri
 			set { _event_weight = value;}
 		}
 		[SerializeField]
-		private int _event_type_value;
-		public int event_type_value
+		private List<int> _event_type_values;
+		public List<int> event_type_values
 		{
-			get { return _event_type_value;}
-			set { _event_type_value = value;}
+			get { return _event_type_values;}
+			set { _event_type_values = value;}
 		}
 		[SerializeField]
 		private int _event_duration;
@@ -54,6 +54,13 @@ namespace BanpoFri
 		{
 			get { return _event_duration;}
 			set { _event_duration = value;}
+		}
+		[SerializeField]
+		private string _event_filename;
+		public string event_filename
+		{
+			get { return _event_filename;}
+			set { _event_filename = value;}
 		}
 		[SerializeField]
 		private string _event_description;
