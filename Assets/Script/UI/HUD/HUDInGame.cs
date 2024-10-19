@@ -69,7 +69,7 @@ public class HUDInGame : UIBase
         GameRoot.Instance.UserData.CurMode.PlayerData.CurStockCountProerty.Subscribe(x => {
             CurPlayerStockText.text = $"{x}주";
         }).AddTo(disposables);
-
+            
 
         GameRoot.Instance.UserData.CurMode.Money.Subscribe(x=> {
             SetMyMoneyText((int)x);
@@ -85,7 +85,7 @@ public class HUDInGame : UIBase
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
         }
-
+        TreepllaNative.Vibrate();
         GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
 
         characterAnim.SetTrigger("Click");
@@ -96,8 +96,8 @@ public class HUDInGame : UIBase
     {
         SoundPlayer.Instance.PlaySound("Effect_Btn_Sell");
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
-
         characterAnim.SetTrigger("Click");
+        TreepllaNative.Vibrate();
     }
 
     public void SetMyMoneyText(int mymoney)
