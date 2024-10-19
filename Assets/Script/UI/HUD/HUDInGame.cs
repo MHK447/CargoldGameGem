@@ -12,7 +12,6 @@ public class HUDInGame : UIBase
     [SerializeField]
     private InGameTopComponent TopComponent;
 
-    [HideInInspector]
     public StageResultComponent ResultComponent;
 
     [SerializeField]

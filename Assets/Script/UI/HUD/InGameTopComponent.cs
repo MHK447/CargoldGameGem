@@ -58,7 +58,7 @@ public class InGameTopComponent : MonoBehaviour
 
     public void WaveTime(int time)
     {
-        if (time <= 0)
+        if (time < 0)
         {
             Result();
         }
