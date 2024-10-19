@@ -279,7 +279,7 @@ RectTransform:
   m_Children:
   - {fileID: 2547003515006396840}
   m_Father: {fileID: 8423351147059036086}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -405,6 +405,7 @@ RectTransform:
   - {fileID: 6180035553066155249}
   - {fileID: 6068113409557430273}
   - {fileID: 6386632776439326005}
+  - {fileID: 6415775781290101995}
   - {fileID: 4617147596274214993}
   m_Father: {fileID: 3099204531714526861}
   m_RootOrder: 0
@@ -542,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.44705883, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -550,6 +551,82 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 8cf71a51b9c992945ab7bc8354de6812, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7588248467883286598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6415775781290101995}
+  - component: {fileID: 3275952604457584561}
+  - component: {fileID: 7745728849471401033}
+  m_Layer: 0
+  m_Name: Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6415775781290101995
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7588248467883286598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8423351147059036086}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 551.9, y: 44.3}
+  m_SizeDelta: {x: 23, y: 23}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!222 &3275952604457584561
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7588248467883286598}
+  m_CullTransparentMesh: 1
+--- !u!114 &7745728849471401033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7588248467883286598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 95aec67bd301734458fae6c73c3d34d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1084,7 +1161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2812489400629317509, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 36.900024
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 2812489400629317509, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1128,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6011367413414980966, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6011367413414980966, guid: 645782504e6a8e9478257945ca9c4ca6, type: 3}
       propertyPath: m_FontData.m_FontStyle
