@@ -77,8 +77,8 @@ MonoBehaviour:
   - _stage_id: 4
     _start_price: 124
     _start_money: 2000
-    _target_money: 20000
-    _node_time: 40
+    _target_money: 10000
+    _node_time: 20
     _change_down_rate: 45
     _change_up_rate: 43
     _down_stock_min: 5
@@ -102,16 +102,16 @@ MonoBehaviour:
     _down_stock_max: 10
     _up_stock_min: 5
     _up_stock_max: 10
-    _event_time: e8030000d0070000b80b000094110000
-    _event_goodbad: 02000000020000000200000002000000
+    _event_time: e8030000d0070000
+    _event_goodbad: 0200000002000000
     _stage_name: "GS \uCE7C\uD30C\uC2A4"
     _stage_number_name: "5\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: Tesla_4
-    _stage_end_time: 60
+    _stage_end_time: 30
   - _stage_id: 6
     _start_price: 1367
     _start_money: 3000
-    _target_money: 20000
+    _target_money: 100000
     _node_time: 30
     _change_down_rate: 60
     _change_up_rate: 30
