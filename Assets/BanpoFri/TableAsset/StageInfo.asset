@@ -27,24 +27,22 @@ MonoBehaviour:
     _start_price: 100
     _start_money: 1000
     _target_money: 10000
-    _start_up_rate: 50
     _node_time: 50
-    _change_down_rate: 30
-    _change_up_rate: 60
-    _down_stock_min: 20
-    _down_stock_max: 30
-    _up_stock_min: 15
-    _up_stock_max: 45
-    _event_time: e8030000d0070000a00f0000
+    _change_down_rate: 45
+    _change_up_rate: 45
+    _down_stock_min: 5
+    _down_stock_max: 35
+    _up_stock_min: 5
+    _up_stock_max: 35
+    _event_time: e8030000d0070000ac0d0000
     _stage_name: "\uD14C\uC2AC\uB354\uC2AC"
     _stage_number_name: "1\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 60
+    _stage_end_time: 45
   - _stage_id: 2
     _start_price: 150
     _start_money: 200
     _target_money: 20000
-    _start_up_rate: 45
     _node_time: 50
     _change_down_rate: 35
     _change_up_rate: 25
@@ -61,7 +59,6 @@ MonoBehaviour:
     _start_price: 100
     _start_money: 3000
     _target_money: 30000
-    _start_up_rate: 40
     _node_time: 50
     _change_down_rate: 30
     _change_up_rate: 35
@@ -78,7 +75,6 @@ MonoBehaviour:
     _start_price: 200
     _start_money: 500
     _target_money: 40000
-    _start_up_rate: 45
     _node_time: 50
     _change_down_rate: 40
     _change_up_rate: 30
@@ -95,7 +91,6 @@ MonoBehaviour:
     _start_price: 50
     _start_money: 700
     _target_money: 50000
-    _start_up_rate: 30
     _node_time: 50
     _change_down_rate: 35
     _change_up_rate: 40
@@ -112,7 +107,6 @@ MonoBehaviour:
     _start_price: 30
     _start_money: 80
     _target_money: 60000
-    _start_up_rate: 50
     _node_time: 50
     _change_down_rate: 50
     _change_up_rate: 30
@@ -129,7 +123,6 @@ MonoBehaviour:
     _start_price: 300
     _start_money: 1000
     _target_money: 70000
-    _start_up_rate: 60
     _node_time: 50
     _change_down_rate: 55
     _change_up_rate: 20
@@ -146,7 +139,6 @@ MonoBehaviour:
     _start_price: 400
     _start_money: 900
     _target_money: 80000
-    _start_up_rate: 50
     _node_time: 50
     _change_down_rate: 60
     _change_up_rate: 50
