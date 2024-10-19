@@ -9,7 +9,10 @@ public class CheatWindowTest : MonoBehaviour
     private Button MoneyCheat;
 
     [SerializeField]
-    private Button StageCheat;
+    private Button SetStageCheat;
+
+    [SerializeField]
+    private InputField StageIdxInputField;
 
     [SerializeField]
     private Button CloseBtn;
@@ -21,7 +24,7 @@ public class CheatWindowTest : MonoBehaviour
     private void Awake()
     {
         MoneyCheat.onClick.AddListener(SetMoney);
-        StageCheat.onClick.AddListener(SetStage);
+        SetStageCheat.onClick.AddListener(SetStage);
         CloseBtn.onClick.AddListener(Hide);
         UpgradeCoinCheat.onClick.AddListener(SetUpgradeCoin);
     }
@@ -44,6 +47,37 @@ public class CheatWindowTest : MonoBehaviour
 
     public void SetStage()
     {
-        GameRoot.Instance.UserData.CurMode.StageData.StageIdx += 1;
+        int stageIdx = 0;
+        if (!int.TryParse(StageIdxInputField.text, out stageIdx))
+        {
+            Debug.LogError("Parse 실패");
+            return;
+        }
+
+        GameRoot.Instance.UserData.CurMode.StageData.StageIdx = stageIdx;
+        Debug.Log($"{stageIdx}스테이지 설정 완료");
+
+        MoveStage();
+    }
+
+    public void MoveStage()
+    {
+        GameRoot.Instance.UISystem.OpenUI<PageFade>(page => {
+            page.Set(() => {
+                GameRoot.Instance.UserData.CurMode.StageData.WaveTimeProperty.Value = 0;
+                Time.timeScale = 1f;
+
+                GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.Init();
+
+                var gethudingame = GameRoot.Instance.UISystem.GetUI<HUDInGame>();
+
+                if (gethudingame != null)
+                {
+                    gethudingame.Init();
+                }
+
+                ProjectUtility.SetActiveCheck(this.gameObject, false);
+            });
+        });
     }
 }

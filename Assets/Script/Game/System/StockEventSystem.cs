@@ -39,12 +39,12 @@ public class StockEventSystem
 
         _cashingCurrentStageEventList = CashingCurrentStageEventData();
         StageInfoData stageInfo = Tables.Instance.GetTable<StageInfo>().GetData(_currentStage);
-        stageInfo.event_time.ForEach(e => GameRoot.Instance.WaitTimeAndCallback(e / 100, StartEvent));
+        stageInfo.event_time.ForEach(e => _EventCoroutineList.Add(GameRoot.Instance.WaitTimeAndCallbackAndReturnCoroutine(e / 100, StartEvent)));
     }
 
     private void ResetEventData()
     {
-        if(_EventCoroutineList.Count > 0)
+        if (_EventCoroutineList.Count > 0)
             _EventCoroutineList.ForEach(e => GameRoot.Instance.StopCoroutine(e));
         _EventCoroutineList.Clear();
 

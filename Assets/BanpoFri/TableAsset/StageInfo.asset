@@ -30,10 +30,10 @@ MonoBehaviour:
     _node_time: 50
     _change_down_rate: 43
     _change_up_rate: 44
-    _down_stock_min: 5
-    _down_stock_max: 10
-    _up_stock_min: 5
-    _up_stock_max: 10
+    _down_stock_min: 4
+    _down_stock_max: 8
+    _up_stock_min: 6
+    _up_stock_max: 12
     _event_time: f4010000a4060000ac0d0000
     _event_goodbad: 000000000100000001000000
     _stage_name: "\uD14C\uC2AC\uB791"
@@ -43,7 +43,7 @@ MonoBehaviour:
   - _stage_id: 2
     _start_price: 1175
     _start_money: 1500
-    _target_money: 4500
+    _target_money: 30000
     _node_time: 40
     _change_down_rate: 60
     _change_up_rate: 30
@@ -56,46 +56,46 @@ MonoBehaviour:
     _stage_name: "\uC560\uBFD4"
     _stage_number_name: "2\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 50
+    _stage_end_time: 40
   - _stage_id: 3
     _start_price: 121
     _start_money: 1500
-    _target_money: 20000
+    _target_money: 10000
     _node_time: 40
-    _change_down_rate: 30
-    _change_up_rate: 60
+    _change_down_rate: 17
+    _change_up_rate: 70
     _down_stock_min: 2
     _down_stock_max: 4
-    _up_stock_min: 6
-    _up_stock_max: 12
+    _up_stock_min: 20
+    _up_stock_max: 40
     _event_time: e8030000d0070000ac0d0000
-    _event_goodbad: 000000000000000000000000
+    _event_goodbad: 000000000100000000000000
     _stage_name: "\uB124\uD06C\uC2A8"
     _stage_number_name: "3\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 50
+    _stage_end_time: 40
   - _stage_id: 4
     _start_price: 128
     _start_money: 2000
     _target_money: 20000
-    _node_time: 25
+    _node_time: 40
     _change_down_rate: 45
-    _change_up_rate: 40
+    _change_up_rate: 43
     _down_stock_min: 5
     _down_stock_max: 10
-    _up_stock_min: 5
-    _up_stock_max: 10
+    _up_stock_min: 7
+    _up_stock_max: 14
     _event_time: e8030000d0070000b80b000094110000
     _event_goodbad: 00000000010000000000000001000000
     _stage_name: "\uB85C\uB610\uB9AC\uC544"
     _stage_number_name: "4\uC8FC\uCC28 \uBAA9\uD45C"
     _stage_icon_filename: 
-    _stage_end_time: 50
+    _stage_end_time: 60
   - _stage_id: 5
     _start_price: 1000
     _start_money: 10000
     _target_money: 30000
-    _node_time: 40
+    _node_time: 30
     _change_down_rate: 69
     _change_up_rate: 69
     _down_stock_min: 5
@@ -112,7 +112,7 @@ MonoBehaviour:
     _start_price: 1367
     _start_money: 3000
     _target_money: 40000
-    _node_time: 40
+    _node_time: 30
     _change_down_rate: 60
     _change_up_rate: 30
     _down_stock_min: 8
@@ -129,7 +129,7 @@ MonoBehaviour:
     _start_price: 278
     _start_money: 3000
     _target_money: 40000
-    _node_time: 40
+    _node_time: 30
     _change_down_rate: 43
     _change_up_rate: 44
     _down_stock_min: 5
@@ -146,7 +146,7 @@ MonoBehaviour:
     _start_price: 136
     _start_money: 3000
     _target_money: 100000
-    _node_time: 40
+    _node_time: 20
     _change_down_rate: 43
     _change_up_rate: 44
     _down_stock_min: 5

@@ -23,13 +23,7 @@ public class StockEventData
 
         _callback = callback;
         SetData(true);
-        return GameRoot.Instance.StartCoroutine(waitTimeAndCallback(_eventInfoData.event_duration / 100, EndEvent));
-    }
-
-    IEnumerator waitTimeAndCallback(float time, System.Action callback)
-    {
-        yield return new WaitForSeconds(time);
-        callback?.Invoke();
+        return GameRoot.Instance.WaitTimeAndCallbackAndReturnCoroutine(_eventInfoData.event_duration / 100, EndEvent);
     }
 
     public void EndEvent()

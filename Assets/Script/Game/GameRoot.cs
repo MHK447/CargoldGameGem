@@ -354,7 +354,12 @@ public class GameRoot : Singleton<GameRoot>
 		StartCoroutine(waitTimeAndCallback(time, callback));
 	}
 
-	public void WaitFrameAndCallback(int frame, System.Action callback)
+    public Coroutine WaitTimeAndCallbackAndReturnCoroutine(float time, System.Action callback)
+    {
+        return StartCoroutine(waitTimeAndCallback(time, callback));
+    }
+
+    public void WaitFrameAndCallback(int frame, System.Action callback)
 	{
 		StartCoroutine(waitFrameAndCallback(frame, callback));
 	}
