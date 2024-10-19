@@ -5,42 +5,42 @@ using UnityEngine;
 
 public class StockEventData
 {
-    private EventInfoData _eventInfoData;
+    public EventInfoData EventInfoData { get; private set; }
     private Action<EventInfoData> _callback;
 
     public void Init(EventInfoData stockEventInfo)
     {
-        _eventInfoData = stockEventInfo;
+        EventInfoData = stockEventInfo;
     }
 
     public Coroutine StartEvent(Action<EventInfoData> callback)
     {
         HUDEvent eventPopup = GameRoot.Instance.UISystem.GetUI<HUDEvent>();
         if (eventPopup != null && eventPopup.gameObject.activeSelf == true)
-            eventPopup.Init(_eventInfoData);
+            eventPopup.Init(EventInfoData);
         else
-            GameRoot.Instance.UISystem.OpenUI<HUDEvent>(popup => popup.Init(_eventInfoData));
+            GameRoot.Instance.UISystem.OpenUI<HUDEvent>(popup => popup.Init(EventInfoData));
 
         _callback = callback;
         SetData(true);
-        return GameRoot.Instance.WaitTimeAndCallbackAndReturnCoroutine(_eventInfoData.event_duration / 100, EndEvent);
+        return GameRoot.Instance.WaitTimeAndCallbackAndReturnCoroutine(EventInfoData.event_duration / 100, EndEvent);
     }
 
     public void EndEvent()
     {
         SetData(false);
-        _callback.Invoke(_eventInfoData);
+        _callback.Invoke(EventInfoData);
     }
 
     private void SetData(bool isStart)
     {
         int sign = isStart ? 1 : -1;
 
-        for (int i = 0; i < _eventInfoData.event_types.Count; i++)
+        for (int i = 0; i < EventInfoData.event_types.Count; i++)
         {
-            int value = _eventInfoData.event_type_values[i] * sign;
+            int value = EventInfoData.event_type_values[i] * sign;
 
-            switch (_eventInfoData.event_types[i])
+            switch (EventInfoData.event_types[i])
             {
                 case "add_up_rate":
                     GameRoot.Instance.UserData.CurMode.EventData.event_change_up_rate += value;

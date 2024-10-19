@@ -40,20 +40,14 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 652a17a0cdf449a469d9413d0eb91f4e, type: 3}
   - {fileID: 21300000, guid: c73a9d82dc10b454fa829cb83d41b552, type: 3}
-  - {fileID: 21300000, guid: 9b3d5b555afafef439f8d11eb83c1f2e, type: 3}
   - {fileID: 21300000, guid: 8b818b95b7c5b24409d1b64489a0a557, type: 3}
   - {fileID: 21300000, guid: b302b5cd83decd54ebaea4a6402ad6a5, type: 3}
-  - {fileID: 21300000, guid: 8870fe1e676f07749a1b75d793f4975d, type: 3}
-  - {fileID: 21300000, guid: ca82a8af43780ca4c9443dcb84c803f4, type: 3}
   - {fileID: 21300000, guid: b593d7ffc60e44a41bdf6d29c4a6f71b, type: 3}
   m_PackedSpriteNamesToIndex:
   - common3
   - common5
-  - tesla2
   - common1
   - common4
-  - tesla3
-  - tesla1
   - common2
   m_RenderDataMap: {}
   m_Tag: UIEventAtlas

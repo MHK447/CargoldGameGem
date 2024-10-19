@@ -163,7 +163,7 @@ MonoBehaviour:
   ItemCardAtlas: {fileID: 0}
   BuffIconAtlas: {fileID: 4343727234628468602, guid: 9dda1ccbf4df6468aaa8a3c545e1d3bc, type: 2}
   facilityAtlas: {fileID: 0}
-  UiIconAtlas: {fileID: 0}
+  UiIconAtlas: {fileID: 4343727234628468602, guid: 47667acac6b6767478d821c919e2373f, type: 2}
   UiBgAtlas: {fileID: 0}
   InGameAtlas: {fileID: 0}
   PlanetAtlas: {fileID: 0}
@@ -173,3 +173,4 @@ MonoBehaviour:
   InGameSkillAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
   CommonAtlas: {fileID: 4343727234628468602, guid: f1c6e32ace6b24de0a7a840e65e42524, type: 2}
   UIEventAtlas: {fileID: 4343727234628468602, guid: 24197aaba1dadbc47954c426092407e4, type: 2}
+  CompanyAtlas: {fileID: 4343727234628468602, guid: 47667acac6b6767478d821c919e2373f, type: 2}
