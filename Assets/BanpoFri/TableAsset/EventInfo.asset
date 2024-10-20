@@ -146,7 +146,7 @@ MonoBehaviour:
     - add_up_rate
     - add_down_stock
     - add_down_rate
-    _event_weight: 3
+    _event_weight: 100
     _event_type_values: 050000001e000000fbffffffe2ffffff
     _event_duration: 1000
     _event_filename: common_BG_icon_07
