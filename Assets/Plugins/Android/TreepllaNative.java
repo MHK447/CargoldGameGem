@@ -26,7 +26,7 @@ public class TreepllaNative {
         v.cancel();
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
         {
-            VibrationEffect vibrationEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK);
+            VibrationEffect vibrationEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK);
             v.vibrate(vibrationEffect);
         }
         else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) 
