@@ -316,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventList: 0
   setValue: 0
+  currentStageIdx: 0
   event_change_up_rate: 0
   event_change_down_rate: 0
   event_up_stock_min: 0
