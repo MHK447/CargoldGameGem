@@ -149,6 +149,7 @@ public class HUDInGame : UIBase
         GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
 
         characterAnim.SetTrigger("Click");
+        TreepllaNative.Vibrate();
     }
 
 
@@ -156,7 +157,7 @@ public class HUDInGame : UIBase
     {
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
         characterAnim.SetTrigger("Click");
-        //TreepllaNative.Vibrate();
+        TreepllaNative.Vibrate();
     }
 
     public void SetMyMoneyText(int mymoney)
