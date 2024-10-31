@@ -141,6 +141,8 @@ public class HUDInGame : UIBase
 
     public void OnClickBuy()
     {
+        if (Time.timeScale == 0) return;
+
         if (GameRoot.Instance.PlayerSystem.IsLuckyBuy())
         {
             GameRoot.Instance.PlayerSystem.AddStock(BuyTrTextRoot);
@@ -155,6 +157,8 @@ public class HUDInGame : UIBase
 
     public void OnClickSell()
     {
+        if (Time.timeScale == 0) return;
+
         GameRoot.Instance.PlayerSystem.SellStock(SellTrTextRoot);
         characterAnim.SetTrigger("Click");
         TreepllaNative.Vibrate();
